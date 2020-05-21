@@ -32,7 +32,7 @@ class AppIndex extends HTMLElement {
             
                 <div class="full-grid-2-col">
                     <a class="github icon" href="https://github.com/vinibs" 
-                        title="GitHub" target="_blank"></a>
+                        title="GitHub" target="_blank" rel="noreferrer"></a>
                 </div>
                 
             </div>

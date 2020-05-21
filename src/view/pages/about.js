@@ -44,12 +44,14 @@ class AboutMe extends HTMLElement {
                         <div>
                             <a class="linkedin-black icon" 
                                 href="https://www.linkedin.com/in/viniciusbs" 
-                                title="LinkedIn" target="_blank"></a>
+                                title="LinkedIn" target="_blank" 
+                                rel="noreferrer"></a>
                         </div>
                         <div>
                             <a class="github-black icon" 
                                 href="https://github.com/vinibs" 
-                                title="GitHub" target="_blank"></a>
+                                title="GitHub" target="_blank"
+                                rel="noreferrer"></a>
                         </div>
                     </div>
                 </div>
