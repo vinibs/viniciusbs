@@ -1,4 +1,4 @@
-const staticCacheName = "lira-v1"
+const staticCacheName = "portfolio-v1"
 const assets = [
   "/",
   "/index.html",
