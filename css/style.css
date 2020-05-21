@@ -318,23 +318,23 @@ my-projects *:not(.logo) {
     }
     .screenshot.pdti {
         background-position: 0 34.22%;
-        padding-bottom: 48.5%;
+        padding-bottom: 48.3%;
     }
     .screenshot.intranet {
         background-position: 0 44.18%;
-        padding-bottom: 47.7%
+        padding-bottom: 47.5%
     }
     .screenshot.events {
         background-position: 0 54.07%;
-        padding-bottom: 48%
+        padding-bottom: 47.8%
     }
     .screenshot.siconf {
         background-position: 0 64.94%;
-        padding-bottom: 55%
+        padding-bottom: 54.8%
     }
     .screenshot.bochabrasil {
         background-position: 0 76.5%;
-        padding-bottom: 55%
+        padding-bottom: 54.8%
     }
     .screenshot.wwb {
         background-position: 0 88.2%;
