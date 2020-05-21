@@ -317,15 +317,15 @@ my-projects *:not(.logo) {
         background-position: 0 22%;
     }
     .screenshot.pdti {
-        background-position: 0 34.2%;
+        background-position: 0 34.22%;
         padding-bottom: 48.5%;
     }
     .screenshot.intranet {
-        background-position: 0 44.16%;
+        background-position: 0 44.18%;
         padding-bottom: 47.7%
     }
     .screenshot.events {
-        background-position: 0 54.05%;
+        background-position: 0 54.07%;
         padding-bottom: 48%
     }
     .screenshot.siconf {
