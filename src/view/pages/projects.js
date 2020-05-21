@@ -64,7 +64,7 @@ class Projects extends HTMLElement {
                         </a>
                     </div>
                     <div class="project-content">
-                        <h3>Lira (2018)</h3>
+                        <h3>Lira (2018 - 2020)</h3>
                         <p class="resources">
                             Pure JavaScript, HTML, CSS, Responsive
                         </p>
