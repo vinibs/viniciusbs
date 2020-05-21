@@ -184,7 +184,7 @@ my-projects *:not(.logo) {
 }
 
 .grid.home > .home-content > .technologies {
-    color: rgb(100,100,100);
+    color: rgb(110,110,110);
     font-size: 14pt;
     line-height: 165%;
     margin-top: 35px;
