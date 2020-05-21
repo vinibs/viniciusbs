@@ -475,8 +475,12 @@ my-projects *:not(.logo) {
 
 
 @media (max-width: 900px) {
-    /* Layout em Grid */
 
+    .project .projectlink {
+        text-align: center;
+    }
+
+    /* Layout em Grid */
     .grid {
         padding: 15px;
     }

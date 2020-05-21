@@ -359,7 +359,7 @@ class Projects extends HTMLElement {
                         </a>
                     </div>
                     <div class="project-content">
-                        <h3>Worlds We Build (2015 - 2019)</h3>
+                        <h3>Worlds We Build (2015)</h3>
                         <p class="resources">
                             PHP, HTML, CSS, Responsive, MySQL
                         </p>
