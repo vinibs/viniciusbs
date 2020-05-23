@@ -158,7 +158,8 @@ my-projects *:not(.logo) {
 
 /* Página inicial */
 .grid.home {
-    align-items: center;
+    min-height: calc(100vh - 115px);
+    align-content: center;
     justify-items: center;
 }
 
@@ -397,10 +398,6 @@ my-projects *:not(.logo) {
 
 @media (min-width: 901px) {
     /* Página inicial */
-    .grid.home {
-        margin-top: 15%;
-    }
-
     .grid.home > .home-logo {
         justify-self: end;
         height: 200px;
