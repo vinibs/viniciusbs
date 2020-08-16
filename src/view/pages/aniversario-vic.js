@@ -18,6 +18,12 @@ class AniversarioVic extends HTMLElement {
             gift.addEventListener('click', this.openGift)
         }, 3500)
 
+        // Waits for the loading of the css and other dependencies to unhide content
+        setTimeout(() => {
+            const container = document.querySelector('aniversario-vic .container')
+            container.removeAttribute('style')
+        }, 500)
+        
         // Sets the element's inner HTML to its own render() method's
         this.innerHTML = this.render()
         document.title = `feliz aniversário`
@@ -105,7 +111,7 @@ class AniversarioVic extends HTMLElement {
     // Defines the component default inner HTML
     render () {
         return `
-            <div class="container">
+            <div class="container" style="display:none">
             <header>
                 <img src="/images/aniversario-vic/colar.svg" 
                     alt="Colar" 
