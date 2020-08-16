@@ -6,10 +6,13 @@ import '../view/index.js'
 import '../view/pages/about.js'
 import '../view/pages/projects.js'
 import '../view/errors/not-found.js'
+import '../view/pages/aniversario-vic.js'
 
 route.set('/', 'app-index')
 route.set('/about-me', 'about-me')
 route.set('/projects', 'my-projects')
+
+route.set('/feliz-aniversario', 'aniversario-vic')
 
 // Wildcard route for anything not listed above
 route.set('*', 'not-found')
