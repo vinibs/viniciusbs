@@ -22,7 +22,7 @@ class AniversarioVic extends HTMLElement {
         setTimeout(() => {
             const container = document.querySelector('aniversario-vic .container')
             container.removeAttribute('style')
-        }, 250)
+        }, 300)
 
         // Sets the element's inner HTML to its own render() method's
         this.innerHTML = this.render()
