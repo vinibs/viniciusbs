@@ -22,8 +22,8 @@ class AniversarioVic extends HTMLElement {
         setTimeout(() => {
             const container = document.querySelector('aniversario-vic .container')
             container.removeAttribute('style')
-        }, 500)
-        
+        }, 250)
+
         // Sets the element's inner HTML to its own render() method's
         this.innerHTML = this.render()
         document.title = `feliz aniversário`
