@@ -203,6 +203,10 @@ body {
     margin-top: 20px;
 }
 
+.gift-subtitle .subtitle {
+    animation-delay: 0.8s;
+}
+
 .card-subtitle .subtitle {
     animation-delay: 3s;
 }
