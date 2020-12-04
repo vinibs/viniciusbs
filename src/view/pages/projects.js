@@ -351,12 +351,8 @@ class Projects extends HTMLElement {
 
                 <div class="grid grid-7-x grid-middle project">
                     <div class="project-screen">
-                        <a href="http://worldswebuild.ga" 
-                            title="Visit Worlds We Build" target="_blank">
-
-                            <div class="screenshot wwb" role="img" 
-                                title="Worlds We Build screenshot"></div>
-                        </a>
+                        <div class="screenshot wwb" role="img" 
+                            title="Worlds We Build screenshot"></div>
                     </div>
                     <div class="project-content">
                         <h3>Worlds We Build (2015)</h3>
@@ -373,12 +369,6 @@ class Projects extends HTMLElement {
                         </p>
                         <p>
                             It was completely made from scratch, all by myself.
-                        </p>
-                        <p class="projectlink">
-                            <a href="http://worldswebuild.ga" 
-                                title="Visit Worlds We Build" target="_blank">
-                                Visit the website
-                            </a>
                         </p>
                     </div>
                 </div>
