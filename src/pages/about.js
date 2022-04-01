@@ -2,7 +2,7 @@
  * Based on Google Custom Elements documentation:
  * https://developers.google.com/web/fundamentals/web-components/customelements
  */
-import '../../components/circle-chart.js'
+import '../components/circle-chart.js'
 
 // Defines the custom element's class
 class AboutMe extends HTMLElement {

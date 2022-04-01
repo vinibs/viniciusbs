@@ -1,7 +1,7 @@
 {
   "name": "viniciusbs",
   "short_name": "viniciusbs",
-  "theme_color": "#ffffff",
+  "theme_color": "#3c3c3c",
   "background_color": "#ffffff",
   "display": "standalone",
   "orientation": "portrait",
@@ -9,25 +9,25 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "images/icons/icon-144x144.png",
+      "src": "images/app/icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "images/icons/icon-512x512.png",
+      "src": "images/app/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "images/icons/icon-default-144x144.png",
+      "src": "images/app/icon-default-144x144.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "images/icons/icon-default-512x512.png",
+      "src": "images/app/icon-default-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
