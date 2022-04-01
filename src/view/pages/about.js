@@ -2,7 +2,7 @@
  * Based on Google Custom Elements documentation:
  * https://developers.google.com/web/fundamentals/web-components/customelements
  */
-import '../../components/circle-chart.js'
+import '../../components/circle-viewer/index.js'
 
 // Defines the custom element's class
 class AboutMe extends HTMLElement {
@@ -91,53 +91,49 @@ class AboutMe extends HTMLElement {
                 <div class="skills text-center">
                     <h2>Skills</h2>
 
-                    <circle-chart percent="30">
-                        Project management
-                    </circle-chart>
-
-                    <circle-chart percent="10">
+                    <circle-viewer>
                         Software architecture
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="10">
+                    <circle-viewer>
                         Automated testing
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="20">
+                    <circle-viewer>
                         Agile methods
-                    </circle-chart>
+                    </circle-viewer>
                     
-                    <circle-chart percent="70">
+                    <circle-viewer>
                         User interface
-                    </circle-chart>
+                    </circle-viewer>
                     
-                    <circle-chart percent="40">
+                    <circle-viewer>
                         User experience
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="75">
+                    <circle-viewer>
                         Web responsivity
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="55">
+                    <circle-viewer>
                         Logo creation
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="10">
+                    <circle-viewer>
                         Visual identity
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="35">
+                    <circle-viewer>
                         Video making
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="45">
+                    <circle-viewer>
                         Text writing
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="60">
+                    <circle-viewer>
                         Hand drawing
-                    </circle-chart>
+                    </circle-viewer>
                 </div>
 
 
@@ -145,153 +141,153 @@ class AboutMe extends HTMLElement {
                 <div id="technologies" class="text-center">
                     <h2>Technologies</h2>
 
-                    <circle-chart percent="100">
+                    <circle-viewer>
                         HTML
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="100">
+                    <circle-viewer>
                         CSS
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="100">
+                    <circle-viewer>
                         PHP
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="100">
+                    <circle-viewer>
                         JavaScript
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="14">
+                    <circle-viewer>
                         Python
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="61">
+                    <circle-viewer>
                         C
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="30">
+                    <circle-viewer>
                         Java
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="05">
+                    <circle-viewer>
                         Android (Java)
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="08">
+                    <circle-viewer>
                         C#
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="05">
+                    <circle-viewer>
                         Node.JS
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="25">
+                    <circle-viewer>
                         Git
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="27">
+                    <circle-viewer>
                         MySQL
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="14">
+                    <circle-viewer>
                         PostgreSQL
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="05">
+                    <circle-viewer>
                         SQLite
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="06">
+                    <circle-viewer>
                         MongoDB
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="06">
+                    <circle-viewer>
                         SQL Server
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="18">
+                    <circle-viewer>
                         Selenium
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="22">
+                    <circle-viewer>
                         Cypress
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="10">
+                    <circle-viewer>
                         Codeception
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="05">
+                    <circle-viewer>
                         JUnit
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="05">
+                    <circle-viewer>
                         Mockito
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="40">
+                    <circle-viewer>
                         Bootstrap
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="50">
+                    <circle-viewer>
                         jQuery
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="10">
+                    <circle-viewer>
                         ExtJS
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="05">
+                    <circle-viewer>
                         D3.js
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="15">
+                    <circle-viewer>
                         React
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="10">
+                    <circle-viewer>
                         Angular
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="20">
+                    <circle-viewer>
                         Laravel 5
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="10">
+                    <circle-viewer>
                         Django
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="05">
+                    <circle-viewer>
                         .NET Framework
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="10">
+                    <circle-viewer>
                         Azure DevOps
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="15">
+                    <circle-viewer>
                         Jira
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="10">
+                    <circle-viewer>
                         Heroku
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="20">
+                    <circle-viewer>
                         Amazon Web Services
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="15">
+                    <circle-viewer>
                         Google Cloud Plaftorm
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="25">
+                    <circle-viewer>
                         GIMP
-                    </circle-chart>
+                    </circle-viewer>
 
-                    <circle-chart percent="55">
+                    <circle-viewer>
                         Inkscape
-                    </circle-chart>
+                    </circle-viewer>
                 </div>
             </div>
 
