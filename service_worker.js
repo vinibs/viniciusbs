@@ -18,7 +18,8 @@ const assets = [
   
   "/src/config/config.js",
   "/src/config/routes.js",
-  "/src/components/circle-chart.js",
+  "/src/components/circle-viewer/index.js",
+  "/src/components/circle-viewer/styles.js",
   "/src/components/main-menu.js",
   "/src/view/index.js",
   "/src/view/errors/not-found.js",
