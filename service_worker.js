@@ -26,8 +26,9 @@ const assets = [
   "/src/view/errors/not-found.js",
   "/src/view/pages/about.js",
   "/src/view/pages/projects.js",
-  
-  "/src/contents/about.js"
+
+  "/src/contents/about.js",
+  "/src/contents/projects.js"
 ]
 
 self.addEventListener("install", installEvent => {
