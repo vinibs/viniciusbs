@@ -15,9 +15,9 @@ class Projects extends HTMLElement {
     }
 
     renderProjectsSections(html = '') {
-        Object.values(projects).forEach(projectData => {
+        Object.entries(projects).forEach(([entry, projectData]) => {
             html += `
-            <div class="project-section" id="personal-projects">
+            <div class="project-section" id="${entry}">
                 <h3 class="subtitle">${projectData.title}</h3>
                     ${this.renderProjects(projectData.items)}
             </div>
