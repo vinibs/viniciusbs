@@ -1,5 +1,4 @@
 import { projects } from '../../contents/projects.js'
-import { styles } from './styles.js'
 
 export class ProjectItem extends HTMLElement {
     constructor () {
@@ -7,6 +6,9 @@ export class ProjectItem extends HTMLElement {
 
         const shadowRoot = this.attachShadow({mode: 'open'})
         this.loadAttributes()
+        
+        this.currentPath = import.meta.url.replace(/https?:\/\/[^\/]+\//, '/')
+        this.currentDirectory = this.currentPath.replace(/\/[^\/]+$/, '')
     }
 
     loadAttributes () {
@@ -43,9 +45,13 @@ export class ProjectItem extends HTMLElement {
         this.shadowRoot.innerHTML = this.render()
     }
 
+    loadStyles () {
+        return `<style>@import '${this.currentDirectory}/styles.css';</style>`
+    }
+
     render () {
         return `
-        <style>${styles}</style>
+        ${this.loadStyles()}
         <div class="project ${this.parity}">
             <div class="project-screen">
                 ${this.hasLink ? `

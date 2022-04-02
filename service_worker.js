@@ -20,13 +20,13 @@ const assets = [
   "/src/config/routes.js",
 
   "/src/components/circle-viewer/index.js",
-  "/src/components/circle-viewer/styles.js",
+  "/src/components/circle-viewer/styles.css",
   "/src/components/main-menu/index.js",
-  "/src/components/main-menu/styles.js",
+  "/src/components/main-menu/styles.css",
   "/src/components/project-item/index.js",
-  "/src/components/project-item/styles.js",
+  "/src/components/project-item/styles.css",
   "/src/components/project-section/index.js",
-  "/src/components/project-section/styles.js",
+  "/src/components/project-section/styles.css",
   "/src/components/index.js",
 
   "/src/view/index.js",
