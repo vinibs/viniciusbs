@@ -3,8 +3,8 @@ export const pageTitle = 'Projects'
 export const projects = {
     personal: {
         title: 'Personal Projects',
-        items: [
-            {
+        items: {
+            tsanalysis: {
                 image: { class: 'tsanalysis', title: 'TSAnalysis screenshot' },
                 name: 'Time Series Analysis System',
                 year: '2019',
@@ -30,7 +30,7 @@ export const projects = {
                     `This was my first use of Amazon S3 (AWS Storage) and Heroku together.`,
                 ]
             },
-            {
+            lira: {
                 link: { 
                     url: 'https://github.com/vinibs/lira', 
                     title: 'Lira on GitHub',
@@ -52,7 +52,7 @@ export const projects = {
                     `<b>And, hey, look!</b> You are seeing it working right now!`
                 ]
             },
-            {
+            luvi: {
                 link: { 
                     url: 'https://github.com/vinibs/luvi', 
                     title: 'Luvi on GitHub',
@@ -74,7 +74,7 @@ export const projects = {
                     `It was entirely made from scratch, all by myself.`
                 ]
             },
-            {
+            cadeu: {
                 image: { class: 'cadeu', title: 'Cadêu screenshot' },
                 name: 'Cadêu',
                 year: '2014 - 2019',
@@ -94,13 +94,13 @@ export const projects = {
                     `It was entirely made from scratch, all by myself.`,
                 ]
             },
-        ],
+        },
     },
 
     at_work: {
         title: 'At work',
-        items: [
-            {
+        items: {
+            pdti: {
                 image: { class: 'pdti', title: 'PDTI screenshot' },
                 name: 'PDTI',
                 year: '2016 - 2018',
@@ -122,7 +122,7 @@ export const projects = {
                     `Between 2016 and 2018, I worked at mainly the back-end, but at the front-end too, on this project.`,
                 ]
             },
-            {
+            intranet: {
                 image: { class: 'intranet', title: 'Intranet/Support System screenshot' },
                 name: 'UTFPR Intranet/Support System',
                 year: '2016 - 2018',
@@ -145,7 +145,7 @@ export const projects = {
                     `Between 2016 and 2018, I worked at mainly the back-end, but at the front-end too, on this project, starting to work on it after some years from its begin.`,
                 ]
             },
-            {
+            events: {
                 link: { 
                     url: 'https://eventos.cp.utfpr.edu.br', 
                     title: 'Visit Events Management System',
@@ -173,13 +173,13 @@ export const projects = {
                     `Between 2016 and 2018, I worked both at the back-end and the front-end on this project, since its first version`,
                 ]
             },
-        ],
+        },
     },
 
     other: {
         title: 'Other projects',
-        items: [
-            {
+        items: {
+            siconf: {
                 image: { class: 'siconf', title: 'SICONF screenshot' },
                 name: `Assutef's SICONF`,
                 year: '2017',
@@ -200,7 +200,7 @@ export const projects = {
                     `I made mainly the management of the platform user interface in its details, helped with some of the back-end logic and made, in group, the modeling of the database.`,
                 ]
             },
-            {
+            bochabrasil: {
                 link: { 
                     url: 'http://bochabrasil.com.br', 
                     title: 'Visit Bocha Brasil',
@@ -225,7 +225,7 @@ export const projects = {
                     `It was completely made from scratch, all by myself.`,
                 ]
             },
-            {
+            wwb: {
                 image: { class: 'wwb', title: 'Worlds We Build screenshot' },
                 name: `Worlds We Build`,
                 year: '2015',
@@ -244,6 +244,6 @@ export const projects = {
                     `It was completely made from scratch, all by myself.`,
                 ]
             },
-        ]
+        },
     }
 }
