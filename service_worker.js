@@ -23,6 +23,10 @@ const assets = [
   "/src/components/circle-viewer/styles.js",
   "/src/components/main-menu/index.js",
   "/src/components/main-menu/styles.js",
+  "/src/components/project-item/index.js",
+  "/src/components/project-item/styles.js",
+  "/src/components/project-section/index.js",
+  "/src/components/project-section/styles.js",
   "/src/components/index.js",
 
   "/src/view/index.js",
