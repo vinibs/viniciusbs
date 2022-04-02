@@ -1,11 +1,7 @@
 // Imports the route instance to set the App's routes
-import { route } from '../../js/lira.js'
+import { route } from '/js/lira.js'
 import '../components/index.js'
-
 import '../view/index.js'
-import '../view/pages/about.js'
-import '../view/pages/projects.js'
-import '../view/errors/not-found.js'
 
 route.set('/', 'app-index')
 route.set('/about-me', 'about-me')

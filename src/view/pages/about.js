@@ -5,7 +5,7 @@
 import { interests, pageTitle, personalInfo, skills, technologies } from '../../contents/about.js'
 
 // Defines the custom element's class
-class AboutMe extends HTMLElement {
+export class AboutMe extends HTMLElement {
     // Defines what should be done when the element is attached to the DOM
     connectedCallback () {
         // Sets the element's inner HTML to its own render() method's
@@ -123,6 +123,3 @@ class AboutMe extends HTMLElement {
         `
     }
 }
-
-// Defines the custom element tag so it can be used in DOM
-window.customElements.define('about-me', AboutMe)

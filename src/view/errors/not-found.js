@@ -4,7 +4,7 @@
  */
 
 // Defines the custom element's class
-class NotFound extends HTMLElement {
+export class NotFound extends HTMLElement {
 
     // Defines what should be done when the element is attached to the DOM
     connectedCallback () {
@@ -23,6 +23,3 @@ class NotFound extends HTMLElement {
         `
     }
 }
-
-// Defines the custom element tag so it can be used in DOM
-window.customElements.define('not-found', NotFound)
