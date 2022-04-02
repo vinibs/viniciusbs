@@ -3,6 +3,7 @@
  * https://developers.google.com/web/fundamentals/web-components/customelements
  */
 import '../../components/circle-viewer/index.js'
+import { interests, pageTitle, personalInfo, skills, technologies } from '../../contents/about.js'
 
 // Defines the custom element's class
 class AboutMe extends HTMLElement {
@@ -13,298 +14,112 @@ class AboutMe extends HTMLElement {
         document.title = `about me • viniciusbs`
     }
 
+    renderSocialIcons(html = '') {
+        Object.entries(personalInfo.icons).forEach(([item, props]) => {
+            html += `
+            <div>
+                <a class="${item}-black icon" 
+                    href="${props.url}" 
+                    title="${props.title}" 
+                    target="_blank" rel="noreferrer"></a>
+            </div>
+            `
+        })
+
+        return html
+    }
+
+    renderDescription(html = '') {
+        personalInfo.descriptionParagraphs.map(paragraph => {
+            html += `
+            <p>
+                ${paragraph}
+            </p>
+            `
+        })
+
+        return html
+    }
+
+    renderCircleViewer(items = [], html = '') {
+        items.map(value => {
+            html += `
+            <circle-viewer>
+                ${value}
+            </circle-viewer>
+            `
+        })
+
+        return html
+    }
+
+    renderInterests(html = '') {
+        interests.items.map(interest => {
+            html += `
+            <div class="${interest.class}">
+                <span class="icon"></span>
+                ${interest.text}
+            </div>
+            `
+        })
+
+        return html
+    }
+
     // Defines the component default inner HTML
     render () {
         return `
             <a href="#" class="logo"></a>
-            <h2>About me</h2>
+            <h2>${pageTitle}</h2>
 
             <div class="grid grid-3-4 col-gap-2 grid-top">
                 <div class="whoiam grid grid-center">
                     <div class="photoarea">
-                        <img src="./images/photo.jpg" 
-                            alt="Vinicius BS">
+                        <img src="${personalInfo.photo.path}" 
+                            alt="${personalInfo.photo.alt}">
                     </div>
 
                     <div class="personal-info text-content">
                         <span class="name">
-                            <strong>Vinicius Baroni Soares</strong>
+                            <strong>${personalInfo.name}</strong>
                         </span>
                         <span class="email">
-                            <a href="mailto:hiviniciusbs@gmail.com" 
-                                target="_blank">hiviniciusbs@gmail.com</a>
+                            <a href="mailto:${personalInfo.email}" 
+                                target="_blank">${personalInfo.email}</a>
                         </span>
                         <span class="location">
-                            Florianópolis, SC, Brazil
+                            ${personalInfo.location}
                         </span>
                         
                     </div>
 
                     <div class="grid grid-1-1 grid-center col-gap-1 always-col">
-                        <div>
-                            <a class="linkedin-black icon" 
-                                href="https://www.linkedin.com/in/viniciusbs" 
-                                title="LinkedIn" target="_blank" 
-                                rel="noreferrer"></a>
-                        </div>
-                        <div>
-                            <a class="github-black icon" 
-                                href="https://github.com/vinibs" 
-                                title="GitHub" target="_blank"
-                                rel="noreferrer"></a>
-                        </div>
+                        ${this.renderSocialIcons()}
                     </div>
                 </div>
                 <article class="self-description text-content">
-                    <p>
-                        Curious about technology since my childhood and web 
-                        developer since 2015, when I completed my technical 
-                        degree course. In August 2019, I finished my 
-                        <strong>Software Engineering graduation</strong> course
-                        at UTFPR (Technological Federal University of Paraná).
-                    </p>
-                    <p>
-                        During the university period, I was a <strong>full-stack
-                        web developer</strong> intern in its IT sector for two
-                        years and worked for a few months in a software 
-                        development business. Currently, I'm working as a 
-                        full-stack web developer, since August 2019.
-                    </p>
-                    <p>
-                        But I'm not here to be <i>just</i> a developer. 
-                    </p>
-                    <p>
-                        I like to work with creativity. That's why all my 
-                        personal projects are <strong>made from scratch</strong>.
-                    </p>
-                    <p>
-                        My deepest desire is to create and build tools that 
-                        can really help people, joining <strong>software, 
-                        design and psychology concepts</strong>, to make 
-                        people's lives at least a little better.
-                    </p>
+                    ${this.renderDescription()}
                 </article>
             </div>
 
 
             <div class="grid grid-3-6 col-gap-4">
                 <div class="skills text-center">
-                    <h2>Skills</h2>
+                    <h2>${skills.title}</h2>
 
-                    <circle-viewer>
-                        Software architecture
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Automated testing
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Agile methods
-                    </circle-viewer>
-                    
-                    <circle-viewer>
-                        User interface
-                    </circle-viewer>
-                    
-                    <circle-viewer>
-                        User experience
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Web responsivity
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Logo creation
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Visual identity
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Video making
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Text writing
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Hand drawing
-                    </circle-viewer>
+                    ${this.renderCircleViewer(skills.items)}
                 </div>
-
-
 
                 <div id="technologies" class="text-center">
                     <h2>Technologies</h2>
 
-                    <circle-viewer>
-                        HTML
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        CSS
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        PHP
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        JavaScript
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Python
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        C
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Java
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Android (Java)
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        C#
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Node.JS
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Git
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        MySQL
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        PostgreSQL
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        SQLite
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        MongoDB
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        SQL Server
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Selenium
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Cypress
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Codeception
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        JUnit
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Mockito
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Bootstrap
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        jQuery
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        ExtJS
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        D3.js
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        React
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Angular
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Laravel 5
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Django
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        .NET Framework
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Azure DevOps
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Jira
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Heroku
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Amazon Web Services
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Google Cloud Plaftorm
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        GIMP
-                    </circle-viewer>
-
-                    <circle-viewer>
-                        Inkscape
-                    </circle-viewer>
+                    ${this.renderCircleViewer(technologies.items)}
                 </div>
             </div>
 
-            <h2>Main interests</h2>
+            <h2>${interests.title}</h2>
                 <div class="interests grid grid-1-1-1 col-gap-2">
-                    <div class="creativity">
-                        <span class="icon"></span>
-                        Creativity
-                    </div>
-                    <div class="technology">
-                        <span class="icon"></span>
-                        Technology
-                    </div>
-                    <div class="difference">
-                        <span class="icon"></span>
-                        Difference
-                    </div>
+                    ${this.renderInterests()}
                 </div>
         `
     }
