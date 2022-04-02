@@ -1,6 +1,6 @@
 import { styles } from './styles.js'
 
-class MainMenu extends HTMLElement {
+export class MainMenu extends HTMLElement {
     constructor () {
         super()
         const shadowRoot = this.attachShadow({mode: 'open'})
@@ -24,5 +24,3 @@ class MainMenu extends HTMLElement {
         `
     }
 }
-
-window.customElements.define('main-menu', MainMenu)

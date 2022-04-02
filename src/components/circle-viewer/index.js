@@ -1,6 +1,6 @@
 import { styles } from './styles.js'
 
-class CircleViewer extends HTMLElement {
+export class CircleViewer extends HTMLElement {
     constructor () {
         super()
         const shadowRoot = this.attachShadow({mode: 'open'})
@@ -22,5 +22,3 @@ class CircleViewer extends HTMLElement {
         `
     }
 }
-
-window.customElements.define('circle-viewer', CircleViewer)

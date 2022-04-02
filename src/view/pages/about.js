@@ -2,7 +2,6 @@
  * Based on Google Custom Elements documentation:
  * https://developers.google.com/web/fundamentals/web-components/customelements
  */
-import '../../components/circle-viewer/index.js'
 import { interests, pageTitle, personalInfo, skills, technologies } from '../../contents/about.js'
 
 // Defines the custom element's class

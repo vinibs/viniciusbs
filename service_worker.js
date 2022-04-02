@@ -18,10 +18,13 @@ const assets = [
   
   "/src/config/config.js",
   "/src/config/routes.js",
+
   "/src/components/circle-viewer/index.js",
   "/src/components/circle-viewer/styles.js",
   "/src/components/main-menu/index.js",
   "/src/components/main-menu/styles.js",
+  "/src/components/index.js",
+
   "/src/view/index.js",
   "/src/view/errors/not-found.js",
   "/src/view/pages/about.js",
