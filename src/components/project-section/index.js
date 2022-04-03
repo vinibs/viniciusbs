@@ -3,7 +3,7 @@ import { LiraElement } from '/js/lira.js'
 
 const ProjectSectionAttributes = [
     'id',
-    'title',
+    'sectionTitle',
 ]
 
 export class ProjectSection extends LiraElement {
@@ -21,7 +21,7 @@ export class ProjectSection extends LiraElement {
     render () {
         return `
             <div class="project-section" id="${this.id}">
-                <h3 class="subtitle">${this.title}</h3>
+                <h3 class="subtitle">${this.sectionTitle}</h3>
 
                 <slot></slot>
             </div>

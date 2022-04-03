@@ -29,7 +29,7 @@ export class Projects extends LiraElement {
                     return `
                     <project-section 
                         id="${sectionId}" 
-                        title="${projectData.title}">
+                        sectionTitle="${projectData.title}">
         
                         ${this.renderEach(
                             Object.keys(projectData.items), 
