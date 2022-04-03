@@ -1,0 +1,21 @@
+
+.icon {
+    background: url('/images/icons.png') no-repeat top center;
+    background-size: 36px auto;
+    display: block;
+    height: 35px;
+    width: 35px;
+}
+
+.icon.github {
+    background-position: 0 0;
+    border-radius: 100%;
+}
+.icon.github-black {
+    background-position: 0 -35px;
+    border-radius: 100%;
+}
+.icon.linkedin-black {
+    background-position: 0 -71px;
+    border-radius: 8px;
+}

@@ -1,10 +1,3 @@
-/* Animações */
-@keyframes fadein {
-    from {opacity: 0}
-    to {opacity: 1}
-}
-
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,7 +16,7 @@ header {
 }
 
 
-a, a:visited, a:hover, a:active {
+a, a:visited, a:hover, a:active, *::part(link) {
     color: rgb(90,90,90);
     font-style: italic;
 }
@@ -55,12 +48,6 @@ p {
     text-align: justify;
 }
 
-app-index *:not(.logo),
-about-me *:not(.logo),
-my-projects *:not(.logo) {
-    animation: fadein 0.3s;
-}
-
 
 .text-content {
     color: rgb(90,90,90);
@@ -70,23 +57,6 @@ my-projects *:not(.logo) {
 
 .text-center {
     text-align: center;
-}
-
-.logo {
-    backdrop-filter: blur(8px);
-    background: url('../images/logo.svg') no-repeat center center;
-    background-color: rgba(255,255,255,0.8);
-    background-size: 96px auto;
-    border-radius: 8px;
-    color: transparent;
-    display: block;
-    height: 50px;
-    left: 5px;
-    position: fixed;
-    top: 5px;
-    width: 120px;
-    z-index: 15;
-    -webkit-backdrop-filter: blur(8px);
 }
 
 
@@ -252,148 +222,7 @@ my-projects *:not(.logo) {
 .interests > .difference > .icon {
     background-position: 0 -300px;
 }
-
-
-
-/* Página de projetos */
-.subtitle {
-    color: rgb(130,130,130);
-    margin: 60px 30px -50px;
-}
-
-.project-section {
-    margin-bottom: 120px;
-}
-
-.project-section.freelances {
-    margin-bottom: 0;
-}
-
-.project {
-    margin: 80px auto 0;
-}
-
-.project-screen {
-    max-width: 730px;
-}
-
-.project-content {
-    max-width: 500px;
-    padding: 5px 25px;
-}
-
-
-.project h3 {
-    color: rgb(0,0,0);
-    margin: 10px auto 30px;
-}
-
-.project img {
-    width: 95%;
-    border: 1px solid rgb(230,230,230);
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
-}
-
-.screenshot {
-    width: 95%;
-    max-width: 95%;
-    min-width: 95%;
-    padding-bottom: 56.25%;
-    border: 1px solid rgb(210,210,210);
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    margin: auto;
-    background: url('../images/screens.jpg') no-repeat top center;
-    background-size: cover;
-}
-
-    .screenshot.lira {
-        background-position: 0 0;
-    }
-    .screenshot.luvi {
-        background-position: 0 11%;
-    }
-    .screenshot.cadeu {
-        background-position: 0 22%;
-    }
-    .screenshot.pdti {
-        background-position: 0 34.23%;
-        padding-bottom: 48%;
-    }
-    .screenshot.intranet {
-        background-position: 0 44.18%;
-        padding-bottom: 47.3%
-    }
-    .screenshot.events {
-        background-position: 0 54.07%;
-        padding-bottom: 47.8%
-    }
-    .screenshot.siconf {
-        background-position: 0 64.94%;
-        padding-bottom: 54.4%
-    }
-    .screenshot.bochabrasil {
-        background-position: 0 76.5%;
-        padding-bottom: 54.4%
-    }
-    .screenshot.wwb {
-        background-position: 0 88.2%;
-        padding-bottom: 55%;
-    }
-    .screenshot.tsanalysis {
-        background-position: 0 99.6%;
-        padding-bottom: 55%
-    }
-
-.project .resources {
-    color: rgb(110,110,110);
-}
-
-.project .projectlink {
-    margin-top: 40px;
-}
-
-    .projectlink.disabled, .projectlink.disabled a {
-        color: rgb(200,200,200);
-        cursor: default;
-    }
-
-    .projectlink.disabled span {
-        text-decoration: underline;
-        font-style: italic;
-    }
-
-.project .half {
-    max-width: 700px;
-}
-
-
-
-/* Ícones */
-.icon {
-    background: url('../images/icons.png') no-repeat top center;
-    background-size: 36px auto;
-    display: block;
-    height: 35px;
-    width: 35px;
-}
-
-.icon.github {
-    background-position: 0 0;
-    border-radius: 100%;
-}
-.icon.github-black {
-    background-position: 0 -35px;
-    border-radius: 100%;
-}
-.icon.linkedin-black {
-    background-position: 0 -71px;
-    border-radius: 8px;
-}
     
-
-
 
 
 @media (min-width: 901px) {
@@ -429,54 +258,10 @@ my-projects *:not(.logo) {
         margin-right: auto;
         max-width: 700px;
     }
-
-
-    /* Página de projetos */
-    /* Projetos de exibição par */
-    body .grid-7-x:nth-child(even) > .project-screen {
-        grid-column: 1/5;
-        grid-row: 1;
-        justify-self: end;
-        width: 100%;
-    }
-
-    body .grid-7-x:nth-child(even) > .project-content {
-        grid-column: 5/8;
-        grid-row: 1;
-        justify-self: start;
-    }
-
-    body .grid-7-x:nth-child(even) > .project-content > * {
-        text-align: left;
-    }
-
-    /* Projetos de exibição ímpar */
-    body .grid-7-x:nth-child(odd) > .project-screen {
-        grid-column: 4/8;
-        grid-row: 1;
-        justify-self: start;
-        width: 100%;
-
-    }
-
-    body .grid-7-x:nth-child(odd) > .project-content {
-        grid-column: 1/4;
-        grid-row: 1;
-        justify-self: end;
-    }
-
-    body .grid-7-x:nth-child(odd) > .project-content > * {
-        text-align: right;
-    }
 }
 
 
 @media (max-width: 900px) {
-
-    .project .projectlink {
-        text-align: center;
-    }
-
     /* Layout em Grid */
     .grid {
         padding: 15px;
@@ -530,13 +315,5 @@ my-projects *:not(.logo) {
 
     .interests {
         grid-row-gap: 2em;
-    }
-
-
-
-    /* Página de projetos */
-    .project-content {
-        padding: 10px;
-        max-width: none;
     }
 }

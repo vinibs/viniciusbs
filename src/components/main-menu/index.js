@@ -1,18 +1,13 @@
-import { styles } from './styles.js'
+import { LiraElement } from '/js/lira.js'
 
-class MainMenu extends HTMLElement {
+export class MainMenu extends LiraElement {
     constructor () {
-        super()
-        const shadowRoot = this.attachShadow({mode: 'open'})
-    }
-
-    connectedCallback () {
-        this.shadowRoot.innerHTML = this.render()
+        super(true)
+        this.useStyle('./styles.css')
     }
 
     render () {
         return `
-            <style>${styles}</style>
             <nav>
                 <div>
                     <a href="#/about-me" title="About me">About me</a>
@@ -24,5 +19,3 @@ class MainMenu extends HTMLElement {
         `
     }
 }
-
-window.customElements.define('main-menu', MainMenu)
