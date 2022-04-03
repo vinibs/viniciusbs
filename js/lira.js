@@ -1,6 +1,6 @@
 /**
  * @author Vinicius Baroni Soares
- * @version 1.1.0
+ * @version 2.1.0
  */
 
 import config from '../src/config/config.js'
