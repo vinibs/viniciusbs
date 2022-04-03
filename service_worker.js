@@ -21,12 +21,18 @@ const assets = [
 
   "/src/components/circle-viewer/index.js",
   "/src/components/circle-viewer/styles.css",
+  "/src/components/fadein-container/index.js",
+  "/src/components/fadein-container/styles.css",
+  "/src/components/floating-logo/index.js",
+  "/src/components/floating-logo/styles.css",
   "/src/components/main-menu/index.js",
   "/src/components/main-menu/styles.css",
   "/src/components/project-item/index.js",
   "/src/components/project-item/styles.css",
   "/src/components/project-section/index.js",
   "/src/components/project-section/styles.css",
+  "/src/components/social-link-icon/index.js",
+  "/src/components/social-link-icon/styles.css",
   "/src/components/index.js",
 
   "/src/view/index.js",

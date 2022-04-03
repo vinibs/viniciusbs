@@ -1,6 +1,6 @@
 import { LiraElement } from '/js/lira.js'
 
-export class CircleViewer extends LiraElement {
+export class FadeInContainer extends LiraElement {
     constructor () {
         super(true)
         this.useStyle('./styles.css')
@@ -8,10 +8,8 @@ export class CircleViewer extends LiraElement {
 
     render () {
         return `
-            <div class="circle">
-                <div class="overlay">
-                    <slot></slot>
-                </div>
+            <div class="fadein">
+                <slot><slot>
             </div>
         `
     }

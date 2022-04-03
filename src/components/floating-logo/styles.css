@@ -1,0 +1,17 @@
+
+.logo {
+    backdrop-filter: blur(8px);
+    background: url('/images/logo.svg') no-repeat center center;
+    background-color: rgba(255,255,255,0.8);
+    background-size: 96px auto;
+    border-radius: 8px;
+    color: transparent;
+    display: block;
+    height: 50px;
+    left: 5px;
+    position: fixed;
+    top: 5px;
+    width: 120px;
+    z-index: 15;
+    -webkit-backdrop-filter: blur(8px);
+}

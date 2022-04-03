@@ -1,23 +1,26 @@
 import { projects } from '../../contents/projects.js'
+import { LiraElement } from '/js/lira.js'
 
-export class ProjectItem extends HTMLElement {
+const ProjectAttributes = [
+    'parity',
+    'section',
+    'id',
+]
+
+export class ProjectItem extends LiraElement {
     constructor () {
-        super()
+        super(true, ProjectAttributes)
+        this.useStyle('./styles.css')
 
-        const shadowRoot = this.attachShadow({mode: 'open'})
-        this.loadAttributes()
-        
-        this.currentPath = import.meta.url.replace(/https?:\/\/[^\/]+\//, '/')
-        this.currentDirectory = this.currentPath.replace(/\/[^\/]+$/, '')
+        this.loadProjectData()
     }
 
-    loadAttributes () {
-        this.parity = this.getAttribute('parity')
-        this.section = this.getAttribute('section')
-        this.id = this.getAttribute('id')
+    static get observedAttributes () {
+        return ProjectAttributes
+    }
 
+    loadProjectData () {
         const project = projects[this.section].items[this.id]
-
 
         this.name = project.name
         this.year = project.year
@@ -33,25 +36,8 @@ export class ProjectItem extends HTMLElement {
         this.imageTitle = project.image.title
     }
 
-    connectedCallback () {
-        this.execRender()
-    }
-
-    attributeChangedCallback () {
-        this.execRender()
-    }
-
-    execRender () {
-        this.shadowRoot.innerHTML = this.render()
-    }
-
-    loadStyles () {
-        return `<style>@import '${this.currentDirectory}/styles.css';</style>`
-    }
-
     render () {
         return `
-        ${this.loadStyles()}
         <div class="project ${this.parity}">
             <div class="project-screen">
                 ${this.hasLink ? `
