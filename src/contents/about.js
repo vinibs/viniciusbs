@@ -6,7 +6,7 @@ export const personalInfo = {
         alt: 'Vinicius BS'
     },
     name: 'Vinicius Baroni Soares',
-    email: 'hiviniciusbs@gmail.com',
+    email: 'hello@viniciusbs.dev',
     location: 'Florianópolis, SC, Brazil',
     icons: {
         linkedin: {
