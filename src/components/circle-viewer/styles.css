@@ -1,6 +1,6 @@
 
 .circle {
-    border: 2px solid rgb(230,230,230);
+    border: 2px solid rgb(90,90,90);
     box-sizing: border-box;
     border-radius: 50%;
     display:inline-block;
@@ -8,7 +8,6 @@
     margin: 10px;
     position: relative;
     text-align: center;
-    transition: linear 0.2s;
     width: 100px;
 }
 
@@ -16,13 +15,38 @@
     align-items: center;
     border-radius: 50%;
     display:grid;
-    height: 100%;
-    margin: 0 2px;
+    height: calc(100% - 4px);
+    margin: 2px;
     position: absolute;
-    width: calc(100% - 1px);
+    width: calc(100% - 4px);
 }
 
 .circle:hover {
+    animation: border 0.7s;
     border-color: rgb(90,90,90);
     border-width: 3px;
+    transform: linear 0.3s;
+}
+
+.circle:hover > .overlay {
+    cursor: default;
+    height: calc(100% - 12px);
+    margin: 6px;
+    width: calc(100% - 12px);
+}
+
+
+@keyframes border {
+    0% {
+        border-color: rgb(90,90,90);
+        border-width: 2px;
+    }
+    50% {
+        border-color: rgb(180,180,180);
+        border-width: 3px;
+    }
+    100% {
+        border-color: rgb(90,90,90);
+        border-width: 3px;
+    }
 }

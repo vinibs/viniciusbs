@@ -2,8 +2,10 @@ export const pageTitle = 'About me'
 
 export const personalInfo = {
     photo: {
-        path: './images/photo.jpg',
-        alt: 'Vinicius BS'
+        path: './images/photo.webp',
+        alt: 'Vinicius BS',
+        width: 200,
+        height: 200,
     },
     name: 'Vinicius Baroni Soares',
     email: 'hello@viniciusbs.dev',
@@ -38,10 +40,8 @@ export const skills = {
         'Automated testing',
         'Agile methods',
         'User interface',
-        'User experience',
         'Web responsivity',
         'Logo creation',
-        'Visual identity',
         'Video making',
         'Text writing',
         'Hand drawing',
@@ -68,7 +68,6 @@ export const technologies = {
         'MongoDB',
         'Cypress',
         'Selenium',
-        'Codeception',
         'JUnit',
         'Mockito',
         'Bootstrap',

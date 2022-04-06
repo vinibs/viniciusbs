@@ -18,7 +18,7 @@
 
 .project h3 {
     color: rgb(0,0,0);
-    font-weight: 100;
+    font-weight: 400;
     line-height: 1.75em;
     margin: 10px auto 30px;
     text-align: center;
@@ -45,7 +45,7 @@
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     border-radius: 10px;
     margin: auto;
-    background: url('/images/screens.jpg') no-repeat top center;
+    background: url('/images/screens.webp') no-repeat top center;
     background-size: cover;
 }
 

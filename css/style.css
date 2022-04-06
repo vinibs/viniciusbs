@@ -6,7 +6,6 @@
 
 body {
     font-family: sans-serif;
-    font-weight: 100;
     line-height: 1.45em;
     margin-bottom: 115px;
 }
@@ -23,7 +22,7 @@ a, a:visited, a:hover, a:active, *::part(link) {
 
 h1, h2, h3, h4 {
     color: rgb(60,60,60);
-    font-weight: 100;
+    font-weight: 400;
     text-align: center;
     text-transform: uppercase;
 }
@@ -35,10 +34,6 @@ h2 {
 
 h3 {
     line-height: 175%;
-}
-
-b, strong {
-    font-weight: 600;
 }
 
 p {
@@ -151,7 +146,6 @@ p {
 
 .grid.home > .home-content > .description > span:first-child {
     font-size: 23pt;
-    font-weight: 500;
 }
 
 .grid.home > .home-content > .technologies {
@@ -203,7 +197,7 @@ p {
 }
 
 .interests > div > .icon {
-    background: url(../images/icons.png) no-repeat top center;
+    background: url(../images/icons.webp) no-repeat top center;
     background-size: 60px auto;
     display: block;
     height: 59px;
