@@ -31,6 +31,8 @@ export class AboutMe extends LiraElement {
                     <div class="whoiam grid grid-center">
                         <div class="photoarea">
                             <img src="${personalInfo.photo.path}" 
+                                width="${personalInfo.photo.width}"
+                                height="${personalInfo.photo.height}"
                                 alt="${personalInfo.photo.alt}">
                         </div>
 

@@ -2,8 +2,10 @@ export const pageTitle = 'About me'
 
 export const personalInfo = {
     photo: {
-        path: './images/photo.jpg',
-        alt: 'Vinicius BS'
+        path: './images/photo.webp',
+        alt: 'Vinicius BS',
+        width: 200,
+        height: 200,
     },
     name: 'Vinicius Baroni Soares',
     email: 'hello@viniciusbs.dev',

@@ -197,7 +197,7 @@ p {
 }
 
 .interests > div > .icon {
-    background: url(../images/icons.png) no-repeat top center;
+    background: url(../images/icons.webp) no-repeat top center;
     background-size: 60px auto;
     display: block;
     height: 59px;

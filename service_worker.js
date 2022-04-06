@@ -12,9 +12,9 @@ const assets = [
   "/images/icons/icon-default-512x512.png",
   "/images/favicon.png",
   "/images/logo.svg",
-  "/images/icons.png",
-  "/images/photo.jpg",
-  "/images/screens.jpg",
+  "/images/icons.webp",
+  "/images/photo.webp",
+  "/images/screens.webp",
   
   "/src/config/config.js",
   "/src/config/routes.js",
