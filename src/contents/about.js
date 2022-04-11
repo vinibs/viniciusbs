@@ -58,6 +58,7 @@ export const technologies = {
         'Python',
         'Node.JS',
         'C',
+        'Shell Script',
         'Java',
         'Android (Java)',
         'C#',
