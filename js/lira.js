@@ -329,8 +329,11 @@ class LiraElement extends HTMLElement {
         
         this._useShadowRoot = useShadowRoot
 
+        let domRoot = this
+
         if (useShadowRoot) {
             this.attachShadow({mode: 'open'})
+            domRoot = this.shadowRoot
         }
 
         this._attributes = attributes
@@ -339,8 +342,15 @@ class LiraElement extends HTMLElement {
         })
 
         this._useStyle = false
+
+        domRoot.addEventListener("slotchange", (event) => {
+            this.onSlotChange(event)
+        })
     }
 
+    /**
+     * Default observed attributes list definition (empty)
+     */
     static get observedAttributes () {
         return []
     }
@@ -363,6 +373,14 @@ class LiraElement extends HTMLElement {
      */
     connectedCallback () {
         this._execRender()
+    }
+
+    /**
+     * Default behavior on slot change
+     * @param {Event} event 
+     */
+    onSlotChange (event) {
+        this._execRender
     }
 
     /**
