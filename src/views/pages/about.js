@@ -63,8 +63,9 @@ export class AboutMe extends LiraElement {
                         </div>
                     </div>
                     <article class="self-description text-content">
-                        ${personalInfo.descriptionParagraphs
-                            .map(text => `<p>${text}</p>`).join('')}
+                        <paragraph-text>
+                            ${personalInfo.description}
+                        </paragraph-text>
                     </article>
                 </div>
 

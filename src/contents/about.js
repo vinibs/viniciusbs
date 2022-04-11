@@ -20,17 +20,17 @@ export const personalInfo = {
             title: 'GitHub',
         }
     },
-    descriptionParagraphs: [
-        `Curious about technology since my childhood and web developer since 2015, when I completed my technical degree course. In August 2019, I finished my <strong>Software Engineering graduation</strong> course at UTFPR (Technological Federal University of Paraná).`,
+    description: `
+        Curious about technology since my childhood and web developer since 2015, when I completed my technical degree course. In August 2019, I finished my <strong>Software Engineering graduation</strong> course at UTFPR (Technological Federal University of Paraná).
+        
+        During the university period, I was a <strong>full-stack web developer</strong> intern in its IT sector for two years and worked for a few months in a software development business. Currently, I'm working as a full-stack web developer, since August 2019.
+        
+        But I'm not here to be <i>just</i> a developer.
 
-        `During the university period, I was a <strong>full-stack web developer</strong> intern in its IT sector for two years and worked for a few months in a software development business. Currently, I'm working as a full-stack web developer, since August 2019.`,
-
-        `But I'm not here to be <i>just</i> a developer. `,
-
-        `I like to work with creativity. That's why all my personal projects are <strong>made from scratch</strong>.`,
-
-        `My deepest desire is to create and build tools that can really help people, joining <strong>software, design and psychology concepts</strong>, to make people's lives at least a little better.`
-    ]
+        I like to work with creativity. That's why all my personal projects are <strong>made from scratch</strong>.
+        
+        My deepest desire is to create and build tools that can really help people, joining <strong>software, design and psychology concepts</strong>, to make people's lives at least a little better.
+    `
 }
 
 export const skills = {
