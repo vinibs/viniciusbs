@@ -25,7 +25,7 @@ export class ProjectItem extends LiraElement {
         this.name = project.name
         this.year = project.year
         this.resources = project.resources
-        this.paragraphs = project.description
+        this.description = project.description
 
         this.url = project.link?.url
         this.linkTitle = project.link?.title
@@ -54,9 +54,9 @@ export class ProjectItem extends LiraElement {
                     ${this.resources.join(', ')}
                 </p>
 
-                <div class="description">
-                    ${this.paragraphs.map(text => `<p>${text}</p>`).join('')}
-                </div>
+                <paragraph-text class="description">
+                    ${this.description}
+                </paragraph-text>
 
                 ${this.hasLink ? `
                 <p class="projectlink">
