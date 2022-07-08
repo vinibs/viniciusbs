@@ -473,18 +473,22 @@ const getCallerInfo = (depthLevel = 1) => {
         var stackLines = err.stack.split('\n')
 
         const extractCallerName = (line) => {
-            let callerName = line.match(/at [^\(]+/)
-            if (!callerName.length) return ''
+            const safariCallerName = line.match(/^[^@]+/)
+            const chromeCallerName = line.match(/at [^\(]+/)
 
-            return callerName[0].trim().split(' ').at(-1)
+            if (safariCallerName) return safariCallerName
+
+            if (!chromeCallerName?.length) return ''
+
+            return chromeCallerName[0].trim().split(' ').at(-1)
         }
 
         const extractFilePath = (line) => {
-            let path = line.match(/\(.+\)/)
-            if (!path.length) return ''
+            let path = line.match(/\(.+\)|@.+/)
+            if (!path?.length) return ''
 
             return path[0]
-                    .replace(/[\(\)]/g, '')
+                    .replace(/[\(\)\@]/g, '')
                     .replace(/https?:\/\/[^\/]+\//, '/')
                     .replace(/(\:\d+)+$/, '')
         }
@@ -493,13 +497,18 @@ const getCallerInfo = (depthLevel = 1) => {
             return filePath.replace(/\/[^\/]+$/, '')
         }
 
+        let controlIndex = 0
         stackLines.map((line, index) => {
-            if (index == desiredDepthIndex) {
+            if (index === 0 && line !== 'Error') controlIndex++
+
+            if (controlIndex == desiredDepthIndex) {
                 line = line.trim()
                 caller = extractCallerName(line)
                 callerFilePath = extractFilePath(line)
                 callerDirPath = extractDirectoryPath(callerFilePath)
             }
+
+            controlIndex++
         })
 
         return {
