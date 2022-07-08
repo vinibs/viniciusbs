@@ -132,26 +132,21 @@ p {
     color: transparent;
 }
 
-.grid.home > .home-content > .description {
-    align-items: center;
-    color: rgb(60,60,60);
-    font-size: 15pt;
-    grid-gap: 0.3em;
-    grid-template-columns: auto auto;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
+/* .grid.home > .home-content {
+    
+} */
 
-.grid.home > .home-content > .description > span:first-child {
-    font-size: 23pt;
+.grid.home > .home-content > .description {
+    color: rgb(60,60,60);
+    font-size: 20pt;
+    line-height: 28pt;
+    text-transform: uppercase;
 }
 
 .grid.home > .home-content > .technologies {
     color: rgb(110,110,110);
     font-size: 14pt;
     line-height: 165%;
-    margin-top: 35px;
-    width: 100%;
 }
 
 .grid.home > .github-icon {
@@ -231,6 +226,15 @@ p {
         justify-self: start;
     }
 
+    .grid.home > .home-content > .description {
+        align-self: end;
+    }
+
+    .grid.home > .home-content > .technologies {
+        align-self: start;
+        justify-self: start;
+    }
+
 
     /* Página About */
     .whoiam {
@@ -295,8 +299,8 @@ p {
         width: 75%;
     }
 
-    .description .functions {
-        text-align: left;
+    .description > span {
+        display: block;
     }
 
 

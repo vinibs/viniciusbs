@@ -19,10 +19,10 @@ export class Home extends LiraElement {
             <fadein-container>
                 <div class="grid grid-1-1 col-gap-4 row-gap-2 home">
                     <div class="home-logo">vinicius bs</div>
-                    <div class="home-content">
-                        <div class="description grid">
-                            <span>Web de</span>
-                            <span class="functions">sign<br>velopment</span>
+                    <div class="home-content grid grid-center row-gap-2">
+                        <div class="description">
+                            <span>Software <strong>making</strong>.</span>
+                            <span><em>Web first.</em></span>
                         </div>
                 
                         <div class="technologies">
