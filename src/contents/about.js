@@ -23,13 +23,15 @@ export const personalInfo = {
     description: `
         Curious about technology since my childhood and web developer since 2015, when I completed my technical degree course. In August 2019, I finished my <strong>Software Engineering graduation</strong> course at UTFPR (Technological Federal University of Paraná).
         
-        During the university period, I was a <strong>full-stack web developer</strong> intern in its IT sector for two years and worked for a few months in a software development business. Currently, I'm working as a full-stack web developer, since August 2019.
+        I worked as a <strong>full-stack web developer</strong> for four years so far, two of them being during my internship. Currently I'm working mainly as a <strong>back-end engineer</strong> for more than one and a half year.
         
-        But I'm not here to be <i>just</i> a developer.
+        But I'm <strong>not</strong> here to be <strong>just</strong> <em>a developer</em>. 
+        
+        I'm here to <strong>build solutions</strong> for real world problems through technology. <strong>To use code as a tool, not as an end.</strong>
 
-        I like to work with creativity. That's why all my personal projects are <strong>made from scratch</strong>.
+        I like to work with creativity and reduce unnecessary complexities from the built solution. That's why all my personal projects are <strong>made from scratch</strong>.
         
-        My deepest desire is to create and build tools that can really help people, joining <strong>software, design and psychology concepts</strong>, to make people's lives at least a little better.
+        My greatest desire is to create and build solutions that can really help people and make their lives at least a little better.
     `
 }
 
