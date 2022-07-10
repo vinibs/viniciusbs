@@ -91,12 +91,3 @@ export const technologies = {
         'Inkscape',
     ]
 }
-
-export const interests = {
-    title: 'Interests',
-    items: [
-        { class: 'creativity', text: 'Creativity' },
-        { class: 'technology', text: 'Technology' },
-        { class: 'difference', text: 'Difference' },
-    ]
-}

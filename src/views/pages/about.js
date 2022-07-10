@@ -3,7 +3,6 @@
  * https://developers.google.com/web/fundamentals/web-components/customelements
  */
 import { 
-    interests, 
     pageTitle, 
     personalInfo, 
     skills, 
@@ -94,18 +93,6 @@ export class AboutMe extends LiraElement {
                             `
                         })}
                     </div>
-                </div>
-
-                <h2>${interests.title}</h2>
-                <div class="interests grid grid-1-1-1 col-gap-2">
-                    ${this.renderEach(interests.items, interest => {
-                        return `
-                        <div class="${interest.class}">
-                            <span class="icon"></span>
-                            ${interest.text}
-                        </div>
-                        `
-                    })}
                 </div>
             </fadein-container>
         `
