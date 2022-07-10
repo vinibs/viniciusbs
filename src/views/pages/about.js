@@ -6,7 +6,7 @@ import {
     pageTitle, 
     personalInfo, 
     skills, 
-    technologies 
+    tools 
 } from '../../contents/about.js'
 import { LiraElement } from '/js/lira.js'
 
@@ -82,10 +82,10 @@ export class AboutMe extends LiraElement {
                         })}
                     </div>
 
-                    <div id="technologies" class="text-center">
-                        <h2>Technologies</h2>
+                    <div id="tools" class="text-center">
+                        <h2>${tools.title}</h2>
                         
-                        ${this.renderEach(technologies.items, (item) => {
+                        ${this.renderEach(tools.items, (item) => {
                             return `
                             <circle-viewer>
                                 ${item}
