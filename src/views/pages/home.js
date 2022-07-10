@@ -21,13 +21,12 @@ export class Home extends LiraElement {
                     <div class="home-logo">vinicius bs</div>
                     <div class="home-content grid grid-center row-gap-2">
                         <div class="description">
-                            <span>Software <strong>making</strong>.</span>
+                            <span>Software <strong>engineering</strong>.</span>
                             <span><em>Web first.</em></span>
                         </div>
                 
                         <div class="technologies">
-                            PHP, HTML, CSS, JS.<br>
-                            And a little bit more.
+                            Building solutions through technology.
                         </div>
                     </div>
                 

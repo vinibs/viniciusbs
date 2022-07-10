@@ -132,15 +132,15 @@ p {
     color: transparent;
 }
 
-/* .grid.home > .home-content {
-    
-} */
-
 .grid.home > .home-content > .description {
     color: rgb(60,60,60);
-    font-size: 20pt;
-    line-height: 28pt;
+    font-size: 18pt;
+    line-height: 25pt;
     text-transform: uppercase;
+}
+
+.grid.home > .home-content > .description > span {
+    display: block;
 }
 
 .grid.home > .home-content > .technologies {
@@ -224,6 +224,7 @@ p {
 
     .grid.home > .home-content {
         justify-self: start;
+        justify-items: start;
     }
 
     .grid.home > .home-content > .description {
@@ -297,10 +298,6 @@ p {
         height: 160px;
         max-width: 300px;
         width: 75%;
-    }
-
-    .description > span {
-        display: block;
     }
 
 
