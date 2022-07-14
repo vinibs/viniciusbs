@@ -25,7 +25,7 @@ export class Home extends LiraElement {
                             <span><em>Web first.</em></span>
                         </div>
                 
-                        <div class="technologies">
+                        <div class="subtitle">
                             Building solutions through technology.
                         </div>
                     </div>

@@ -143,7 +143,7 @@ p {
     display: block;
 }
 
-.grid.home > .home-content > .tools {
+.grid.home > .home-content > .subtitle {
     color: rgb(110,110,110);
     font-size: 14pt;
     line-height: 165%;
@@ -206,7 +206,7 @@ p {
         align-self: end;
     }
 
-    .grid.home > .home-content > .tools {
+    .grid.home > .home-content > .subtitle {
         align-self: start;
         justify-self: start;
     }
