@@ -9,7 +9,7 @@ export class FadeInContainer extends LiraElement {
     render () {
         return `
             <div class="fadein">
-                <slot><slot>
+                <slot></slot>
             </div>
         `
     }
