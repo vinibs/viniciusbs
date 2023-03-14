@@ -1,0 +1,34 @@
+p {
+    text-transform: uppercase;
+}
+
+.project-item-container {
+    background-repeat: no-repeat;
+    background-position: center left 10px;
+    background-size: 32px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px 10px 5px 58px;
+    text-align: left;
+    transition: linear 0.2s;
+}
+
+.project-item-container.backend {
+    background-image: url('../images/content-icons/backend.svg');
+}
+
+.project-item-container.cli {
+    background-image: url('../images/content-icons/cli.svg');
+}
+
+.project-item-container.mobile {
+    background-image: url('../images/content-icons/mobile.svg');
+}
+
+.project-item-container.web {
+    background-image: url('../images/content-icons/web.svg');
+}
+
+.project-item-container:hover {
+    background-color: rgb(245,245,245)
+}
