@@ -8,7 +8,7 @@ export const personalInfo = {
         height: 200,
     },
     name: 'Vinicius Baroni Soares',
-    email: 'hello@viniciusbs.dev',
+    email: 'hiviniciusbs@gmail.com',
     location: 'Florianópolis, SC, Brazil',
     icons: {
         linkedin: {
