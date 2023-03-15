@@ -293,11 +293,22 @@ p {
         padding: 15px;
     }
 
-    .grid-1-1, 
     .grid-1-2, 
     .grid-3-4, 
     .grid-3-6 {
         grid-template-columns: 1fr;
+    }
+
+    .grid-1-2.col-gap-1, 
+    .grid-1-2.col-gap-2, 
+    .grid-1-2.col-gap-4, 
+    .grid-3-4.col-gap-1,
+    .grid-3-4.col-gap-2, 
+    .grid-3-4.col-gap-4, 
+    .grid-3-6.col-gap-1,
+    .grid-3-6.col-gap-2,
+    .grid-3-6.col-gap-4 {
+        grid-column-gap: 0;
     }
 
     .grid-1-1 > div, 
@@ -327,6 +338,10 @@ p {
     .grid.home {
         grid-template-columns: 1fr;
     }
+
+        .grid.home > div {
+            grid-column: 1/1;
+        }
 
     .grid.home > .home-logo {
         height: 160px;
