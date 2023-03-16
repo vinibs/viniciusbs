@@ -117,6 +117,7 @@ export const projects = {
             "RabbitMQ",
             "Jest",
             "PostgreSQL",
+            "AWS",
         ],
         description: `
             After a few months helping the project's back-end team by constantly reviewing their code, I started working on it directly.
@@ -143,6 +144,8 @@ export const projects = {
             "Firebase",
             "Pytest",
             "PostgreSQL",
+            "AWS",
+            "Terraform",
         ],
         description: `
             Thaw is an app created for controlling heating insoles.
@@ -154,6 +157,8 @@ export const projects = {
             In this project, we used Firebase to send push notifications. To get to know the correct parameters the back-end should send so the notifications appear correctly on the different operating systems, I also developed two proves of concept (POCs) - one for Android, using native Kotlin, and one for iOS, using Swift - to better understand what data each OS needed to receive.
 
             Keeping the culture of automated testing, all the backend main functions and its integrations were tested through test cases written with Pytest.
+
+            I was also responsible for setting and managing the project's backend environments (staging and production) on AWS through Terraform scripts.
         `
     },
     etch: {
@@ -191,6 +196,8 @@ export const projects = {
             "OAuth",
             "PHP",
             "MySQL",
+            "AWS",
+            "Jenkins",
         ],
         description: `
             This project started by a need of allowing users of one application to be redirected and automatically authenticated in another application from a partner company. That meant we needed to provide the user's data to this second application.
@@ -213,6 +220,7 @@ export const projects = {
             "Cordova",
             "PHP",
             "MySQL",
+            "Jenkins",
         ],
         description: `
             A mobile app to let the client follow up with its seed shipment in real time among many different farms is what defines CliConnect.
@@ -235,6 +243,7 @@ export const projects = {
             "Native Android",
             "PHP",
             "MySQL",
+            "Jenkins",
         ],
         description: `
             mGeld is the Android app used by Genesis's employees in the field to register their activities on some processes, that later can be seen and managed through Geld.
@@ -257,6 +266,8 @@ export const projects = {
             "Java",
             "Springboot",
             "MySQL",
+            "AWS",
+            "Jenkins",
         ],
         description: `
             This project was an abstraction inside a partner application to access Geld data and generate charts and statistics.
@@ -281,6 +292,8 @@ export const projects = {
             "jQuery",
             "Cypress",
             "MySQL",
+            "AWS",
+            "Jenkins",
         ],
         description: `
             Geld is a web platform for managing Genesis's internal field operations.
@@ -313,6 +326,8 @@ export const projects = {
             "Responsive", 
             "SQLite", 
             "PostgreSQL",
+            "Heroku",
+            "AWS S3",
         ],
         description: `
             This was my graduation's final project, made with various technologies that I had to learn just to get it done.
