@@ -21,62 +21,16 @@ export const personalInfo = {
         }
     },
     description: `
-        Curious about technology since my childhood and web developer since 2015, when I completed my technical degree course. In August 2019, I finished my <strong>Software Engineering graduation</strong> course at UTFPR (Technological Federal University of Paraná).
-        
-        I worked as a <strong>full-stack web developer</strong> for four years so far, two of them being during my internship. Currently I'm working mainly as a <strong>back-end engineer</strong> for more than one and a half year.
-        
-        But I'm <strong>not</strong> here to be <strong>just</strong> <em>a developer</em>. 
-        
-        I'm here to <strong>build solutions</strong> for real world problems through technology. <strong>To use code as a tool, not as an end.</strong>
+        Hello! You can call me Vini.
 
-        I like to work with creativity and reduce unnecessary complexities from the built solution. That's why all my personal projects are <strong>made from scratch</strong>.
+        I'm a Software Engineer with expertise in both back-end and full-stack development, graduated in Software Engineering in 2019, but I have been learning and working with it since 2014.
         
-        My greatest desire is to create and build solutions that can really help people and make their lives at least a little better.
+        I see writing code as a path to achieve great results and making a real difference, not as the end goal. A passion for helping people drives me, and it brings me great satisfaction to assist others in solving problems whenever possible.
+
+        Because of that, I have become a trusted reference for code review, clean code and Git issue resolution among my colleagues, and many coworkers have sought my help in solving tricky problems.
+
+        I have achieved great results when responsible for planning and building the architecture for some projects and mentoring my colleagues in learning new technologies to deliver successful outcomes.
+
+        Always a curious person, I look for opportunities to improve my skills and knowledge, currently exploring new areas of interest, focusing on DevOps, software architecture, design patterns, and leadership.
     `
-}
-
-export const skills = {
-    title: 'Skills',
-    items: [
-        // 'Software architecture',
-        'Automated testing',
-        'Web responsivity',
-        'Logo creation',
-        'Video making',
-        'Text writing',
-        'Hand drawing',
-    ]
-}
-
-export const tools = {
-    title: 'Main Tools',
-    items: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'PHP',
-        'Python',
-        'Node JS',
-        'C',
-        'Shell Script',
-        'Java',
-        'Android (Java)',
-        'Git',
-        'MySQL',
-        'PostgreSQL',
-        'SQLite',
-        'Pytest',
-        'Jest',
-        'Cypress',
-        'Selenium',
-        'Bootstrap',
-        'jQuery',
-        'Django',
-        'React',
-        'Laravel 5',
-        'Jira',
-        'AWS',
-        'GIMP',
-        'Inkscape',
-    ]
 }

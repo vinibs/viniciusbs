@@ -4,9 +4,7 @@
  */
 import { 
     pageTitle, 
-    personalInfo, 
-    skills, 
-    tools 
+    personalInfo,
 } from '../../contents/about.js'
 import { LiraElement } from '/js/lira.js'
 
@@ -27,7 +25,7 @@ export class AboutMe extends LiraElement {
                 <h2>${pageTitle}</h2>
 
                 <div class="grid grid-3-4 col-gap-2 grid-top">
-                    <div class="whoiam grid grid-center">
+                    <div class="whoiam grid grid-center grid-middle">
                         <div class="photoarea">
                             <img src="${personalInfo.photo.path}" 
                                 width="${personalInfo.photo.width}"
@@ -68,32 +66,6 @@ export class AboutMe extends LiraElement {
                     </article>
                 </div>
 
-
-                <div class="grid grid-3-6 col-gap-4">
-                    <div class="skills text-center">
-                        <h2>${skills.title}</h2>
-
-                        ${this.renderEach(skills.items, (item) => {
-                            return `
-                            <circle-viewer>
-                                ${item}
-                            </circle-viewer>
-                            `
-                        })}
-                    </div>
-
-                    <div id="tools" class="text-center">
-                        <h2>${tools.title}</h2>
-                        
-                        ${this.renderEach(tools.items, (item) => {
-                            return `
-                            <circle-viewer>
-                                ${item}
-                            </circle-viewer>
-                            `
-                        })}
-                    </div>
-                </div>
             </fadein-container>
         `
     }
