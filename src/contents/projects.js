@@ -117,6 +117,7 @@ export const projects = {
             "RabbitMQ",
             "Jest",
             "PostgreSQL",
+            "Terraform",
             "AWS",
         ],
         description: `
@@ -124,16 +125,23 @@ export const projects = {
 
             The main goal was to create a ctyptocurrency exchange inside a digital bank app, so user could buy, convert and sell assets in an easy and integrated way.
 
-            During its development, I helped the team to identify risky situations and find convertion errors that could lead to an issue to the digital bank company.
+            During its development, I helped the team to identify risky situations and find convertion errors that could lead to issues to the digital bank company.
 
             Besides the usual complexity of the back-end, this project also involved integrating the code with Binance APIs - where the cryptocurrencies were actually traded - and manage transactions using RabbitMQ as a message broker.
 
             All the main functionalities and their behaviors were tested using Jest, keeping a culture of testing as much as possible during the back-end development.
+
+            I also needed to make some changes on the back-end infrastructure using Terraform and accompany logs on AWS to identify and solve some issues.
         `
     },
     thaw: {
         type: projectTypes.mobile,
         category: categories.at_work,
+        link: { 
+            url: "https://github.com/vinibs/fcm-notification-tester", 
+            title: "Firebase POCs on GitHub",
+            text: "View the POCs on GitHub",
+        },
         image: { title: "ACG Thaw screenshot", file: "thaw.webp" },
         name: "ACG Thaw",
         year: "2021 - 2022",
