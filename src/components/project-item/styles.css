@@ -126,6 +126,9 @@ button.close-project {
     }
 
     button.close-project {
+        bottom: 95px;
         grid-column: 4/4;
+        left: calc(50vw - 22.5px);
+        position: fixed;
     }
 }
