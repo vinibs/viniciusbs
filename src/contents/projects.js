@@ -62,6 +62,7 @@ export const projects = {
             "Node JS", 
             "TypeScript",
             "React",
+            "RabbitMQ",
             "Jira API",
             "Apache Superset",
             "Docker",
