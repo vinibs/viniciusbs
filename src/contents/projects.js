@@ -15,6 +15,159 @@ const projectTypes = {
 
 export const projects = {
 
+    mob_dropbox_automation: {
+        type: projectTypes.backend,
+        category: categories.at_work,
+        name: "Dropbox data collect automation",
+        year: "2023",
+        resources: [
+            "Python",
+            "AWS S3",
+            "AWS Lambda Functions",
+            "Dropbox SDK",
+            "Docker",
+        ],
+        description: `
+            As part of the data collect process, one client needed the data was collected from a Dropbox account, where the files were manually uploaded during the weekdays.
+
+            For more than a year this collect process was done manually, eventually more than once a day, since there weren't a fixed time window to the files to be available on the Dropbox account, and once I became responsible for this process (for a few days) a developed a Python script to automate this process.
+
+            This project consisted in understanding how to have a constant connection to the Dropbox account without needing a user to interact to it and deploy the code to a Lambda function so it could be scheduled to run a few times a day (due to the lack of a fixed time window for the files' availability).
+
+            The main idea of this automation was to connect to Dropbox, look for the files regarding the provided date, download them (if found) and upload them to AWS S3 to start the data engineering process.
+
+            A cool feature was the fact that the script identified if the provided date (by default the current date) is a monday and, if so, it also searched for the files regarding the previous weekend days - since the files for these days are always uploaded on mondays. 
+            
+            In the end, this scheduled Lambda function reduced the time and effort needed to daily collect the data from this specific client.
+        `
+    },
+    sync_oracle_db_connection_poc: {
+        type: projectTypes.cli,
+        category: categories.at_work,
+        name: "Oracle DB connection POC",
+        year: "2023",
+        resources: [
+            "Python",
+            "Shell Script",
+            "Windows",
+            "Linux",
+            "Multiplatform",
+            "Virtual Machine",
+            "Proof of Concept (POC)",
+        ],
+        description: `
+            A Proof of Concept developed to find a better way to connect the current application to Oracle databases running locally.
+
+            The application was initially configured to connect to Oracle databases through a Java platform, but since the application needed to be installed in the client's machine the goal was not to need to install Java when installing the application.
+
+            This change should be able to connect to the database when running in different Windows versions, such as XP, 7 and 10, while being compatible with Linux platforms - since it would run in an uncontrolled environment in the client's machine.
+
+            This POC needed some virtual machines running different Windows and Linux versions and also the Oracle database so it could be accessible by the other VMs.
+
+            The Python code was able to successfully be installed on the machines and connect to the database so this POC became the base for future improvements to the final application.
+        `
+    },
+    sync_serverless_automation_server: {
+        type: projectTypes.backend,
+        category: categories.at_work,
+        name: "Serverless deploy automation server",
+        year: "2023",
+        resources: [
+            "JavaScript",
+            "NodeJS",
+            "Express",
+            "AWS S3",
+            "AWS EC2",
+            "AWS CodeDeploy",
+            "Serverless Framework",
+            "Docker",
+            "Bitbucket Pipelines",
+        ],
+        description: `
+            As part of a bigger application it was necessary to automate the process of creating serverless projects, with specifics files and dependencies and custom Docker images.
+
+            Oriented to use the Serverless Framework to deploy the custom image through code, I developed a Proof of Concept and then turned it into a web server, running on AWS EC2, to receive a JSON data through an endpoint and use it to create an internal directory with all the needed files, including the setup for Serverless Framework and the Dockerfile and then run a command to trigger Serverless to build and deploy the project.
+
+            This project also used Bitbucket pipelines, which were configured to run the automated tests and, once they all passed, deploy the updated version using AWS CodeDeploy.
+        `
+    },
+    mob_collect_proxy: {
+        type: projectTypes.backend,
+        category: categories.at_work,
+        name: "Data collect reverse proxy",
+        year: "2023",
+        resources: [
+            "Nginx",
+            "AWS EC2",
+        ],
+        description: `
+            For collecting data of some clients, there were IP restrictions on their firewall and it was decided to configure an existing EC2 machine with fixed IP as a reverse proxy.
+
+            This way, it was possible to communicate with all the clients' APIs that had IP restrictions using the fixed IP from this machine. To do that, I configured an Nginx server on that machine and configured it as a reverse proxy.
+
+            It became, then, used for both development and production purposes to allow our Fargate instances to communicate to the clients' APIs.
+
+            Although there were some limitations with this approach, such as error observability when we got a 502 answer from the proxy, it made the process of communicating with such APIs a lot easier.
+        `
+    },
+    mob_data_formatting: {
+        type: projectTypes.backend,
+        category: categories.at_work,
+        name: "Data formatting platform",
+        year: "2023",
+        resources: [
+            "Python",
+            "AWS S3",
+            "AWS Lambda Functions",
+            "Pandas",
+            "NumPy",
+            "Docker",
+        ],
+        description: `
+            Being part of the same flow as the data collect platform, the data formatting platform consists of Lambda functions that were created to standardize the data before going to data engineering processes.
+
+            After the data of a single source (client) was collected, Lambda functions to format the data from that source were invoked, reading the original Parquet file on AWS S3, adjusting its data to the standard format and uploading the resulting dataset as a new Parquet on S3.
+
+            When I started working in this project, it was composed by a bunch of independent scripts, most of them copying the same base structure from the others. Then I became responsible for maintaining it and making it support new sources and, to make it easier, I refactored the whole project structure so we had a single base class defining the whole formatting process and each of the specific classes, for each source, would have to just define what was really specific for those data.
+
+            After refactoring and documenting the new structure and how it worked, it became much easier to create new formatting Lambda functions, since each new class, for a new source, would have only a few lines of code and a process that initially was taking about one or two days to be done started to be done in a couple of hours.
+        `
+    },
+    mob_collect: {
+        type: projectTypes.backend,
+        category: categories.at_work,
+        name: "Data collect platform",
+        year: "2023 - 2024",
+        resources: [
+            "Python",
+            "FastAPI",
+            "CLI",
+            "AWS S3",
+            "AWS Fargate",
+            "AWS CDK",
+            "AWS SDK",
+            "Docker",
+            "Parallelism",
+            "MS Teams messaging",
+        ],
+        description: `
+            A platform started from scratch to satisfy the need of collecting data from different sources for a specific client - each source being one of the client's client, with different API standards and naming patterns.
+
+            Initially developed as a FastAPI project, it was soon converted to a Python CLI to be run on different containers on AWS using Fargate. Built so the data collect process for each source could be run in a different instance but using the same Docker image, later I became responsible for splitting and parallelizing the collect process for a single source (client).
+
+            To achieve the desired parallelism and improve collect time, there were used 3 different approaches: split the collect by every context (running one instance to collect only products, another one only for suppliers, etc.), splitting the collect on specific parameters the API needed (some APIs returned data only for a specific store, so each store's data were collected in a different instance) and splitting by pagination, with each instance collecting a chunk of X pages.
+
+            The greatest challenge on this process was to really parallelize the pagination, since it was not possible to know the total number of pages. To do this, it was used the idea of "check the last page of the chunk - if we have more pages than that, start a new instance for the next chunk and, then, continue collecting data from all the other pages in this current chunk" and it worked like a charm. 
+            
+            After implementing all these strategies, a data collect that was taking more than 4h started to be done in 26 minutes.
+            
+            Every data collected was saved as a Parquet file on S3 and became part of a data engineering flow of another team. The instances management was done using the AWS SDK and the base infrastructure was defined using AWS CDK.
+
+            During the collect processes, if something gone wrong, the platform automatically retried 3 times the same request and if it kept failing sent a message on a MS Teams group, alerting about the error.
+
+            I was responsible for the creation of this project in first instance, then became responsible for implementing every new feature, guiding colleagues on maintaining it and writing automated tests, defining how to improve collect time and implementing what was needed to make this improvement. With this, I was taken as a technical reference and expert in this client's process and data collect features.
+        `
+    },
     farm: {
         type: projectTypes.web,
         category: categories.at_work,
