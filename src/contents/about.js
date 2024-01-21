@@ -23,14 +23,14 @@ export const personalInfo = {
     description: `
         Hello! You can call me Vini.
 
-        I'm a Software Engineer with expertise in both back-end and full-stack development, graduated in Software Engineering in 2019, but I have been learning and working with it since 2014.
+        I'm a Software Engineer with expertise in both back-end and full-stack development, graduated in Software Engineering in 2019. However, I have been learning and working with software development since 2014.
         
         I see writing code as a path to achieve great results and making a real difference, not as the end goal. A passion for helping people drives me, and it brings me great satisfaction to assist others in solving problems whenever possible.
 
         Because of that, I have become a trusted reference for code review, clean code and Git issue resolution among my colleagues, and many coworkers have sought my help in solving tricky problems.
 
-        I have achieved great results when responsible for planning and building the architecture for some projects and mentoring my colleagues in learning new technologies to deliver successful outcomes.
+        I have achieved great results when responsible for planning and building the architecture for some projects and mentoring my colleagues in learning new technologies to deliver successful outcomes. That's why I am often taken as a technical reference and leader in the projects I work in.
 
-        Always a curious person, I look for opportunities to improve my skills and knowledge, currently exploring new areas of interest, focusing on DevOps, software architecture, design patterns, and leadership.
+        Always a curious person, I look for opportunities to improve my skills and knowledge, currently exploring new areas of interest, focusing on DevOps, software architecture, design patterns, leadership and both implementation and applications of AI.
     `
 }
