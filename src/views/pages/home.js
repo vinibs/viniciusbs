@@ -22,7 +22,7 @@ export class Home extends LiraElement {
                     <div class="home-content grid grid-center row-gap-2">
                         <div class="description">
                             <span>Software <strong>engineering</strong>.</span>
-                            <span><em>Web first.</em></span>
+                            <span><em>Adapt. Code. Lead. Solve.</em></span>
                         </div>
                 
                         <div class="subtitle">
