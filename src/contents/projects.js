@@ -705,14 +705,9 @@ export const projects = {
     bochabrasil: {
         type: projectTypes.web,
         category: categories.freelance,
-        link: { 
-            url: "http://bochabrasil.com.br", 
-            title: "Visit Bocha Brasil",
-            text: "Visit the website",
-        },
         image: { title: "Bocha Brasil screenshot", file: "bochabrasil.webp" },
         name: "Bocha Brasil",
-        year: "2010 - 2019",
+        year: "2010 - 2023",
         resources: [
             "PHP", 
             "HTML", 
