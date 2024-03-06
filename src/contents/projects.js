@@ -15,6 +15,28 @@ const projectTypes = {
 
 export const projects = {
 
+    jfm_idiomas: {
+        type: projectTypes.web,
+        category: categories.freelance,
+        image: { title: "JFM Idiomas screenshot", file: "jfm.webp" },
+        name: "JFM Idiomas",
+        year: "2023 - 2024",
+        resources: [
+            "PHP",
+            "React",
+            "Laravel",
+            "Inertia JS",
+            "Tailwild CSS",
+            "MySQL",
+        ],
+        description: `
+            As a growing language school, JFM Idiomas needed a new custom web platform for managing its teachers, students, schedules, classes and invoices.
+
+            Built and discussed from sketch, this project aims to be a hub where teachers and students can manage their classes and keep up with the latest lessons' contents.
+            
+            Besides that, it's also the entrypoint for company's managers to keep up with their numbers and teachers' performance, as well as generating invoices based on given classes for each teacher.
+        `
+    },
     mob_dropbox_automation: {
         type: projectTypes.backend,
         category: categories.at_work,
