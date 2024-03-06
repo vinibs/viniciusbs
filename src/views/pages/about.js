@@ -47,7 +47,7 @@ export class AboutMe extends LiraElement {
                             
                         </div>
 
-                        <div class="grid grid-1-1 grid-center col-gap-1 always-col">
+                        <div class="grid grid-1-1-1 grid-center col-gap-1 always-col">
                             ${this.renderEach(Object.entries(personalInfo.icons), 
                                 ([icon, props]) => {
                                     return `

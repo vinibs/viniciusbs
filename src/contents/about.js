@@ -18,6 +18,10 @@ export const personalInfo = {
         github: {
             url: 'https://github.com/vinibs',
             title: 'GitHub',
+        },
+        medium: {
+            url: 'https://medium.com/@hiviniciusbs',
+            title: 'Medium',
         }
     },
     description: `
