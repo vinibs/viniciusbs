@@ -27,12 +27,12 @@ export class ProjectItem extends LiraElement {
         this.year = project.year
         this.resources = project.resources
         this.description = project.description
-        
+
         this.url = project.link?.url
         this.linkTitle = project.link?.title
         this.linkText = project.link?.text
         this.hasLink = !!project.link
-        
+
         this.hasImage = !!project.image
         this.imageTitle = project.image?.title
         this.imageFile = project.image?.file
@@ -45,7 +45,7 @@ export class ProjectItem extends LiraElement {
         <div class="project">
             <div class="project-content">
                 <h2>${this.name}</h2>
-                
+
                 <h3 class="year">
                     ${this.year}
                 </h3>
@@ -68,8 +68,8 @@ export class ProjectItem extends LiraElement {
 
                 ${this.hasLink ? `
                 <p class="projectlink">
-                    <a href="${this.url}" part="link" 
-                        title="${this.linkTitle}" 
+                    <a href="${this.url}" part="link"
+                        title="${this.linkTitle}"
                         target="_blank">${this.linkText}</a>
                 </p>
                 ` : ''}
@@ -78,7 +78,7 @@ export class ProjectItem extends LiraElement {
             ${this.hasImage ? `
             <div class="project-screen">
                 ${this.hasLink ? `
-                    <a href="${this.url}" 
+                    <a href="${this.url}"
                     title="${this.linkTitle}" target="_blank">
                 ` : ''}
                 <img src="/images/projects/${this.imageFile}" title="${this.imageTitle}"/>
@@ -87,8 +87,8 @@ export class ProjectItem extends LiraElement {
             ` : ''}
 
 
-            <button 
-                class="close-project" 
+            <button
+                class="close-project"
                 onclick="closeProjectDetails()"
                 title="Close project details">
             </button>

@@ -12,3 +12,9 @@
     grid-row-gap: 1em;
     margin-bottom: 35px;
 }
+
+@media (prefers-color-scheme: dark) {
+    .subtitle {
+        color: rgb(200,200,200);
+    }
+}

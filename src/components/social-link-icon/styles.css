@@ -1,18 +1,11 @@
 
 .icon {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 36px auto;
     display: block;
     height: 35px;
     width: 35px;
-}
-
-.icon.colored {
     mask-repeat: no-repeat;
     mask-size: 36px auto;
     mask-position: center center;
-    background-image: none !important;
 }
 
 .icon.gray {
@@ -20,25 +13,26 @@
 }
 
 .icon.github {
-    background-image: url('/images/icons/github.svg');
-    border-radius: 100%;
-}
-.icon.colored.github {
     mask-image: url('/images/icons/github.svg');
+    border-radius: 100%;
 }
 
 .icon.linkedin {
-    background-image: url('/images/icons/linkedin.svg');
-    border-radius: 8px;
-}
-.icon.colored.linkedin {
     mask-image: url('/images/icons/linkedin.svg');
+    border-radius: 8px;
 }
 
 .icon.medium {
-    background-image: url('/images/icons/medium.svg');
+    mask-image: url('/images/icons/medium.svg');
     border-radius: 8px;
 }
-.icon.colored.medium {
-    mask-image: url('/images/icons/medium.svg');
+
+@media (prefers-color-scheme: dark) {
+    .icon {
+        background-color: rgb(230,230,230);
+    }
+
+    .icon.gray {
+        background-color: rgb(150,150,150);
+    }
 }

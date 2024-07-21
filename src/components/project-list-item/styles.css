@@ -3,9 +3,6 @@ p {
 }
 
 .project-item-container {
-    background-repeat: no-repeat;
-    background-position: center left 10px;
-    background-size: 32px;
     border-radius: 10px;
     cursor: pointer;
     padding: 5px 10px 5px 58px;
@@ -13,22 +10,46 @@ p {
     transition: linear 0.2s;
 }
 
-.project-item-container.backend {
-    background-image: url('../images/content-icons/backend.svg');
+.project-item-container::before {
+    content: '';
+    display: block;
+    height: 54px;
+    width: 32px;
+    position: absolute;
+    margin-left: -48px;
+    background-color: rgb(140,140,140);
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: 32px;
+    mask-image: url('../images/content-icons/backend.svg');
 }
 
-.project-item-container.cli {
-    background-image: url('../images/content-icons/cli.svg');
+.project-item-container.backend::before {
+    mask-image: url('../images/content-icons/backend.svg');
 }
 
-.project-item-container.mobile {
-    background-image: url('../images/content-icons/mobile.svg');
+.project-item-container.cli::before {
+    mask-image: url('../images/content-icons/cli.svg');
 }
 
-.project-item-container.web {
-    background-image: url('../images/content-icons/web.svg');
+.project-item-container.mobile::before {
+    mask-image: url('../images/content-icons/mobile.svg');
+}
+
+.project-item-container.web::before {
+    mask-image: url('../images/content-icons/web.svg');
 }
 
 .project-item-container:hover {
     background-color: rgb(245,245,245)
+}
+
+@media (prefers-color-scheme: dark) {
+    .project-item-container::before {
+        background-color: rgb(120,120,120);
+    }
+
+    .project-item-container:hover {
+        background-color: rgb(50,50,50);
+    }
 }
