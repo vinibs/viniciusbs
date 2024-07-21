@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="90"
+   height="90"
+   viewBox="0 0 23.812499 23.8125"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   sodipodi:docname="medium.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="2.5919106"
+     inkscape:cx="34.916327"
+     inkscape:cy="66.55322"
+     inkscape:window-width="1512"
+     inkscape:window-height="888"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g4"
+       transform="translate(-36.348648,-172.38884)">
+      <rect
+         style="fill:none;stroke-width:0.32292"
+         id="rect4"
+         width="23.8125"
+         height="23.8125"
+         x="36.348648"
+         y="172.38884"
+         ry="4.1003795" />
+      <g
+         id="Layer_2"
+         data-name="Layer 2"
+         transform="matrix(0.02028177,0,0,0.02028177,37.671566,178.28449)"
+         style="fill:#000000">
+        <g
+           id="Layer_1-2"
+           data-name="Layer 1"
+           style="fill:#000000">
+          <path
+             d="m 588.67,296.36 c 0,163.67 -131.78,296.35 -294.33,296.35 C 131.79,592.71 0,460 0,296.36 0,132.72 131.78,0 294.34,0 456.9,0 588.67,132.69 588.67,296.36"
+             id="path1"
+             style="fill:#000000" />
+          <path
+             d="m 911.56,296.36 c 0,154.06 -65.89,279 -147.17,279 -81.28,0 -147.17,-124.94 -147.17,-279 0,-154.06 65.88,-279 147.16,-279 81.28,0 147.17,124.9 147.17,279"
+             id="path2-3"
+             style="fill:#000000" />
+          <path
+             d="m 1043.63,296.36 c 0,138 -23.17,249.94 -51.76,249.94 -28.59,0 -51.75,-111.91 -51.75,-249.94 0,-138.03 23.17,-249.94 51.75,-249.94 28.58,0 51.76,111.9 51.76,249.94"
+             id="path3"
+             style="fill:#000000" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

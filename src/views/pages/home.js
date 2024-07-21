@@ -24,18 +24,22 @@ export class Home extends LiraElement {
                             <span>Software <strong>engineering</strong>.</span>
                             <span><em>Adapt. Code. Lead. Solve.</em></span>
                         </div>
-                
+
                         <div class="subtitle">
                             Building solutions through technology.
                         </div>
                     </div>
-                
-                    <div class="full-grid-2-col">
-                        <social-link-icon icon="github" 
+
+                    <div class="full-grid-2-col flex flex-center gap-15">
+                        <social-link-icon icon="github" color="gray"
                             href="https://github.com/vinibs" title="GitHub">
                         </social-link-icon>
+
+                        <social-link-icon icon="medium" color="gray"
+                            href="https://medium.com/@hiviniciusbs" title="Medium">
+                        </social-link-icon>
                     </div>
-                    
+
                 </div>
             </fadein-container>
         `

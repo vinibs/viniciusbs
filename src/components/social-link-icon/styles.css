@@ -1,25 +1,44 @@
 
 .icon {
-    background: url('/images/icons.webp') no-repeat top center;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: 36px auto;
     display: block;
     height: 35px;
     width: 35px;
 }
 
+.icon.colored {
+    mask-repeat: no-repeat;
+    mask-size: 36px auto;
+    mask-position: center center;
+    background-image: none !important;
+}
+
+.icon.gray {
+    background-color: rgb(179,179,179);
+}
+
 .icon.github {
-    background-position: 0 0;
+    background-image: url('/images/icons/github.svg');
     border-radius: 100%;
 }
-.icon.github-black {
-    background-position: 0 -35px;
-    border-radius: 100%;
+.icon.colored.github {
+    mask-image: url('/images/icons/github.svg');
 }
-.icon.linkedin-black {
-    background-position: 0 -71px;
+
+.icon.linkedin {
+    background-image: url('/images/icons/linkedin.svg');
     border-radius: 8px;
 }
-.icon.medium-black {
-    background-position: 0 -110px;
+.icon.colored.linkedin {
+    mask-image: url('/images/icons/linkedin.svg');
+}
+
+.icon.medium {
+    background-image: url('/images/icons/medium.svg');
     border-radius: 8px;
+}
+.icon.colored.medium {
+    mask-image: url('/images/icons/medium.svg');
 }

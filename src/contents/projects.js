@@ -33,7 +33,7 @@ export const projects = {
             As a growing language school, JFM Idiomas needed a new custom web platform for managing its teachers, students, schedules, classes and invoices.
 
             Built and discussed from sketch, this project aims to be a hub where teachers and students can manage their classes and keep up with the latest lessons' contents.
-            
+
             Besides that, it's also the entrypoint for company's managers to keep up with their numbers and teachers' performance, as well as generating invoices based on given classes for each teacher.
         `
     },
@@ -58,8 +58,8 @@ export const projects = {
 
             The main idea of this automation was to connect to Dropbox, look for the files regarding the provided date, download them (if found) and upload them to AWS S3 to start the data engineering process.
 
-            A cool feature was the fact that the script identified if the provided date (by default the current date) is a monday and, if so, it also searched for the files regarding the previous weekend days - since the files for these days are always uploaded on mondays. 
-            
+            A cool feature was the fact that the script identified if the provided date (by default the current date) is a monday and, if so, it also searched for the files regarding the previous weekend days - since the files for these days are always uploaded on mondays.
+
             In the end, this scheduled Lambda function reduced the time and effort needed to daily collect the data from this specific client.
         `
     },
@@ -179,10 +179,10 @@ export const projects = {
 
             To achieve the desired parallelism and improve collect time, there were used 3 different approaches: split the collect by every context (running one instance to collect only products, another one only for suppliers, etc.), splitting the collect on specific parameters the API needed (some APIs returned data only for a specific store, so each store's data were collected in a different instance) and splitting by pagination, with each instance collecting a chunk of X pages.
 
-            The greatest challenge on this process was to really parallelize the pagination, since it was not possible to know the total number of pages. To do this, it was used the idea of "check the last page of the chunk - if we have more pages than that, start a new instance for the next chunk and, then, continue collecting data from all the other pages in this current chunk" and it worked like a charm. 
-            
+            The greatest challenge on this process was to really parallelize the pagination, since it was not possible to know the total number of pages. To do this, it was used the idea of "check the last page of the chunk - if we have more pages than that, start a new instance for the next chunk and, then, continue collecting data from all the other pages in this current chunk" and it worked like a charm.
+
             After implementing all these strategies, a data collect that was taking more than 4h started to be done in 26 minutes.
-            
+
             Every data collected was saved as a Parquet file on S3 and became part of a data engineering flow of another team. The instances management was done using the AWS SDK and the base infrastructure was defined using AWS CDK.
 
             During the collect processes, if something gone wrong, the platform automatically retried 3 times the same request and if it kept failing sent a message on a MS Teams group, alerting about the error.
@@ -196,7 +196,7 @@ export const projects = {
         name: "Farm management system",
         year: "2023",
         resources: [
-            "Python", 
+            "Python",
             "FastAPI",
             "MySQL",
         ],
@@ -214,7 +214,7 @@ export const projects = {
         name: "DBAccess",
         year: "2022",
         resources: [
-            "Python", 
+            "Python",
             "Flask",
             "MySQL",
         ],
@@ -234,7 +234,7 @@ export const projects = {
         name: "Internal metrics system",
         year: "2022",
         resources: [
-            "Node JS", 
+            "Node JS",
             "TypeScript",
             "React",
             "RabbitMQ",
@@ -259,8 +259,8 @@ export const projects = {
     env_setup: {
         type: projectTypes.cli,
         category: categories.personal,
-        link: { 
-            url: "https://github.com/vinibs/environment-setup", 
+        link: {
+            url: "https://github.com/vinibs/environment-setup",
             title: "Environment setup on GitHub",
             text: "View on GitHub",
         },
@@ -287,7 +287,7 @@ export const projects = {
         name: "Cryptocurrency exchange",
         year: "2022",
         resources: [
-            "Node JS", 
+            "Node JS",
             "TypeScript",
             "Binance API",
             "RabbitMQ",
@@ -313,8 +313,8 @@ export const projects = {
     thaw: {
         type: projectTypes.mobile,
         category: categories.at_work,
-        link: { 
-            url: "https://github.com/vinibs/fcm-notification-tester", 
+        link: {
+            url: "https://github.com/vinibs/fcm-notification-tester",
             title: "Firebase POCs on GitHub",
             text: "View the POCs on GitHub",
         },
@@ -322,7 +322,7 @@ export const projects = {
         name: "ACG Thaw",
         year: "2021 - 2022",
         resources: [
-            "Python", 
+            "Python",
             "Django",
             "Django Rest Framework",
             "Firebase",
@@ -352,7 +352,7 @@ export const projects = {
         name: "Etch Travel",
         year: "2021",
         resources: [
-            "Python", 
+            "Python",
             "Django",
             "Django Rest Framework",
             "Google Maps API",
@@ -365,7 +365,7 @@ export const projects = {
             Its main idea is to allow planning the itinerary for a trip and add friends who will travel together. This way, every involved person can easily know the travel plans, such as "who", "where" and "when".
 
             It was an iOS app, but I worked on the back-end, creating the needed endpoints and integrating with Google Maps API to get places' data.
-            
+
             Sometimes I also helped the front-end/mobile team to find some design inconsistencies across the UI, such as elements that had a background in one screen but didn't have in another.
 
             Since my first day on this project, the automated tests for the backend services and endpoints were essential for any delivery, so I learn many things about testing during this project.
@@ -500,15 +500,15 @@ export const projects = {
         name: "Time Series Analysis System",
         year: "2019",
         resources: [
-            "Python", 
-            "Django", 
-            "JavaScript", 
-            "HTML", 
-            "CSS", 
-            "jQuery", 
-            "D3.js", 
-            "Responsive", 
-            "SQLite", 
+            "Python",
+            "Django",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "jQuery",
+            "D3.js",
+            "Responsive",
+            "SQLite",
             "PostgreSQL",
             "Heroku",
             "AWS S3",
@@ -526,8 +526,8 @@ export const projects = {
     lira: {
         type: projectTypes.web,
         category: categories.personal,
-        link: { 
-            url: "https://github.com/vinibs/lira", 
+        link: {
+            url: "https://github.com/vinibs/lira",
             title: "Lira on GitHub",
             text: "View on GitHub",
         },
@@ -555,8 +555,8 @@ export const projects = {
     luvi: {
         type: projectTypes.backend,
         category: categories.personal,
-        link: { 
-            url: "https://github.com/vinibs/luvi", 
+        link: {
+            url: "https://github.com/vinibs/luvi",
             title: "Luvi on GitHub",
             text: "View on GitHub",
         },
@@ -582,11 +582,11 @@ export const projects = {
         name: `Assutef's SICONF`,
         year: "2017",
         resources: [
-            "PHP", 
-            "HTML", 
-            "CSS", 
-            "jQuery", 
-            "Bootstrap", 
+            "PHP",
+            "HTML",
+            "CSS",
+            "jQuery",
+            "Bootstrap",
             "Laravel",
             "AdminLTE",
             "MySQL",
@@ -607,11 +607,11 @@ export const projects = {
         name: "PDTI",
         year: "2016 - 2018",
         resources: [
-            "PHP", 
-            "HTML", 
-            "CSS", 
-            "jQuery", 
-            "Bootstrap", 
+            "PHP",
+            "HTML",
+            "CSS",
+            "jQuery",
+            "Bootstrap",
             "PostgreSQL",
         ],
         description: `
@@ -629,12 +629,12 @@ export const projects = {
         name: "UTFPR Intranet/Support System",
         year: "2016 - 2018",
         resources: [
-            "PHP", 
-            "HTML", 
-            "CSS", 
-            "JavaScript", 
-            "jQuery", 
-            "Bootstrap", 
+            "PHP",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "jQuery",
+            "Bootstrap",
             "PostgreSQL",
         ],
         description: `
@@ -648,8 +648,8 @@ export const projects = {
     events: {
         type: projectTypes.web,
         category: categories.at_work,
-        link: { 
-            url: "https://eventos.cp.utfpr.edu.br", 
+        link: {
+            url: "https://eventos.cp.utfpr.edu.br",
             title: "Visit Events Management System",
             text: "Visit the website",
         },
@@ -657,12 +657,12 @@ export const projects = {
         name: "UTFPR Events Management System",
         year: "2016 - 2018",
         resources: [
-            "PHP", 
-            "HTML", 
-            "CSS", 
-            "jQuery", 
-            "Bootstrap", 
-            "Laravel", 
+            "PHP",
+            "HTML",
+            "CSS",
+            "jQuery",
+            "Bootstrap",
+            "Laravel",
             "PostgreSQL",
         ],
         description: `
@@ -684,9 +684,9 @@ export const projects = {
         name: `Worlds We Build`,
         year: "2015",
         resources: [
-            "PHP", 
-            "HTML", 
-            "CSS", 
+            "PHP",
+            "HTML",
+            "CSS",
             "MySQL",
             "Responsive",
         ],
@@ -705,11 +705,11 @@ export const projects = {
         name: "Cadêu",
         year: "2014 - 2019",
         resources: [
-            "PHP", 
-            "HTML", 
-            "CSS", 
-            "Vanilla JavaScript", 
-            "Responsive", 
+            "PHP",
+            "HTML",
+            "CSS",
+            "Vanilla JavaScript",
+            "Responsive",
             "MySQL",
         ],
         description: `
@@ -731,11 +731,11 @@ export const projects = {
         name: "Bocha Brasil",
         year: "2010 - 2023",
         resources: [
-            "PHP", 
-            "HTML", 
-            "CSS", 
-            "Vanilla JavaScript", 
-            "Responsive", 
+            "PHP",
+            "HTML",
+            "CSS",
+            "Vanilla JavaScript",
+            "Responsive",
             "MySQL",
         ],
         description: `

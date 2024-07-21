@@ -134,6 +134,21 @@ p {
     grid-row-gap: 2em;
 }
 
+/* Classes para layout flex */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.gap-15 {
+    gap: 15px;
+
+}
+
 
 /* Página inicial */
 .grid.home {
@@ -201,7 +216,7 @@ p {
     margin: 25px auto 0;
     color: rgb(90,90,90);
 }
-    
+
 
 
 @media (min-width: 901px) {
@@ -243,7 +258,7 @@ p {
     }
 
 
-    /* Página Projetos */    
+    /* Página Projetos */
     .grid.projects-list {
         justify-self: end;
         max-width: 500px;
@@ -263,7 +278,7 @@ p {
         background: url(/images/projects-background.svg) no-repeat center center;
         background-size: 50% auto;
     }
-    
+
     .project-info.open {
         align-self: start;
         background: none;
@@ -293,27 +308,27 @@ p {
         padding: 15px;
     }
 
-    .grid-1-2, 
-    .grid-3-4, 
+    .grid-1-2,
+    .grid-3-4,
     .grid-3-6 {
         grid-template-columns: 1fr;
     }
 
-    .grid-1-2.col-gap-1, 
-    .grid-1-2.col-gap-2, 
-    .grid-1-2.col-gap-4, 
+    .grid-1-2.col-gap-1,
+    .grid-1-2.col-gap-2,
+    .grid-1-2.col-gap-4,
     .grid-3-4.col-gap-1,
-    .grid-3-4.col-gap-2, 
-    .grid-3-4.col-gap-4, 
+    .grid-3-4.col-gap-2,
+    .grid-3-4.col-gap-4,
     .grid-3-6.col-gap-1,
     .grid-3-6.col-gap-2,
     .grid-3-6.col-gap-4 {
         grid-column-gap: 0;
     }
 
-    .grid-1-1 > div, 
-    .grid-1-2 > div, 
-    .grid-3-4 > div, 
+    .grid-1-1 > div,
+    .grid-1-2 > div,
+    .grid-3-4 > div,
     .grid-3-6 > div {
         text-align: center;
     }

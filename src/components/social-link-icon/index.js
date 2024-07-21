@@ -18,14 +18,14 @@ export class SocialLinkIcon extends LiraElement {
     }
 
     render () {
-        const iconColor = this.color ? `-${this.color}` : ''
-        const iconClass = `${this.icon}${iconColor}`
-        
+        const iconColor = this.color ? `colored ${this.color}` : ''
+        const iconClass = `${iconColor} ${this.icon}`
+
         return `
         <div>
-            <a class="${iconClass} icon" 
-                href="${this.href}" 
-                title="${this.title}" 
+            <a class="icon ${iconClass}"
+                href="${this.href}"
+                title="${this.title}"
                 target="_blank" rel="noreferrer"></a>
         </div>
         `

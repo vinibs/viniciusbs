@@ -29,10 +29,12 @@ const assets = [
   "/images/projects/tsanalysis.webp",
   "/images/projects/worldswebuild.webp",
   "/images/favicon.png",
-  "/images/icons.webp",
+  "/images/icons/github.svg",
+  "/images/icons/linkedin.svg",
+  "/images/icons/medium.svg",
   "/images/logo.svg",
   "/images/photo.webp",
-  
+
   "/src/config/config.js",
   "/src/config/routes.js",
 
