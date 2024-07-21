@@ -15,6 +15,28 @@ const projectTypes = {
 
 export const projects = {
 
+    ai_travel_lanner: {
+        type: projectTypes.web,
+        category: categories.personal,
+        image: { title: "AI Travel Planner", file: "ai-travel-planner.webp" },
+        name: "AI Travel Planner",
+        year: "2024",
+        resources: [
+            "AI",
+            "React",
+            "Gemini",
+            "PoC",
+        ],
+        description: `
+            A simple project built to explore new ways of interacting with an LLM model without relying exclusively on a chat format.
+
+            Using Gemini as the AI model, this project aims to be a simple travel planner, where the user can input a few parameters and get a daily plan.
+
+            By asking only for the final destination and how many days the trip will last, the AI model will generate a plan with the best places to visit during each day, describing where to go during each period of the day considering the time available and informing how much it cost to visit each place.
+
+            It is very simple, built on around 2 days, as a proof of concept to bring to the reality the concept I see as a future step of interactions with AI - using them as a tool, not as a person.
+        `
+    },
     jfm_idiomas: {
         type: projectTypes.web,
         category: categories.freelance,
