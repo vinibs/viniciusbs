@@ -15,9 +15,14 @@ const projectTypes = {
 
 export const projects = {
 
-    ai_travel_lanner: {
+    ai_travel_planner: {
         type: projectTypes.web,
         category: categories.personal,
+        link: {
+            url: "https://github.com/vinibs/ai-travel-planner",
+            title: "AI Travel Planner on GitHub",
+            text: "View on GitHub",
+        },
         image: { title: "AI Travel Planner", file: "ai-travel-planner.webp" },
         name: "AI Travel Planner",
         year: "2024",
