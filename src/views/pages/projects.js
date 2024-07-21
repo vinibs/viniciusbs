@@ -9,13 +9,13 @@ import { LiraElement } from '/js/lira.js'
 export class Projects extends LiraElement {
     constructor () {
         super()
-        
+
         document.title = `projects • viniciusbs`
 
         window.closeProjectDetails = this.closeProjectDetails
         window.clearActiveProjectListItem = () => {
             const projects = document.getElementsByTagName("project-list-item")
-    
+
             for (const project of projects) {
                 project.classList.remove("active")
             }
@@ -38,11 +38,11 @@ export class Projects extends LiraElement {
         const projectId = project.id
         const projectInfo = document.getElementById("project-info")
         const projectsList = document.getElementById("projects-list")
-        
+
         if (!projectInfo.classList.contains("open") || this.openProjectId !== projectId) {
             clearActiveProjectListItem()
             project.classList.add("active")
-            
+
             projectInfo.classList.add("open")
             projectInfo.innerHTML = `
             <project-item id="${projectId}">
@@ -51,12 +51,12 @@ export class Projects extends LiraElement {
             projectInfo.scrollTo(0, 0)
         }
     }
-    
+
     closeProjectDetails () {
         const projectInfo = document.getElementById("project-info")
         const projectsList = document.getElementById("projects-list")
         clearActiveProjectListItem()
-        
+
         projectInfo.classList.add("fadeout")
         setTimeout(() => {
             projectsList.classList.remove("mobile-hidden")
@@ -76,17 +76,19 @@ export class Projects extends LiraElement {
                 <div class="grid grid-3-4 col-gap-2 grid-top mobile-overlapping" id="projects-content">
                     <div class="grid row-gap-1 grid-top projects-list" id="projects-list">
                         <h2>${pageTitle}</h2>
+                        <project-list>
                             ${this.renderEach(
-                                Object.entries(projects), 
+                                Object.entries(projects),
                                 ([projectId, projectData]) => {
                                     return `
-                                    <project-list-item 
+                                    <project-list-item
                                         name="${projectData.name}"
                                         id="${projectId}"
                                         type="${projectData.type}">
                                     </project-list-item>
                                     `
                             })}
+                        </project-list>
                     </div>
 
                     <article class="project-info text-content" id="project-info">

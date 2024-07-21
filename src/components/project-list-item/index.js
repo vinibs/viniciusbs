@@ -18,9 +18,9 @@ export class ProjectListItem extends LiraElement {
 
     render () {
         return `
-            <div class="project-item-container ${this.type}">
+            <li class="project-item-container ${this.type}">
                 <p>${this.name}</p>
-            </div>
+            </li>
         `
     }
 }
