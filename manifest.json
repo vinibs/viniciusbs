@@ -9,25 +9,25 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "images/icons/icon-144x144.png",
+      "src": "images/app-icons/icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "images/icons/icon-512x512.png",
+      "src": "images/app-icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "images/icons/icon-default-144x144.png",
+      "src": "images/app-icons/icon-default-144x144.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "images/icons/icon-default-512x512.png",
+      "src": "images/app-icons/icon-default-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
