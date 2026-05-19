@@ -2,14 +2,14 @@ export const pageTitle = 'About me'
 
 export const personalInfo = {
     photo: {
-        path: './images/photo.webp',
+        path: './images/photo.jpg',
         alt: 'Vinicius BS',
         width: 200,
         height: 200,
     },
     name: 'Vinicius Baroni Soares',
     email: 'hiviniciusbs@gmail.com',
-    location: 'Florianópolis, SC, Brazil',
+    location: 'Braga, Portugal',
     icons: {
         linkedin: {
             url: 'https://www.linkedin.com/in/viniciusbs',
