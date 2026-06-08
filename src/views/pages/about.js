@@ -37,23 +37,18 @@ export class AboutMe extends LiraElement {
                             <span class="name">
                                 <strong>${personalInfo.name}</strong>
                             </span>
-                            <span class="email">
-                                <a href="mailto:${personalInfo.email}"
-                                    target="_blank">${personalInfo.email}</a>
-                            </span>
                             <span class="location">
                                 ${personalInfo.location}
                             </span>
-
                         </div>
 
-                        <div class="grid grid-1-1-1 grid-center col-gap-1 always-col">
+                        <div class="flex flex-column flex-center gap-5">
                             ${this.renderEach(Object.entries(personalInfo.icons),
                                 ([icon, props]) => {
                                     return `
-                                    <social-link-icon icon="${icon}"
-                                        href="${props.url}" title="${props.title}">
-                                    </social-link-icon>
+                                    <social-link icon="${icon}"
+                                        href="${props.url}" title="${props.title}" text="${props.text}">
+                                    </social-link>
                                     `
                                 }
                             )}

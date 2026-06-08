@@ -1,10 +1,18 @@
 
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: rgb(140,140,140);
+}
+
 .icon {
-    display: block;
-    height: 35px;
-    width: 35px;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
     mask-repeat: no-repeat;
-    mask-size: 36px auto;
+    mask-size: 31px auto;
     mask-position: center center;
     background-color: rgb(140,140,140);
 }
@@ -20,12 +28,18 @@
 
 .icon.linkedin {
     mask-image: url('/images/icons/linkedin.svg');
-    border-radius: 8px;
+    border-radius: 4px;
+}
+
+.icon.email {
+    mask-image: url('/images/icons/email.svg');
+    border-radius: 4px;
+    mask-position: center 2px;
 }
 
 .icon.medium {
     mask-image: url('/images/icons/medium.svg');
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 @media (prefers-color-scheme: dark) {

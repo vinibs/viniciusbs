@@ -8,21 +8,18 @@ export const personalInfo = {
         height: 200,
     },
     name: 'Vinicius Baroni Soares',
-    email: 'hiviniciusbs@gmail.com',
     location: 'Braga, Portugal',
     icons: {
+        email: {
+            url: 'mailto:hiviniciusbs@gmail.com',
+            title: 'E-mail',
+            text: 'hiviniciusbs@gmail.com',
+        },
         linkedin: {
             url: 'https://www.linkedin.com/in/viniciusbs',
             title: 'LinkedIn',
+            text: 'in/viniciusbs',
         },
-        github: {
-            url: 'https://github.com/vinibs',
-            title: 'GitHub',
-        },
-        medium: {
-            url: 'https://medium.com/@hiviniciusbs',
-            title: 'Medium',
-        }
     },
     description: `
         Hi! You can call me Vini.

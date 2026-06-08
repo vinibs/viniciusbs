@@ -160,9 +160,18 @@ p {
     justify-content: center;
 }
 
+.gap-5 {
+    gap: 5px;
+
+}
+
 .gap-15 {
     gap: 15px;
 
+}
+
+.flex-column {
+    flex-direction: column;
 }
 
 
@@ -249,7 +258,7 @@ p {
 }
 
 .personal-info > span.location {
-    margin: 25px auto 0;
+    margin: 5px auto 0;
     color: rgb(90,90,90);
 }
 

@@ -8,7 +8,7 @@ import { ProjectItem } from './project-item/index.js'
 import { ProjectList } from './project-list/index.js'
 import { ProjectListItem } from './project-list-item/index.js'
 import { ProjectSection } from './project-section/index.js'
-import { SocialLinkIcon } from './social-link-icon/index.js'
+import { SocialLink } from './social-link/index.js'
 
 
 window.customElements.define('badge-item', BadgeItem)
@@ -21,4 +21,4 @@ window.customElements.define('project-item', ProjectItem)
 window.customElements.define('project-list', ProjectList)
 window.customElements.define('project-list-item', ProjectListItem)
 window.customElements.define('project-section', ProjectSection)
-window.customElements.define('social-link-icon', SocialLinkIcon)
+window.customElements.define('social-link', SocialLink)
