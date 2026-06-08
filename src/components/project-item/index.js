@@ -4,12 +4,15 @@ import { LiraElement } from '/js/lira.js'
 const ProjectAttributes = [
     'section',
     'id',
+    'category'
 ]
 
 export class ProjectItem extends LiraElement {
     constructor () {
         super(true, ProjectAttributes)
         this.useStyle('./styles.css')
+
+        this.category = this.category.toLowerCase()
 
         this.loadProjectData()
     }
@@ -19,10 +22,9 @@ export class ProjectItem extends LiraElement {
     }
 
     loadProjectData () {
-        const project = projects[this.id]
+        const project = projects[this.category]?.[this.id]
 
         this.type = project.type
-        this.category = project.category
         this.name = project.name
         this.year = project.year
         this.resources = project.resources
@@ -50,18 +52,6 @@ export class ProjectItem extends LiraElement {
                     ${this.year}
                 </h3>
 
-                <p class="category">
-                    <badge-item type="dark">
-                        ${this.category}
-                    </badge-item>
-                </p>
-
-                <p class="resources">
-                    ${this.renderEach(this.resources, (resource) => {
-                        return `<badge-item>${resource}</badge-item>`
-                    })}
-                </p>
-
                 <paragraph-text class="description">
                     ${this.description}
                 </paragraph-text>
@@ -86,12 +76,33 @@ export class ProjectItem extends LiraElement {
             </div>
             ` : ''}
 
+            <div class="project-meta">
+                <p class="type">
+                    <span class="title">Type:</span>
+                    <badge-item type="dark">
+                        ${this.type}
+                    </badge-item>
+                </p>
 
-            <button
-                class="close-project"
-                onclick="closeProjectDetails()"
-                title="Close project details">
-            </button>
+                <p class="resources">
+                    <span class="title">Resources:</span>
+                    <span class="flex gap-5 wrap">
+                    ${this.renderEach(this.resources, (resource) => {
+                        return `<badge-item>${resource}</badge-item>`
+                    })}
+                    </span>
+                </p>
+            </div>
+
+
+            
+            <div class="close-project-container">
+                <button
+                    class="close-project"
+                    onclick="closeProjectDetails()"
+                    title="Close project details">
+                </button>
+            </div>
         </div>
 
         </fadein-container>

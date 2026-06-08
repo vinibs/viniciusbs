@@ -36,6 +36,8 @@ export class Projects extends LiraElement {
 
     showProjectDetails (project) {
         const projectId = project.id
+        const projectCategory = project.getAttribute("category").toLowerCase()
+
         const projectInfo = document.getElementById("project-info")
         const projectsList = document.getElementById("projects-list")
 
@@ -45,7 +47,7 @@ export class Projects extends LiraElement {
 
             projectInfo.classList.add("open")
             projectInfo.innerHTML = `
-            <project-item id="${projectId}">
+            <project-item id="${projectId}" category="${projectCategory}"/>
             `
             projectsList.classList.add("mobile-hidden")
             projectInfo.scrollTo(0, 0)
@@ -76,19 +78,50 @@ export class Projects extends LiraElement {
                 <div class="grid grid-3-4 col-gap-2 grid-top mobile-overlapping" id="projects-content">
                     <div class="grid row-gap-1 grid-top projects-list" id="projects-list">
                         <h2>${pageTitle}</h2>
-                        <project-list>
-                            ${this.renderEach(
-                                Object.entries(projects),
-                                ([projectId, projectData]) => {
-                                    return `
-                                    <project-list-item
-                                        name="${projectData.name}"
-                                        id="${projectId}"
-                                        type="${projectData.type}">
-                                    </project-list-item>
-                                    `
-                            })}
-                        </project-list>
+
+                        <div class="project-category">
+                            <h3 class="title">
+                                Personal
+                            </h3>
+
+                            <project-list>
+                                ${this.renderEach(
+                                    Object.entries(projects.personal),
+                                    ([projectId, projectData]) => {
+                                        return `
+                                        <project-list-item
+                                            name="${projectData.name}"
+                                            year="${projectData.year}"
+                                            id="${projectId}"
+                                            type="${projectData.type}"
+                                            category="${projectData.category}">
+                                        </project-list-item>
+                                        `
+                                })}
+                            </project-list>
+                        </div>
+
+                        <div class="project-category">
+                            <h3 class="title">
+                                Corporate
+                            </h3>
+
+                            <project-list>
+                                ${this.renderEach(
+                                    Object.entries(projects.corporate),
+                                    ([projectId, projectData]) => {
+                                        return `
+                                        <project-list-item
+                                            name="${projectData.name}"
+                                            year="${projectData.year}"
+                                            id="${projectId}"
+                                            type="${projectData.type}"
+                                            category="${projectData.category}">
+                                        </project-list-item>
+                                        `
+                                })}
+                            </project-list>
+                        </div>
                     </div>
 
                     <article class="project-info text-content" id="project-info">

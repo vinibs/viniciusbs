@@ -3,6 +3,7 @@ import { LiraElement } from '/js/lira.js'
 const ProjectListItemAttributes = [
     'type',
     'name',
+    'year',
     'id',
 ]
 
@@ -19,7 +20,8 @@ export class ProjectListItem extends LiraElement {
     render () {
         return `
             <li class="project-item-container ${this.type}">
-                <p>${this.name}</p>
+                <p class="name">${this.name}</p>
+                <p class="year">${this.year}</p>
             </li>
         `
     }

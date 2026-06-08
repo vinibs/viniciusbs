@@ -1,9 +1,9 @@
-export const pageTitle = "Projects"
+export const pageTitle = "Main Projects"
 
 const categories = {
-    at_work: "At Work",
-    personal: "Personal",
-    freelance: "Freelance",
+    corporate: "corporate",
+    personal: "personal",
+    freelance: "freelance",
 }
 
 const projectTypes = {
@@ -13,8 +13,7 @@ const projectTypes = {
     web: "web",
 }
 
-export const projects = {
-
+const personalProjects = {
     ai_travel_planner: {
         type: projectTypes.web,
         category: categories.personal,
@@ -42,149 +41,116 @@ export const projects = {
             It is very simple, built on around 2 days, as a proof of concept to bring to the reality the concept I see as a future step of interactions with AI - using them as a tool, not as a person.
         `
     },
-    jfm_idiomas: {
+    env_setup: {
+        type: projectTypes.cli,
+        category: categories.personal,
+        link: {
+            url: "https://github.com/vinibs/environment-setup",
+            title: "Environment setup on GitHub",
+            text: "View on GitHub",
+        },
+        name: "Environment setup CLI",
+        year: "2022",
+        resources: [
+            "Shell script",
+        ],
+        description: `
+            After having some trouble to configure my computer after formatting it, I decided to automate a few steps and started creating shell scripts to do all the heavy install of the development platforms I usually use.
+
+            It started by just a few scripts, for PHP and MySQL, but then I noticed that in the company I was working for, many people had troubles and spent many time setting their environment up. Then I decided to also create scripts for setting up other technologies, to help them getting started.
+
+            After some time using the scripts for setting up my machine with different development environments, I noticed that there also troubles with some other tools we used on the day-by-day that could be fixed and automated with some scripts.
+
+            Some of them were to downgrade a tool used with pre-commit, since it had one of its dependencies updated - what broke the tool - but it was not updated itself to fix it - and a fix to be able to correctly execute Terraform commands from M1 Macs, since the projects used a plugin that didn't have an ARM64 build available.
+
+            All these scripts were then gathered in a GitHub public repository so everyone could use them if needed.
+        `
+    },
+    lira: {
         type: projectTypes.web,
-        category: categories.freelance,
-        image: { title: "JFM Idiomas screenshot", file: "jfm.webp" },
-        name: "JFM Idiomas",
-        year: "2023 - 2024",
+        category: categories.personal,
+        link: {
+            url: "https://github.com/vinibs/lira",
+            title: "Lira on GitHub",
+            text: "View on GitHub",
+        },
+        name: "Lira",
+        year: "2018 - 2020",
+        resources: [
+            "JavaScript", "HTML", "CSS", "Responsive",
+        ],
+        description: `
+            Lira (or LiraJS) is a Single Page Application (SPA) and Progressive Web App (PWA) microframework.
+
+            It brings a simple router made in pure JS and a file/directory structure to simplify some basics of SPAs and PWAs, using the concepts of HTML Custom Elements.
+
+            The reason why this project was created is similar to Luvi's history. I started learning front-end frameworks an didn't understand (and like) how they work and their complexity, so I decided to create my own.
+
+            An idea behind it is to keep it the most near as using the default base language as possible, instead of creating a completely new syntax.
+
+            The funniest part about its history is that its logo came to my mind before even thinking about a name, so it was the logo that defined how it was going to be called.
+
+            It is a great way to learn new concepts and front-end technologies, even though it has its limitations.
+
+            And, hey, look! <b>You are seeing it working right now!</b> This website is built over Lira to test its capabilities and limitations in practice.
+        `
+    },
+    luvi: {
+        type: projectTypes.backend,
+        category: categories.personal,
+        link: {
+            url: "https://github.com/vinibs/luvi",
+            title: "Luvi on GitHub",
+            text: "View on GitHub",
+        },
+        name: "Luvi",
+        year: "2017",
         resources: [
             "PHP",
-            "React",
-            "Laravel",
-            "Inertia JS",
-            "Tailwild CSS",
+        ],
+        description: `
+            Luvi is a PHP microframework.
+
+            When I started using frameworks, I got bothered for not understanding how things work behid the scenes and how much resources (many of them not useful for my use cases at the time) they bring, so I decided to create my own framework (a generic MVC structure) to better understand the architecture and fundamentals, thinking of being the simplest as possible.
+
+            Then Luvi was born. A simple structure that, in its first version, tried to abstract database connections and authentication flow. However, in newer versions - remaking it with a different structure -, some features were removed and other were added, such as support for many localization strings.
+
+            The main focus of this project is to understand technologies and architecture patterns, eventually being useful as a base for personal projects.
+        `
+    },
+    cadeu: {
+        type: projectTypes.web,
+        category: categories.personal,
+        image: { title: "Cadêu screenshot", file: "cadeu.webp" },
+        name: "Cadêu",
+        year: "2014 - 2019",
+        resources: [
+            "PHP",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Responsive",
             "MySQL",
         ],
         description: `
-            As a growing language school, JFM Idiomas needed a new custom web platform for managing its teachers, students, schedules, classes and invoices.
+            Cadêu was my first personal project, born from the question "what sites/services do I currently have online accounts in?". The initial idea was to check the internet to discover if a given e-mail was already registered in each visited site and give the user a list of results.
 
-            Built and discussed from sketch, this project aims to be a hub where teachers and students can manage their classes and keep up with the latest lessons' contents.
+            However, it ended up not being possible to be done - at least at that time, with the knowledge I had -, so I decided to go through a different approach: a web platform so I can manually register where I have an account, possibly also registering a password tip (not the full password, for security reasons) and which e-mail address I used.
 
-            Besides that, it's also the entrypoint for company's managers to keep up with their numbers and teachers' performance, as well as generating invoices based on given classes for each teacher.
+            As my first personal project, it was a great way to learn things, such as CSS, JavaScript and responsivity. It was maintained and had new versions until 2019, when I decided to shut it down since there were only few users and I had some issues finding a free infrastructure to keep it in.
+
+            During its lifetime, I also created a "submodule" for it, called Cadêu Steps. Its idea was to provide users with a community-maintained platform to check the step-by-step to delete accounts from specific sites/services - usually it's easy to know how to create an account, but how to delete it can be a tricky info to find, in some cases.
+
+            Besides developing the website, as a monolhitic PHP/HTML application, built from scratch without any framework, I also designed its logo an all its icons so they could be as customizable as possible.
         `
     },
-    mob_dropbox_automation: {
-        type: projectTypes.backend,
-        category: categories.at_work,
-        name: "Dropbox data collect automation",
-        year: "2023",
-        resources: [
-            "Python",
-            "AWS S3",
-            "AWS Lambda Functions",
-            "Dropbox SDK",
-            "Docker",
-        ],
-        description: `
-            As part of the data collect process, one client needed the data was collected from a Dropbox account, where the files were manually uploaded during the weekdays.
+}
 
-            For more than a year this collect process was done manually, eventually more than once a day, since there weren't a fixed time window to the files to be available on the Dropbox account, and once I became responsible for this process (for a few days) a developed a Python script to automate this process.
-
-            This project consisted in understanding how to have a constant connection to the Dropbox account without needing a user to interact to it and deploy the code to a Lambda function so it could be scheduled to run a few times a day (due to the lack of a fixed time window for the files' availability).
-
-            The main idea of this automation was to connect to Dropbox, look for the files regarding the provided date, download them (if found) and upload them to AWS S3 to start the data engineering process.
-
-            A cool feature was the fact that the script identified if the provided date (by default the current date) is a monday and, if so, it also searched for the files regarding the previous weekend days - since the files for these days are always uploaded on mondays.
-
-            In the end, this scheduled Lambda function reduced the time and effort needed to daily collect the data from this specific client.
-        `
-    },
-    sync_oracle_db_connection_poc: {
-        type: projectTypes.cli,
-        category: categories.at_work,
-        name: "Oracle DB connection POC",
-        year: "2023",
-        resources: [
-            "Python",
-            "Shell Script",
-            "Windows",
-            "Linux",
-            "Multiplatform",
-            "Virtual Machine",
-            "Proof of Concept (POC)",
-        ],
-        description: `
-            A Proof of Concept developed to find a better way to connect the current application to Oracle databases running locally.
-
-            The application was initially configured to connect to Oracle databases through a Java platform, but since the application needed to be installed in the client's machine the goal was not to need to install Java when installing the application.
-
-            This change should be able to connect to the database when running in different Windows versions, such as XP, 7 and 10, while being compatible with Linux platforms - since it would run in an uncontrolled environment in the client's machine.
-
-            This POC needed some virtual machines running different Windows and Linux versions and also the Oracle database so it could be accessible by the other VMs.
-
-            The Python code was able to successfully be installed on the machines and connect to the database so this POC became the base for future improvements to the final application.
-        `
-    },
-    sync_serverless_automation_server: {
-        type: projectTypes.backend,
-        category: categories.at_work,
-        name: "Serverless deploy automation server",
-        year: "2023",
-        resources: [
-            "JavaScript",
-            "NodeJS",
-            "Express",
-            "AWS S3",
-            "AWS EC2",
-            "AWS CodeDeploy",
-            "Serverless Framework",
-            "Docker",
-            "Bitbucket Pipelines",
-        ],
-        description: `
-            As part of a bigger application it was necessary to automate the process of creating serverless projects, with specifics files and dependencies and custom Docker images.
-
-            Oriented to use the Serverless Framework to deploy the custom image through code, I developed a Proof of Concept and then turned it into a web server, running on AWS EC2, to receive a JSON data through an endpoint and use it to create an internal directory with all the needed files, including the setup for Serverless Framework and the Dockerfile and then run a command to trigger Serverless to build and deploy the project.
-
-            This project also used Bitbucket pipelines, which were configured to run the automated tests and, once they all passed, deploy the updated version using AWS CodeDeploy.
-        `
-    },
-    mob_collect_proxy: {
-        type: projectTypes.backend,
-        category: categories.at_work,
-        name: "Data collect reverse proxy",
-        year: "2023",
-        resources: [
-            "Nginx",
-            "AWS EC2",
-        ],
-        description: `
-            For collecting data of some clients, there were IP restrictions on their firewall and it was decided to configure an existing EC2 machine with fixed IP as a reverse proxy.
-
-            This way, it was possible to communicate with all the clients' APIs that had IP restrictions using the fixed IP from this machine. To do that, I configured an Nginx server on that machine and configured it as a reverse proxy.
-
-            It became, then, used for both development and production purposes to allow our Fargate instances to communicate to the clients' APIs.
-
-            Although there were some limitations with this approach, such as error observability when we got a 502 answer from the proxy, it made the process of communicating with such APIs a lot easier.
-        `
-    },
-    mob_data_formatting: {
-        type: projectTypes.backend,
-        category: categories.at_work,
-        name: "Data formatting platform",
-        year: "2023",
-        resources: [
-            "Python",
-            "AWS S3",
-            "AWS Lambda Functions",
-            "Pandas",
-            "NumPy",
-            "Docker",
-        ],
-        description: `
-            Being part of the same flow as the data collect platform, the data formatting platform consists of Lambda functions that were created to standardize the data before going to data engineering processes.
-
-            After the data of a single source (client) was collected, Lambda functions to format the data from that source were invoked, reading the original Parquet file on AWS S3, adjusting its data to the standard format and uploading the resulting dataset as a new Parquet on S3.
-
-            When I started working in this project, it was composed by a bunch of independent scripts, most of them copying the same base structure from the others. Then I became responsible for maintaining it and making it support new sources and, to make it easier, I refactored the whole project structure so we had a single base class defining the whole formatting process and each of the specific classes, for each source, would have to just define what was really specific for those data.
-
-            After refactoring and documenting the new structure and how it worked, it became much easier to create new formatting Lambda functions, since each new class, for a new source, would have only a few lines of code and a process that initially was taking about one or two days to be done started to be done in a couple of hours.
-        `
-    },
+const corporateProjects = {
+    // Add at least one StartSe project here
     mob_collect: {
         type: projectTypes.backend,
-        category: categories.at_work,
+        category: categories.corporate,
         name: "Data collect platform",
         year: "2023 - 2024",
         resources: [
@@ -217,27 +183,9 @@ export const projects = {
             I was responsible for the creation of this project in first instance, then became responsible for implementing every new feature, guiding colleagues on maintaining it and writing automated tests, defining how to improve collect time and implementing what was needed to make this improvement. With this, I was taken as a technical reference and expert in this client's process and data collect features.
         `
     },
-    farm: {
-        type: projectTypes.web,
-        category: categories.at_work,
-        name: "Farm management system",
-        year: "2023",
-        resources: [
-            "Python",
-            "FastAPI",
-            "MySQL",
-        ],
-        description: `
-            This project can be described as a web platform to manage the processes, mostly focused on animal lifecycles, adopted by a group of farms.
-
-            I got the chance to participate in this project since its beginning and help the team during the main discovery process, also brainstorming about the system UI, user flow and some behaviors the system was expected to have.
-
-            My responsibilities included choosing the techology to use in the back-end, such as language, framework and database, seting up the base back-end architecture based on an internal base project - and help improving this base with some generic features as they were created for this project -, and creating the code for the user management of the system.
-        `
-    },
     dbaccess: {
         type: projectTypes.backend,
-        category: categories.at_work,
+        category: categories.corporate,
         name: "DBAccess",
         year: "2022",
         resources: [
@@ -248,69 +196,16 @@ export const projects = {
         description: `
             A database Identity Access Manager (IAM) is what defines DBAccess.
 
-            It was created as a new version of an existing platform, focused on managing the users accesses to many databases and being integrated with many other company's services to manage all the whole business.
+            It was created as a new version of an existing MercadoLibre's platform, focused on managing the users accesses to many databases and being integrated with many other company's services to manage all the whole business.
 
             The team for this project was distributed among three different countries and it was a great experience of dealing with people in English and Spanish.
 
             During the project I had the responsibilities of understanding some architecture pattern requirements, setting up the project's architecture, providing examples of the appropriated way to do things following the requirements and help and guide teammates with no previous knowledge in Python and some of the adopted technologies. And it was a great experience.
         `
     },
-    metrics: {
-        type: projectTypes.backend,
-        category: categories.at_work,
-        name: "Internal metrics system",
-        year: "2022",
-        resources: [
-            "Node JS",
-            "TypeScript",
-            "React",
-            "RabbitMQ",
-            "Jira API",
-            "Apache Superset",
-            "Docker",
-            "MySQL",
-        ],
-        description: `
-            This project's focus were to gather information from Jira regarding the development process - how much time are the tasks taking to be completed, how many tasks were delivered in a given period and so on.
-
-            Built as a microservice, being part of an internal service for the company's management, this project involved planning how to connect to Jira to gather the data, store what was relevant in the database and setting and automated way of requesting new updates from time to time so the stored data were always updated.
-
-            Besides working on the back-end to develop the process of getting and storing data, I also worked on searching for data visualization tools and setting up Apache Superset as our main tool to view all charts and statistics.
-
-            During its set up process, I also needed to create customized charts (visualizations) for Superset, in React, and set the platform's Docker build process to compile and include them on the final distribution build we used.
-
-            I was also responsible for the project as a lead developer during its last few months, helping the team to remove blockers, open and organize tasks and prioritize the next steps.
-
-        `
-    },
-    env_setup: {
-        type: projectTypes.cli,
-        category: categories.personal,
-        link: {
-            url: "https://github.com/vinibs/environment-setup",
-            title: "Environment setup on GitHub",
-            text: "View on GitHub",
-        },
-        name: "Environment setup CLI",
-        year: "2022",
-        resources: [
-            "Shell script",
-        ],
-        description: `
-            After having some trouble to configure my computer after formatting it, I decided to automate a few steps and started creating shell scripts to do all the heavy install of the development platforms I usually use.
-
-            It started by just a few scripts, for PHP and MySQL, but then I noticed that in the company I was working for, many people had troubles and spent many time setting their environment up. Then I decided to also create scripts for setting up other technologies, to help them getting started.
-
-            After some time using the scripts for setting up my machine with different development environments, I noticed that there also troubles with some other tools we used on the day-by-day that could be fixed and automated with some scripts.
-
-            Some of them were to downgrade a tool used with pre-commit, since it had one of its dependencies updated - what broke the tool - but it was not updated itself to fix it - and a fix to be able to correctly execute Terraform commands from M1 Macs, since the projects used a plugin that didn't have an ARM64 build available.
-
-            All these scripts were then gathered in a GitHub public repository so everyone could use them if needed.
-        `
-    },
     crypto_exchange: {
         type: projectTypes.mobile,
-        category: categories.at_work,
+        category: categories.corporate,
         name: "Cryptocurrency exchange",
         year: "2022",
         resources: [
@@ -339,7 +234,7 @@ export const projects = {
     },
     thaw: {
         type: projectTypes.mobile,
-        category: categories.at_work,
+        category: categories.corporate,
         link: {
             url: "https://github.com/vinibs/fcm-notification-tester",
             title: "Firebase POCs on GitHub",
@@ -372,9 +267,247 @@ export const projects = {
             I was also responsible for setting and managing the project's backend environments (staging and production) on AWS through Terraform scripts.
         `
     },
+    auth_server: {
+        type: projectTypes.backend,
+        category: categories.corporate,
+        name: "Genesis Auth Server",
+        year: "2020",
+        resources: [
+            "OAuth",
+            "PHP",
+            "MySQL",
+            "AWS",
+            "Jenkins",
+        ],
+        description: `
+            This project started by a need of allowing users of one application to be redirected and automatically authenticated in another application from a partner company. That meant we needed to provide the user's data to this second application.
+
+            To do that, it was created a server that, following the OAuth 2 protocol, allowed the user to authorizate the use of its data on the partner client once and automatically access the second app in the future.
+
+            I worked on this project since its planning and technology definitions until its deploy and followed up with its first monts in production. I built its internal structure to be mostly like an MVC structure, but didn't use any framework, and designed all the flows, even simulating the behavior and frontend of both parts.
+
+            It's considered one of the most challenging projects I worked on, since it presented me new concepts such as the OAuth 2 protocol and its flows  .
+        `
+    },
+    geld_datasource: {
+        type: projectTypes.backend,
+        category: categories.corporate,
+        name: "Geld Data Source",
+        year: "2019 - 2020",
+        resources: [
+            "Java",
+            "Springboot",
+            "MySQL",
+            "AWS",
+            "Jenkins",
+        ],
+        description: `
+            This project was an abstraction inside a partner application to access Geld data and generate charts and statistics.
+
+            The partner application was built using Java and Springboot, so every data source created for it uses the same technologies.
+
+            It required, for gathering some information, to change the database structure by creating read-only tables with pre-processed data (materialize data) to improve speed on the report generation.
+
+            I started working on this project sharing some duties with a few teammates, but ended up being the person in charge for all the management of this data source after some time.
+        `
+    },
+}
+
+/**
+export const projects = {
+    jfm_idiomas: {
+        type: projectTypes.web,
+        category: categories.freelance,
+        image: { title: "JFM Idiomas screenshot", file: "jfm.webp" },
+        name: "JFM Idiomas",
+        year: "2023 - 2024",
+        resources: [
+            "PHP",
+            "React",
+            "Laravel",
+            "Inertia JS",
+            "Tailwild CSS",
+            "MySQL",
+        ],
+        description: `
+            As a growing language school, JFM Idiomas needed a new custom web platform for managing its teachers, students, schedules, classes and invoices.
+
+            Built and discussed from sketch, this project aims to be a hub where teachers and students can manage their classes and keep up with the latest lessons' contents.
+
+            Besides that, it's also the entrypoint for company's managers to keep up with their numbers and teachers' performance, as well as generating invoices based on given classes for each teacher.
+        `
+    },
+    mob_dropbox_automation: {
+        type: projectTypes.backend,
+        category: categories.corporate,
+        name: "Dropbox data collect automation",
+        year: "2023",
+        resources: [
+            "Python",
+            "AWS S3",
+            "AWS Lambda Functions",
+            "Dropbox SDK",
+            "Docker",
+        ],
+        description: `
+            As part of the data collect process, one client needed the data was collected from a Dropbox account, where the files were manually uploaded during the weekdays.
+
+            For more than a year this collect process was done manually, eventually more than once a day, since there weren't a fixed time window to the files to be available on the Dropbox account, and once I became responsible for this process (for a few days) a developed a Python script to automate this process.
+
+            This project consisted in understanding how to have a constant connection to the Dropbox account without needing a user to interact to it and deploy the code to a Lambda function so it could be scheduled to run a few times a day (due to the lack of a fixed time window for the files' availability).
+
+            The main idea of this automation was to connect to Dropbox, look for the files regarding the provided date, download them (if found) and upload them to AWS S3 to start the data engineering process.
+
+            A cool feature was the fact that the script identified if the provided date (by default the current date) is a monday and, if so, it also searched for the files regarding the previous weekend days - since the files for these days are always uploaded on mondays.
+
+            In the end, this scheduled Lambda function reduced the time and effort needed to daily collect the data from this specific client.
+        `
+    },
+    sync_oracle_db_connection_poc: {
+        type: projectTypes.cli,
+        category: categories.corporate,
+        name: "Oracle DB connection POC",
+        year: "2023",
+        resources: [
+            "Python",
+            "Shell Script",
+            "Windows",
+            "Linux",
+            "Multiplatform",
+            "Virtual Machine",
+            "Proof of Concept (POC)",
+        ],
+        description: `
+            A Proof of Concept developed to find a better way to connect the current application to Oracle databases running locally.
+
+            The application was initially configured to connect to Oracle databases through a Java platform, but since the application needed to be installed in the client's machine the goal was not to need to install Java when installing the application.
+
+            This change should be able to connect to the database when running in different Windows versions, such as XP, 7 and 10, while being compatible with Linux platforms - since it would run in an uncontrolled environment in the client's machine.
+
+            This POC needed some virtual machines running different Windows and Linux versions and also the Oracle database so it could be accessible by the other VMs.
+
+            The Python code was able to successfully be installed on the machines and connect to the database so this POC became the base for future improvements to the final application.
+        `
+    },
+    sync_serverless_automation_server: {
+        type: projectTypes.backend,
+        category: categories.corporate,
+        name: "Serverless deploy automation server",
+        year: "2023",
+        resources: [
+            "JavaScript",
+            "NodeJS",
+            "Express",
+            "AWS S3",
+            "AWS EC2",
+            "AWS CodeDeploy",
+            "Serverless Framework",
+            "Docker",
+            "Bitbucket Pipelines",
+        ],
+        description: `
+            As part of a bigger application it was necessary to automate the process of creating serverless projects, with specifics files and dependencies and custom Docker images.
+
+            Oriented to use the Serverless Framework to deploy the custom image through code, I developed a Proof of Concept and then turned it into a web server, running on AWS EC2, to receive a JSON data through an endpoint and use it to create an internal directory with all the needed files, including the setup for Serverless Framework and the Dockerfile and then run a command to trigger Serverless to build and deploy the project.
+
+            This project also used Bitbucket pipelines, which were configured to run the automated tests and, once they all passed, deploy the updated version using AWS CodeDeploy.
+        `
+    },
+    mob_collect_proxy: {
+        type: projectTypes.backend,
+        category: categories.corporate,
+        name: "Data collect reverse proxy",
+        year: "2023",
+        resources: [
+            "Nginx",
+            "AWS EC2",
+        ],
+        description: `
+            For collecting data of some clients, there were IP restrictions on their firewall and it was decided to configure an existing EC2 machine with fixed IP as a reverse proxy.
+
+            This way, it was possible to communicate with all the clients' APIs that had IP restrictions using the fixed IP from this machine. To do that, I configured an Nginx server on that machine and configured it as a reverse proxy.
+
+            It became, then, used for both development and production purposes to allow our Fargate instances to communicate to the clients' APIs.
+
+            Although there were some limitations with this approach, such as error observability when we got a 502 answer from the proxy, it made the process of communicating with such APIs a lot easier.
+        `
+    },
+    mob_data_formatting: {
+        type: projectTypes.backend,
+        category: categories.corporate,
+        name: "Data formatting platform",
+        year: "2023",
+        resources: [
+            "Python",
+            "AWS S3",
+            "AWS Lambda Functions",
+            "Pandas",
+            "NumPy",
+            "Docker",
+        ],
+        description: `
+            Being part of the same flow as the data collect platform, the data formatting platform consists of Lambda functions that were created to standardize the data before going to data engineering processes.
+
+            After the data of a single source (client) was collected, Lambda functions to format the data from that source were invoked, reading the original Parquet file on AWS S3, adjusting its data to the standard format and uploading the resulting dataset as a new Parquet on S3.
+
+            When I started working in this project, it was composed by a bunch of independent scripts, most of them copying the same base structure from the others. Then I became responsible for maintaining it and making it support new sources and, to make it easier, I refactored the whole project structure so we had a single base class defining the whole formatting process and each of the specific classes, for each source, would have to just define what was really specific for those data.
+
+            After refactoring and documenting the new structure and how it worked, it became much easier to create new formatting Lambda functions, since each new class, for a new source, would have only a few lines of code and a process that initially was taking about one or two days to be done started to be done in a couple of hours.
+        `
+    },
+
+    farm: {
+        type: projectTypes.web,
+        category: categories.corporate,
+        name: "Farm management system",
+        year: "2023",
+        resources: [
+            "Python",
+            "FastAPI",
+            "MySQL",
+        ],
+        description: `
+            This project can be described as a web platform to manage the processes, mostly focused on animal lifecycles, adopted by a group of farms.
+
+            I got the chance to participate in this project since its beginning and help the team during the main discovery process, also brainstorming about the system UI, user flow and some behaviors the system was expected to have.
+
+            My responsibilities included choosing the techology to use in the back-end, such as language, framework and database, seting up the base back-end architecture based on an internal base project - and help improving this base with some generic features as they were created for this project -, and creating the code for the user management of the system.
+        `
+    },
+    metrics: {
+        type: projectTypes.backend,
+        category: categories.corporate,
+        name: "Internal metrics system",
+        year: "2022",
+        resources: [
+            "Node JS",
+            "TypeScript",
+            "React",
+            "RabbitMQ",
+            "Jira API",
+            "Apache Superset",
+            "Docker",
+            "MySQL",
+        ],
+        description: `
+            This project's focus were to gather information from Jira regarding the development process - how much time are the tasks taking to be completed, how many tasks were delivered in a given period and so on.
+
+            Built as a microservice, being part of an internal service for the company's management, this project involved planning how to connect to Jira to gather the data, store what was relevant in the database and setting and automated way of requesting new updates from time to time so the stored data were always updated.
+
+            Besides working on the back-end to develop the process of getting and storing data, I also worked on searching for data visualization tools and setting up Apache Superset as our main tool to view all charts and statistics.
+
+            During its set up process, I also needed to create customized charts (visualizations) for Superset, in React, and set the platform's Docker build process to compile and include them on the final distribution build we used.
+
+            I was also responsible for the project as a lead developer during its last few months, helping the team to remove blockers, open and organize tasks and prioritize the next steps.
+
+        `
+    },
+    
+ 
+    
     etch: {
         type: projectTypes.mobile,
-        category: categories.at_work,
+        category: categories.corporate,
         image: { title: "Etch screenshot", file: "etch.webp" },
         name: "Etch Travel",
         year: "2021",
@@ -398,31 +531,10 @@ export const projects = {
             Since my first day on this project, the automated tests for the backend services and endpoints were essential for any delivery, so I learn many things about testing during this project.
         `
     },
-    auth_server: {
-        type: projectTypes.backend,
-        category: categories.at_work,
-        name: "Genesis Auth Server",
-        year: "2020",
-        resources: [
-            "OAuth",
-            "PHP",
-            "MySQL",
-            "AWS",
-            "Jenkins",
-        ],
-        description: `
-            This project started by a need of allowing users of one application to be redirected and automatically authenticated in another application from a partner company. That meant we needed to provide the user's data to this second application.
-
-            To do that, it was created a server that, following the OAuth 2 protocol, allowed the user to authorizate the use of its data on the partner client once and automatically access the second app in the future.
-
-            I worked on this project since its planning and technology definitions until its deploy and followed up with its first monts in production. I built its internal structure to be mostly like an MVC structure, but didn't use any framework, and designed all the flows, even simulating the behavior and frontend of both parts.
-
-            It's considered one of the most challenging projects I worked on, since it presented me new concepts such as the OAuth 2 protocol and its flows  .
-        `
-    },
+    
     cliconnect: {
         type: projectTypes.mobile,
-        category: categories.at_work,
+        category: categories.corporate,
         image: { title: "CliConnect screenshot", file: "cliconnect.webp" },
         name: "CliConnect",
         year: "2020",
@@ -438,14 +550,14 @@ export const projects = {
 
             Built using React and ported to a mobile app using Cordova, its goal was to give Genesis's clients an easy way to check their shipments in real time in a national scale.
 
-            It was my first contact with React, so I needed to learn it to go on with the project. I ended up being the only maintainer of this project and leter of a new one, very similar, but focused on a single client.
+            It was my first contact with React, so I needed to learn it to go on with the project. I ended up being the only maintainer of this project and later of a new one, very similar, but focused on a single client.
 
             After some time working on it, I also organized a workshop to teach my teammates the basics of the technology and the build and deploy processes.
         `
     },
     mgeld: {
         type: projectTypes.mobile,
-        category: categories.at_work,
+        category: categories.corporate,
         image: { title: "mGeld screenshot", file: "mgeld.webp" },
         name: "mGeld",
         year: "2020",
@@ -468,31 +580,10 @@ export const projects = {
             Besides the app itself, I also worked on the web service the app communicates to, which was a completely different project from Geld (web), even though they both communicate with the same databases and manage some of the same processes.
         `
     },
-    geld_datasource: {
-        type: projectTypes.backend,
-        category: categories.at_work,
-        name: "Geld Data Source",
-        year: "2019 - 2020",
-        resources: [
-            "Java",
-            "Springboot",
-            "MySQL",
-            "AWS",
-            "Jenkins",
-        ],
-        description: `
-            This project was an abstraction inside a partner application to access Geld data and generate charts and statistics.
-
-            The partner application was built using Java and Springboot, so every data source created for it uses the same technologies.
-
-            It required, for gathering some information, to change the database structure by creating read-only tables with pre-processed data (materialize data) to improve speed on the report generation.
-
-            I started working on this project sharing some duties with a few teammates, but ended up being the person in charge for all the management of this data source after some time.
-        `
-    },
+    
     geld: {
         type: projectTypes.web,
-        category: categories.at_work,
+        category: categories.corporate,
         image: { title: "Geld screenshot", file: "geld.webp" },
         name: "Geld",
         year: "2019 - 2020",
@@ -550,58 +641,7 @@ export const projects = {
             To deploy it I had a few issues regarding free infrastructure, since limitations on file storage on Heroku. This led me to deploying the backend on Heroku and integrate it with AWS S3 to store the user's uploaded files.
         `
     },
-    lira: {
-        type: projectTypes.web,
-        category: categories.personal,
-        link: {
-            url: "https://github.com/vinibs/lira",
-            title: "Lira on GitHub",
-            text: "View on GitHub",
-        },
-        name: "Lira",
-        year: "2018 - 2020",
-        resources: [
-            "Vanilla JavaScript", "HTML", "CSS", "Responsive",
-        ],
-        description: `
-            Lira (or LiraJS) is a Single Page Application (SPA) and Progressive Web App (PWA) microframework.
-
-            It brings a simple router made in pure JS and a file/directory structure to simplify some basics of SPAs and PWAs, using the concepts of HTML Custom Elements.
-
-            The reason why this project was created is similar to Luvi's history. I started learning front-end frameworks an didn't understand (and like) how they work and their complexity, so I decided to create my own.
-
-            An idea behind it is to keep it the most near as using the default base language as possible, instead of creating a completely new syntax.
-
-            The funniest part about its history is that its logo came to my mind before even thinking about a name, so it was the logo that defined how it was going to be called.
-
-            It is a great way to learn new concepts and front-end technologies, even though it has its limitations.
-
-            And, hey, look! <b>You are seeing it working right now!</b> This website is built over Lira to test its capabilities and limitations in practice.
-        `
-    },
-    luvi: {
-        type: projectTypes.backend,
-        category: categories.personal,
-        link: {
-            url: "https://github.com/vinibs/luvi",
-            title: "Luvi on GitHub",
-            text: "View on GitHub",
-        },
-        name: "Luvi",
-        year: "2017",
-        resources: [
-            "PHP",
-        ],
-        description: `
-            Luvi is a PHP microframework.
-
-            When I started using frameworks, I got bothered for not understanding how things work behid the scenes and how much resources (many of them not useful for my use cases at the time) they bring, so I decided to create my own framework (a generic MVC structure) to better understand the architecture and fundamentals, thinking of being the simplest as possible.
-
-            Then Luvi was born. A simple structure that, in its first version, tried to abstract database connections and authentication flow. However, in newer versions - remaking it with a different structure -, some features were removed and other were added, such as support for many localization strings.
-
-            The main focus of this project is to understand technologies and architecture patterns, eventually being useful as a base for personal projects.
-        `
-    },
+    
     siconf: {
         type: projectTypes.web,
         category: categories.freelance,
@@ -629,7 +669,7 @@ export const projects = {
     },
     pdti: {
         type: projectTypes.web,
-        category: categories.at_work,
+        category: categories.corporate,
         image: { title: "PDTI screenshot", file: "pdti.webp" },
         name: "PDTI",
         year: "2016 - 2018",
@@ -651,7 +691,7 @@ export const projects = {
     },
     intranet: {
         type: projectTypes.web,
-        category: categories.at_work,
+        category: categories.corporate,
         image: { title: "Intranet/Support System screenshot", file: "intranet.webp" },
         name: "UTFPR Intranet/Support System",
         year: "2016 - 2018",
@@ -674,7 +714,7 @@ export const projects = {
     },
     events: {
         type: projectTypes.web,
-        category: categories.at_work,
+        category: categories.corporate,
         link: {
             url: "https://eventos.cp.utfpr.edu.br",
             title: "Visit Events Management System",
@@ -725,32 +765,7 @@ export const projects = {
             It stayed availabe online for a few years but had to be shut down due to infrastructure issues back on 2019.
         `
     },
-    cadeu: {
-        type: projectTypes.web,
-        category: categories.personal,
-        image: { title: "Cadêu screenshot", file: "cadeu.webp" },
-        name: "Cadêu",
-        year: "2014 - 2019",
-        resources: [
-            "PHP",
-            "HTML",
-            "CSS",
-            "Vanilla JavaScript",
-            "Responsive",
-            "MySQL",
-        ],
-        description: `
-            Cadêu was my first personal project, born from the question "what sites/services do I currently have online accounts in?". The initial idea was to check the internet to discover if a given e-mail was already registered in each visited site and give the user a list of results.
-
-            However, it ended up not being possible to be done - at least at that time, with the knowledge I had -, so I decided to go through a different approach: a web platform so I can manually register where I have an account, possibly also registering a password tip (not the full password, for security reasons) and which e-mail address I used.
-
-            As my first personal project, it was a great way to learn things, such as CSS, JavaScript and responsivity. It was maintained and had new versions until 2019, when I decided to shut it down since there were only few users and I had some issues finding a free infrastructure to keep it in.
-
-            During its lifetime, I also created a "submodule" for it, called Cadêu Steps. Its idea was to provide users with a community-maintained platform to check the step-by-step to delete accounts from specific sites/services - usually it's easy to know how to create an account, but how to delete it can be a tricky info to find, in some cases.
-
-            Besides developing the website, as a monolhitic PHP/HTML application, built from scratch without any framework, I also designed its logo an all its icons so they could be as customizable as possible.
-        `
-    },
+    
     bochabrasil: {
         type: projectTypes.web,
         category: categories.freelance,
@@ -761,7 +776,7 @@ export const projects = {
             "PHP",
             "HTML",
             "CSS",
-            "Vanilla JavaScript",
+            "JavaScript",
             "Responsive",
             "MySQL",
         ],
@@ -777,4 +792,12 @@ export const projects = {
             I also participate in the logo design changes a few times and was responsible for shooting and editing the photos used in the website and designing its icons and illustrations.
         `
     },
+}
+
+
+*/
+
+export const projects = {
+    personal: {...personalProjects},
+    corporate: {...corporateProjects},
 }

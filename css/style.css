@@ -273,6 +273,16 @@ p {
 }
 
 
+/* Página Projetos */
+.projects-list .project-category {
+    margin-top: 40px;
+}
+
+.projects-list .project-category:nth-child(2) {
+    margin-top: 0;
+}
+
+
 
 @media (min-width: 901px) {
     /* Página inicial */
