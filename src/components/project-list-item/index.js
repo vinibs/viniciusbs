@@ -5,6 +5,8 @@ const ProjectListItemAttributes = [
     'name',
     'year',
     'id',
+    'category',
+    'onClick',
 ]
 
 export class ProjectListItem extends LiraElement {
@@ -19,7 +21,12 @@ export class ProjectListItem extends LiraElement {
 
     render () {
         return `
-            <li class="project-item-container ${this.type}">
+            <li class="project-item-container ${this.type}"
+                id="${this.id}"
+                category="${this.category}"
+                type="${this.type}"
+                ${this.onClick ? `onclick="${this.onClick}(${this.id})"` : ""}>
+
                 <p class="name">${this.name}</p>
                 <p class="year">${this.year}</p>
             </li>

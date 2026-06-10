@@ -1,4 +1,4 @@
-export const pageTitle = "Main Projects"
+export const pageTitle = "Featured Projects"
 
 const categories = {
     corporate: "corporate",

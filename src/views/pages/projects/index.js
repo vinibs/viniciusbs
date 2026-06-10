@@ -10,30 +10,21 @@ export class Projects extends LiraElement {
     constructor () {
         super()
 
-        document.title = `projects • viniciusbs`
+        document.title = `featured projects • viniciusbs`
 
+        window.openProjectId = null
+
+        window.showProjectDetails = this.showProjectDetails
         window.closeProjectDetails = this.closeProjectDetails
         window.clearActiveProjectListItem = () => {
-            const projects = document.getElementsByTagName("project-list-item")
+            const previousActiveProject = document.getElementById(window.openProjectId)
 
-            for (const project of projects) {
-                project.classList.remove("active")
+            if (previousActiveProject) {
+                previousActiveProject.classList.remove("active")
             }
         }
 
         this.useStyle('./styles.css')
-    }
-
-    connectedCallback () {
-        super.connectedCallback()
-
-        const projects_list = document.getElementsByTagName("project-list-item")
-
-        for (const project of projects_list) {
-            project.addEventListener("click", (ev) => {
-                this.showProjectDetails(project)
-            })
-        }
     }
 
     showProjectDetails (project) {
@@ -43,9 +34,10 @@ export class Projects extends LiraElement {
         const projectInfo = document.getElementById("project-info")
         const projectsList = document.getElementById("projects-list")
 
-        if (!projectInfo.classList.contains("open") || this.openProjectId !== projectId) {
-            clearActiveProjectListItem()
+        if (!projectInfo.classList.contains("open") || window.openProjectId !== projectId) {
+            window.clearActiveProjectListItem()
             project.classList.add("active")
+            window.openProjectId = projectId
 
             projectInfo.classList.add("open")
             projectInfo.innerHTML = `
@@ -76,9 +68,8 @@ export class Projects extends LiraElement {
             <floating-logo></floating-logo>
 
             <fadein-container>
-
-                <div class="grid grid-3-4 col-gap-2 grid-top mobile-overlapping" id="projects-content">
-                    <div class="grid row-gap-1 grid-top projects-list" id="projects-list">
+                <responsive-container mode="sidebar" limitedWidth mainContainer>
+                    <div class="projects-list" id="projects-list">
                         <h2>${pageTitle}</h2>
 
                         <div class="project-category">
@@ -96,7 +87,8 @@ export class Projects extends LiraElement {
                                             year="${projectData.year}"
                                             id="${projectId}"
                                             type="${projectData.type}"
-                                            category="${projectData.category}">
+                                            category="${projectData.category}"
+                                            onclick="showProjectDetails">
                                         </project-list-item>
                                         `
                                 })}
@@ -118,7 +110,8 @@ export class Projects extends LiraElement {
                                             year="${projectData.year}"
                                             id="${projectId}"
                                             type="${projectData.type}"
-                                            category="${projectData.category}">
+                                            category="${projectData.category}"
+                                            onclick="showProjectDetails">
                                         </project-list-item>
                                         `
                                 })}
@@ -128,8 +121,7 @@ export class Projects extends LiraElement {
 
                     <article class="project-info text-content" id="project-info">
                     </article>
-                </div>
-
+                </responsive-container>
             </fadein-container>
         `
     }

@@ -2,7 +2,8 @@ import { LiraElement } from '/js/lira.js'
 
 const ResponsiveContainerAttributes = [
     'mode',
-    'limitedWidth'
+    'limitedWidth',
+    'mainContainer',
 ]
 
 const availableModes = {
@@ -19,6 +20,7 @@ export class ResponsiveContainer extends LiraElement {
             this.mode = availableModes.full
         }
         this.limitedWidth = !(this.limitedWidth === null)
+        this.mainContainer = !(this.mainContainer === null)
 
         this.useStyle('./styles.css')
     }
@@ -29,7 +31,10 @@ export class ResponsiveContainer extends LiraElement {
 
     render () {
         return `
-        <section class="responsive-container ${this.mode} ${this.limitedWidth ? 'limited-width' : ''}">
+        <section class="responsive-container ${this.mode} 
+            ${this.limitedWidth ? 'limited-width' : ''} 
+            ${this.mainContainer ? 'main-container' : ''}">
+
             <slot></slot>
         </section>
         `

@@ -1,9 +1,11 @@
 
 .project {
     align-items: center;
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
     margin: 15px auto 0;
+    min-height: calc(100vh - 180px);
 }
 
 
@@ -34,6 +36,7 @@ p {
 
 .project-meta {
     margin-top: 30px;
+    width: 100%;
 }
 
 .type, .resources {
@@ -118,7 +121,6 @@ button.close-project {
         font-size: 36px;
         left: 0;
         line-height: 100%;
-        position: absolute;
         top: calc(50% - 20px);
         width: 100%;
     }
@@ -145,6 +147,13 @@ button.close-project {
         button.close-project:after {
             color: rgb(180,180,180);
         }
+}
+
+@media (min-width: 901px) {
+    .close-project-container {
+        justify-self: end;
+        margin-top: auto;
+    }
 }
 
 
@@ -183,7 +192,6 @@ button.close-project {
 
     button.close-project {
         bottom: 95px;
-        grid-column: 4/4;
         left: calc(50vw - 22.5px);
         position: fixed;
     }
