@@ -2,7 +2,7 @@
  * Based on Google Custom Elements documentation:
  * https://developers.google.com/web/fundamentals/web-components/customelements
  */
-import { pageTitle, projects } from '../../contents/projects.js'
+import { pageTitle, projects } from '../../../contents/projects.js'
 import { LiraElement } from '/js/lira.js'
 
 // Defines the custom element's class
@@ -20,6 +20,8 @@ export class Projects extends LiraElement {
                 project.classList.remove("active")
             }
         }
+
+        this.useStyle('./styles.css')
     }
 
     connectedCallback () {

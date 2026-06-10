@@ -1,5 +1,5 @@
-import { AboutMe } from './about.js'
-import { Projects } from './projects.js'
+import { AboutMe } from './about/index.js'
+import { Projects } from './projects/index.js'
 import { Home } from './home/index.js'
 
 

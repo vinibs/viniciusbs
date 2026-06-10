@@ -5,7 +5,7 @@
 import {
     pageTitle,
     personalInfo,
-} from '../../contents/about.js'
+} from '../../../contents/about.js'
 import { LiraElement } from '/js/lira.js'
 
 // Defines the custom element's class
@@ -14,6 +14,8 @@ export class AboutMe extends LiraElement {
         super()
 
         document.title = `about me • viniciusbs`
+
+        this.useStyle('./styles.css')
     }
 
     // Defines the component default inner HTML
