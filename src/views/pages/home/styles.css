@@ -1,0 +1,70 @@
+/* Página inicial */
+.home-logo {
+    background: url('../images/logo.svg') no-repeat center center;
+    background-size: clamp(150px, 100%, 300px) clamp(80px, 100%, 200px);
+    background-position: center right;
+    color: transparent;    
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.home-content > .description {
+    color: rgb(60,60,60);
+    font-size: 18pt;
+    line-height: 25pt;
+    text-transform: uppercase;
+}
+
+.home-content > .description > span {
+    display: block;
+}
+
+.home-content > .subtitle {
+    color: rgb(110,110,110);
+    font-size: 14pt;
+    line-height: 165%;
+}
+
+.github-icon {
+    justify-self: center;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .home-logo {
+        mask-repeat: no-repeat;
+        mask-size: clamp(150px, 100%, 320px) clamp(80px, auto, 200px);
+        mask-position: center center;
+        background-image: none !important;
+        background-color: rgb(230,230,230);
+        mask-image: url('../images/logo.svg');
+    }
+
+    .home-content > .description {
+        color: rgb(230,230,230);
+    }
+
+    .home-content > .subtitle {
+        color: rgb(190,190,190);
+    }
+}
+
+
+@media (max-width: 900px) {
+    .home-logo {
+        background-position: bottom center;
+    }
+
+    .home-content {
+        justify-content: flex-start;
+        align-content: center;
+        text-align: center;
+    }
+
+
+}

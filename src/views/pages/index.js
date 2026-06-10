@@ -1,6 +1,6 @@
 import { AboutMe } from './about.js'
 import { Projects } from './projects.js'
-import { Home } from './home.js'
+import { Home } from './home/index.js'
 
 
 window.customElements.define('app-index', Home)

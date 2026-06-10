@@ -11,15 +11,17 @@ export class Home extends LiraElement {
         super()
 
         document.title = `viniciusbs`
+
+        this.useStyle('./styles.css')
     }
 
     // Defines the component default inner HTML
     render () {
         return `
             <fadein-container>
-                <div class="grid grid-1-1 col-gap-4 row-gap-2 home">
+                <responsive-container mode="half" limitedWidth>
                     <div class="home-logo">vinicius bs</div>
-                    <div class="home-content grid grid-center row-gap-2">
+                    <div class="home-content">
                         <div class="description">
                             <span>Software <strong>engineering</strong>.</span>
                             <span><em>Adapt. Code. Lead. Solve.</em></span>
@@ -29,7 +31,7 @@ export class Home extends LiraElement {
                             Building solutions through technology.
                         </div>
                     </div>
-                </div>
+                </responsive-container>
             </fadein-container>
         `
     }

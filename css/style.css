@@ -7,7 +7,6 @@
 body {
     font-family: sans-serif;
     line-height: 1.45em;
-    margin-bottom: 115px;
 }
 
 header {
@@ -175,61 +174,6 @@ p {
 }
 
 
-/* Página inicial */
-.grid.home {
-    min-height: calc(100vh - 115px);
-    align-content: center;
-    justify-items: center;
-}
-
-.grid.home > .home-logo {
-    background: url('../images/logo.svg') no-repeat center center;
-    background-size: 100% auto;
-    color: transparent;
-}
-
-.grid.home > .home-content > .description {
-    color: rgb(60,60,60);
-    font-size: 18pt;
-    line-height: 25pt;
-    text-transform: uppercase;
-}
-
-.grid.home > .home-content > .description > span {
-    display: block;
-}
-
-.grid.home > .home-content > .subtitle {
-    color: rgb(110,110,110);
-    font-size: 14pt;
-    line-height: 165%;
-}
-
-.grid.home > .github-icon {
-    justify-self: center;
-}
-
-
-@media (prefers-color-scheme: dark) {
-    .grid.home > .home-logo {
-        mask-repeat: no-repeat;
-        mask-size: 100% auto;
-        mask-position: center center;
-        background-image: none !important;
-        background-color: rgb(230,230,230);
-        mask-image: url('../images/logo.svg');
-    }
-
-    .grid.home > .home-content > .description {
-        color: rgb(230,230,230);
-    }
-
-    .grid.home > .home-content > .subtitle {
-        color: rgb(190,190,190);
-    }
-}
-
-
 
 
 /* Página About */
@@ -285,28 +229,6 @@ p {
 
 
 @media (min-width: 901px) {
-    /* Página inicial */
-    .grid.home > .home-logo {
-        justify-self: end;
-        height: 200px;
-        max-width: 300px;
-        width: 90%;
-    }
-
-    .grid.home > .home-content {
-        justify-self: start;
-        justify-items: start;
-    }
-
-    .grid.home > .home-content > .description {
-        align-self: end;
-    }
-
-    .grid.home > .home-content > .subtitle {
-        align-self: start;
-        justify-self: start;
-    }
-
 
     /* Página About */
     .whoiam {
@@ -436,23 +358,6 @@ p {
 
     .always-col > div {
         grid-column: auto;
-    }
-
-
-
-    /* Página inicial */
-    .grid.home {
-        grid-template-columns: 1fr;
-    }
-
-        .grid.home > div {
-            grid-column: 1/1;
-        }
-
-    .grid.home > .home-logo {
-        height: 160px;
-        max-width: 300px;
-        width: 75%;
     }
 
 
