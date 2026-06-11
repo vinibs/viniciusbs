@@ -20,12 +20,13 @@ p.year {
     padding: 5px 10px 5px 66px;
     text-align: left;
     transition: linear 0.2s;
+    position: relative;
 }
 
 .project-item-container::before {
     content: '';
     display: block;
-    height: 54px;
+    height: calc(100% - 10px);
     width: 32px;
     position: absolute;
     margin-left: -48px;
