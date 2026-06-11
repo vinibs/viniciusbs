@@ -139,7 +139,7 @@ const personalProjects = {
 }
 
 const corporateProjects = {
-    interseas_quality_framework: {
+    ai_quality_framework: {
         type: projectTypes.cli,
         category: categories.corporate,
         name: "AI Quality Validation Framework",
@@ -161,7 +161,7 @@ const corporateProjects = {
             Once the proof of concept successfully validated the approach, the framework was transitioned to the wider squad. This enablement strategy empowered the team to take ownership of the quality tool, scaling its coverage and implementing the detailed assertions required across all inner system modules and workflows.
         `
     },
-    mob_collect: {
+    distributed_data_ingestion_platform: {
         type: projectTypes.backend,
         category: categories.corporate,
         name: "Distributed Data Ingestion Platform",
@@ -185,7 +185,7 @@ const corporateProjects = {
             As the foundational owner and technical reference for the platform, this role encompassed defining the baseline infrastructure via AWS CDK and leveraging the AWS SDK for dynamic container orchestration. To guarantee long-term maintainability and platform resilience, the architecture was embedded with robust fault tolerance — including automated retry policies and real-time MS Teams alerting — alongside a comprehensive automated test suite. This technical oversight ultimately matured into a mentorship framework, guiding team members through feature expansion and cementing specialized expertise in the client's complex data domain.
         `
     },
-    sync_oracle_db_connection_poc: {
+    multiplatform_db_connection: {
         type: projectTypes.cli,
         category: categories.corporate,
         name: "Multiplatform Database Connection Protocol",
@@ -206,10 +206,10 @@ const corporateProjects = {
             The development cycle leveraged rigorous cross-platform testing, deploying and executing the codebase within a dedicated virtual machine grid to simulate varied kernel behaviors and isolated networking constraints. The PoC successfully established persistent, low-overhead database handshakes across all targeted operating systems, subsequently serving as the verified structural blueprint for the application's core production connection subsystem.
         `
     },
-    sync_serverless_automation_server: {
+    dynamic_infrastructure_automation_server: {
         type: projectTypes.backend,
         category: categories.corporate,
-        name: "Serverless deploy automation server",
+        name: "Dynamic Infrastructure Automation Server",
         year: "2023",
         resources: [
             "Node.js",
@@ -230,7 +230,7 @@ const corporateProjects = {
             The service operation was integrated with continuous delivery principles, utilizing Bitbucket Pipelines to enforce automated testing guardrails before provisioning. Successful builds automatically triggered localized deployments onto AWS EC2 instances managed via AWS CodeDeploy, ensuring an automated, hands-off infrastructure lifecycle.
         `
     },
-    mob_data_formatting: {
+    data_ingestion_and_formatting_platform: {
         type: projectTypes.backend,
         category: categories.corporate,
         name: "Data Ingestion & Formatting Platform",
@@ -326,7 +326,7 @@ const corporateProjects = {
             To ensure continuous delivery and operational stability, the backend infrastructure was fully codified using Terraform scripts to provision and manage decoupled staging and production environments on AWS. Maintaining a commitment to software quality, the core business logic, edge-case hardware states, and external API integrations were comprehensively protected by an automated test suite engineered with Pytest.
         `
     },
-    auth_server: {
+    genesis_auth_server: {
         type: projectTypes.backend,
         category: categories.corporate,
         name: "Genesis Auth Server",

@@ -3,7 +3,7 @@
  * https://developers.google.com/web/fundamentals/web-components/customelements
  */
 import { pageTitle, projects } from '../../../contents/projects.js'
-import { LiraElement } from '/js/lira.js'
+import { LiraElement, http } from '/js/lira.js'
 
 // Defines the custom element's class
 export class Projects extends LiraElement {
@@ -25,6 +25,18 @@ export class Projects extends LiraElement {
         }
 
         this.useStyle('./styles.css')
+
+        let params = http.params;
+        if (params.projectId) {
+            this.initializeProjectView(params.projectId)
+        }
+    }
+
+    initializeProjectView (projectId) {
+        setTimeout(() => {
+            const project = document.getElementById(projectId)
+            this.showProjectDetails(project)
+        }, 60)
     }
 
     showProjectDetails (project) {
@@ -45,6 +57,16 @@ export class Projects extends LiraElement {
             `
             projectsList.classList.add("mobile-hidden")
             projectInfo.scrollTo(0, 0)
+
+
+            const currentProtocol = window.location.protocol + "//"
+            let currentUrl = window.location.href
+            currentUrl = currentUrl.replace(currentProtocol, "")
+
+            let projectUrl = currentUrl.replace(/\/view\/.*/g, "") + `/view/${projectId}`
+            projectUrl = currentProtocol + projectUrl.replace(/\/+/g, "/")
+
+            history.pushState(null, '', projectUrl)
         }
     }
 
@@ -58,6 +80,11 @@ export class Projects extends LiraElement {
             projectsList.classList.remove("mobile-hidden")
             projectInfo.classList.remove("fadeout", "open")
             projectInfo.innerHTML = ``
+
+            let currentUrl = window.location.href
+            let baseUrl = currentUrl.replace(/\/view\/.*/g, "")
+
+            history.pushState(null, '', baseUrl)
         }, 200)
     }
 

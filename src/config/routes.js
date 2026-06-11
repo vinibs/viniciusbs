@@ -6,7 +6,8 @@ import '../views/index.js'
 
 route.set('/', 'app-index')
 route.set('/about-me', 'about-me')
-route.set('/projects', 'my-projects')
+route.set('/projects/', 'my-projects')
+route.set('/projects/view/{projectId}', 'my-projects')
 
 // Wildcard route for anything not listed above
 route.set('*', 'not-found')
