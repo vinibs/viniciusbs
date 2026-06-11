@@ -4,6 +4,7 @@ const ResponsiveContainerAttributes = [
     'mode',
     'limitedWidth',
     'mainContainer',
+    'verticalCentered'
 ]
 
 const availableModes = {
@@ -21,6 +22,7 @@ export class ResponsiveContainer extends LiraElement {
         }
         this.limitedWidth = !(this.limitedWidth === null)
         this.mainContainer = !(this.mainContainer === null)
+        this.verticalCentered = !(this.verticalCentered === null)
 
         this.useStyle('./styles.css')
     }
@@ -33,7 +35,8 @@ export class ResponsiveContainer extends LiraElement {
         return `
         <section class="responsive-container ${this.mode} 
             ${this.limitedWidth ? 'limited-width' : ''} 
-            ${this.mainContainer ? 'main-container' : ''}">
+            ${this.mainContainer ? 'main-container' : ''}
+            ${this.verticalCentered ? 'vertical-centered' : ''}">
 
             <slot></slot>
         </section>

@@ -1,0 +1,70 @@
+
+.whoiam {
+    text-align: center;
+}
+
+.whoiam b, .whoiam strong, .whoiam a {
+    color: rgb(0,0,0);
+}
+
+.photoarea > img {
+    border-radius: 100% 100% 15px 100%;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    margin: 15px auto;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.personal-info {
+    line-height: 175%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.personal-info > span {
+    display: block;
+    margin: 5px;
+}
+
+.personal-info > span.location {
+    margin: 5px auto 0;
+    color: rgb(90,90,90);
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .whoiam b, .whoiam strong, .whoiam a {
+        color: rgb(255,255,255);
+    }
+
+    .personal-info > span.location {
+        color: rgb(180,180,180);
+    }
+}
+
+
+
+
+@media (min-width: 901px) {
+    .whoiam {
+        margin-top: 1em;
+        width: 100%;
+    }
+
+    .self-description {
+        padding: 5px 40px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .self-description {
+        margin-top: 50px;
+        padding: 15px;
+    }
+}

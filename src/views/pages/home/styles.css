@@ -3,7 +3,9 @@
     background: url('../images/logo.svg') no-repeat center center;
     background-size: clamp(150px, 100%, 300px) clamp(80px, 100%, 200px);
     background-position: center right;
-    color: transparent;    
+    color: transparent;
+    height: 100%;
+    min-height: 200px;
 }
 
 .home-content {

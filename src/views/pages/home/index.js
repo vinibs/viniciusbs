@@ -19,7 +19,7 @@ export class Home extends LiraElement {
     render () {
         return `
             <fadein-container>
-                <responsive-container mode="half" limitedWidth mainContainer>
+                <responsive-container mode="half" limitedWidth mainContainer verticalCentered>
                     <div class="home-logo">vinicius bs</div>
                     <div class="home-content">
                         <div class="description">
