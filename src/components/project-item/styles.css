@@ -54,7 +54,7 @@ p {
 }
 
 .type badge-item {
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .type badge-item, .resources badge-item {
@@ -182,7 +182,7 @@ button.close-project {
         max-width: none;
     }
 
-    .project > .project-meta {
+    .project-meta {
         text-align: left;
     }
 
