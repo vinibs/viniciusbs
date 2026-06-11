@@ -71,6 +71,12 @@
     }
 }
 
+@media (min-width: 901px) {
+    .project-info {
+        font-size: 1.1em;
+    }
+}
+
 
 @media (max-width: 900px) {
     .projects-list {
