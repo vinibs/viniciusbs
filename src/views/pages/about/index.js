@@ -67,6 +67,22 @@ export class AboutMe extends LiraElement {
                         </article>
 
                     </responsive-container>
+
+                    <section class="profile-pillars">
+                        <h3>Profile Pillars</h3>
+                        <ul class="pillars-list">
+                            ${this.renderEach(Object.entries(personalInfo.profilePillars),
+                                ([index, pillar]) => {
+                                    return `
+                                    <li>
+                                        <h4>${pillar.title}</h4>
+                                        <p>${pillar.description}</p>
+                                    </li>
+                                    `
+                                }
+                            )}
+                        </ul>
+                    </section>
                 </responsive-container>
 
             </fadein-container>

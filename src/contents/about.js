@@ -29,5 +29,23 @@ export const personalInfo = {
         I ensure consistency and longevity of software projects by thoroughly reviewing code, consistently mentoring (and learning from) peers and automating repetitive workflows, simplifying them where possible, for the sake of <strong>process quality</strong>. I understand "quality" is a complex concept, shaped by the intersection of code, product and process attributes – measured by <strong>assessing the real problem</strong> and how the proposed solution covers it.
 
         My current focus is on merging core backend logic with mentoring, quality (in all contexts) and <strong>software longevity</strong>, ensuring each problem is actually understood and solved, with a solution that is <strong>built to last</strong> and easy to maintain over the long-term.
-    `
+    `,
+    profilePillars: [
+        {
+            title: "Quality",
+            description: "The intersection of code, product, and process attributes, measured by how effectively a solution solves the real problem.",
+        },
+        {
+            title: "Mentorship",
+            description: "Knowledge sharing and peer growth as an atomic part of daily engineering workflows.",
+        },
+        {
+            title: "Longevity",
+            description: "Focus on software maintainability, ensuring systems are built to last and easy to evolve over the long term.",
+        },
+        {
+            title: "Context",
+            description: "Thinking first about the problem rather than the technology, delivering real solutions based on actual domain analysis.",
+        },
+    ],
 }

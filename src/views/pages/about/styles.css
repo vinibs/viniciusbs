@@ -37,12 +37,62 @@
     row-gap: 10px;
 }
 
+ul.pillars-list {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 30px;
+    margin-top: 10px;
+}
+
+ul.pillars-list li {
+    animation: slide-up 0.5s ease both;
+    animation-delay: 0.2s;
+}
+
+@supports (animation-delay: calc(sibling-index() * 1s)) {
+  ul.pillars-list li {
+    animation-delay: calc((sibling-index() - 1) * 0.3s);
+  }
+}
+
+
+ul.pillars-list h4 {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+ul.pillars-list p {
+    font-size: 1em;
+    font-style: italic;
+    color: rgb(100,100,100);
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
 @media (prefers-color-scheme: dark) {
     .whoiam b, .whoiam strong, .whoiam a {
         color: rgb(255,255,255);
     }
 
     .personal-info > span.location {
+        color: rgb(180,180,180);
+    }
+
+    ul.pillars-list p {
         color: rgb(180,180,180);
     }
 }
@@ -52,12 +102,15 @@
 
 @media (min-width: 901px) {
     .whoiam {
-        margin-top: 1em;
         width: 100%;
     }
-
+    
     .self-description {
         padding: 5px 40px;
+    }
+    
+    ul.pillars-list {
+        column-gap: 80px;
     }
 }
 
@@ -65,6 +118,10 @@
 @media (max-width: 900px) {
     .self-description {
         margin-top: 50px;
-        padding: 15px;
+        padding: 20px;
+    }
+
+    ul.pillars-list {
+        flex-direction: column;
     }
 }
