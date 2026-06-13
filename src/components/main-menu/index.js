@@ -1,4 +1,5 @@
 import { LiraElement } from '/js/lira.js'
+import { navItems } from '../../contents/nav.js'
 
 export class MainMenu extends LiraElement {
     constructor () {
@@ -9,12 +10,17 @@ export class MainMenu extends LiraElement {
     render () {
         return `
             <nav>
-                <div>
-                    <a href="#/about-me" title="About me">About me</a>
-                </div>
-                <div>
-                    <a href="#/projects" title="Projects">Projects</a>
-                </div>
+                ${this.renderEach(navItems,
+                    (navItem) => {
+                        return `
+                        <a href="${navItem.href}"
+                            title="${navItem.title}"
+                            aria-label="${navItem.title}">
+                            ${navItem.title}
+                        </a>
+                        `
+                    }
+                )}
             </nav>
         `
     }

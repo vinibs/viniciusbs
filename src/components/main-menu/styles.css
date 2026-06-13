@@ -27,7 +27,7 @@ nav {
 
 nav a, nav a:hover {
     color: rgb(90,90,90);
-    font-size: 14pt;
+    font-size: 1.2em;
     font-style: normal;
     text-decoration: none;
     text-transform: uppercase;
@@ -41,7 +41,11 @@ nav a, nav a:hover {
 
 @media (max-width: 900px) {
     nav {
-        height: 90px;
+        height: 65px;
+    }
+
+    nav a, nav a:hover {
+        font-size: 1em;
     }
 }
 

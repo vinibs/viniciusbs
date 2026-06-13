@@ -67,6 +67,11 @@
         row-gap: 20px;
     }
 
+    .responsive-container.main-container {
+        margin-bottom: 85px
+    }
+
+
     .responsive-container ::slotted(*) {
         flex: 1 1 100% !important;
     }
