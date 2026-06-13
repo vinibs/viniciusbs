@@ -52,7 +52,9 @@ export class AboutMe extends LiraElement {
                                     ([icon, props]) => {
                                         return `
                                         <social-link icon="${icon}"
-                                            href="${props.url}" title="${props.title}" text="${props.text}">
+                                            href="${props.url}"
+                                            title="${props.title}"
+                                            ${props.text ? `text="${props.text}` : ''}">
                                         </social-link>
                                         `
                                     }

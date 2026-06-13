@@ -25,6 +25,7 @@
     mask-position: center center;
     background-color: rgb(140,140,140);
     transition: linear 0.2s;
+    border-radius: 4px;
 }
 
 .icon.gray {
@@ -38,18 +39,26 @@
 
 .icon.linkedin {
     mask-image: url('/images/icons/linkedin.svg');
-    border-radius: 4px;
 }
 
 .icon.email {
     mask-image: url('/images/icons/email.svg');
-    border-radius: 4px;
-    mask-position: center 2px;
 }
 
 .icon.medium {
     mask-image: url('/images/icons/medium.svg');
-    border-radius: 4px;
+}
+
+.icon.medium-new {
+    mask-image: url('/images/icons/medium-new.svg');
+}
+
+.icon.youtube {
+    mask-image: url('/images/icons/youtube.svg');
+}
+
+.icon.instagram {
+    mask-image: url('/images/icons/instagram.svg');
 }
 
 @media (prefers-color-scheme: dark) {
