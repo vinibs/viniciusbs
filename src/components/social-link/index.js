@@ -13,19 +13,22 @@ export class SocialLink extends LiraElement {
         super(true, SocialLinkAttributes)
         this.useStyle('./styles.css')
     }
-
+    
     static get observedAttributes () {
         return SocialLinkAttributes
     }
-
+    
     render () {
         const iconColor = this.color ? `colored ${this.color}` : ''
         const iconClass = `${iconColor} ${this.icon}`
 
+        this.text = this.text && this.text !== 'undefined' ? this.text : null
+        
         return `
         <a class="social-link"
             href="${this.href}"
             title="${this.title}"
+            aria-label="${this.title}"
             target="_blank" rel="noreferrer">
 
             <span class="icon ${iconClass}"></span>

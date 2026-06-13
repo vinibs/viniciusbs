@@ -10,15 +10,13 @@ export const personalInfo = {
     name: 'Vinicius Baroni Soares',
     location: 'Braga, Portugal',
     icons: {
-        email: {
-            url: 'mailto:hiviniciusbs@gmail.com',
-            title: 'E-mail',
-            text: 'hiviniciusbs@gmail.com',
-        },
         linkedin: {
             url: 'https://www.linkedin.com/in/viniciusbs',
-            title: 'LinkedIn',
-            text: 'in/viniciusbs',
+            title: 'Check my LinkedIn profile',
+        },
+        email: {
+            url: 'mailto:hiviniciusbs@gmail.com',
+            title: 'Send me an e-mail',
         },
     },
     description: `
@@ -41,7 +39,7 @@ export const personalInfo = {
         },
         {
             title: "Longevity",
-            description: "Focus on software maintainability, ensuring systems are built to last and easy to evolve over the long term.",
+            description: "A focus on software maintainability, ensuring systems are built to last and easy to evolve over the long term.",
         },
         {
             title: "Context",
