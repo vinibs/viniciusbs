@@ -132,6 +132,7 @@ responsive-container[mainContainer] > section:not(:first-of-type) {
 
     .channel-links {
         flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 }

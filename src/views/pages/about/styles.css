@@ -38,6 +38,10 @@
     justify-content: center;
 }
 
+.profile-pillars {
+    margin-top: 60px;
+}
+
 ul.pillars-list {
     display: flex;
     gap: 40px;
@@ -60,7 +64,7 @@ ul.pillars-list li {
 
 ul.pillars-list h4 {
     font-size: 1.3em;
-    font-weight: 600;
+    /* font-weight: 600; */
 
     color: var(--highlight-color);
 
@@ -124,11 +128,16 @@ ul.pillars-list p {
 
 @media (max-width: 900px) {
     .self-description {
-        margin-top: 50px;
+        margin-top: 20px;
         padding: 20px;
     }
 
     ul.pillars-list {
         flex-direction: column;
+        align-items: center;
+    }
+
+    ul.pillars-list p {
+        max-width: 450px;
     }
 }

@@ -74,21 +74,21 @@
 @media (min-width: 901px) {
     .project-info {
         font-size: 1.1em;
-        height: calc(100vh - 155px);
+        height: calc(100vh - (75px + 1.5em + 30px + 82px) - 25px);
 
         animation-name: expandSticky;
         animation-timeline: --sticky-tracker;
         
-        animation-range: contain -25% contain 0%; 
+        animation-range: contain -20% contain 20%; 
         animation-fill-mode: both;
     }
 
     @keyframes expandSticky {
         from {
-            height: calc(100vh - 245px);
+            height: calc(100vh - (75px + 1.5em + 30px + 82px) - 25px);
         }
         to {
-            height: calc(100vh - 155px);
+            height: calc(100vh - (40px + 82px) - 25px);
         }
     }
 

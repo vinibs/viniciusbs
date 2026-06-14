@@ -110,6 +110,6 @@
 
 @supports (animation-delay: calc(sibling-index() * 1s)) {
   .floating-bubbles ::slotted(bubble-item) {
-    animation-delay: calc((sibling-index() - 1) * 0.3s);
+    animation-delay: calc((sibling-index() - 1) * 0.15s);
   }
 }
