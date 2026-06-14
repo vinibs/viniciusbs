@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+:root {
+  --highlight-color: teal;
+  --highlight-gradient: linear-gradient(green, teal);
+}
+
 html {
     scrollbar-gutter: stable;
 }
