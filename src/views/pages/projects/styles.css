@@ -28,7 +28,7 @@
         height: 100%;
         width: 100%;
         background-color: rgba(255,255,255,0.8);
-        background: url(/images/projects-background.svg) no-repeat center center;
+        /* background: url(/images/projects-background.svg) no-repeat center center; */
         background-size: contain;
         max-height: 300px;
         max-width: 300px;
@@ -84,23 +84,22 @@
         z-index: 1;
     }
 
-
-    .mobile-overlapping > * {
-        grid-row-start: 1;
-        grid-column-start: 1;
-    }
-
-    .mobile-overlapping > .project-info.open {
+    .project-info.open {
         background-color: rgb(255,255,255);
+        max-height: 100vh;
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        padding-bottom: 80px;
         z-index: 2;
     }
 
-    .projects-list.mobile-hidden {
-        display: none;
+    *:has(.mobile-no-scroll) {
+        overflow: hidden;
     }
 
     @media (prefers-color-scheme: dark) {
-        .mobile-overlapping > .project-info.open {
+        .project-info.open {
             background-color: rgb(40,40,40);
         }
     }

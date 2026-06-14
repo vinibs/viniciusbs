@@ -55,9 +55,7 @@ export class Projects extends LiraElement {
             projectInfo.innerHTML = `
             <project-item id="${projectId}" category="${projectCategory}"/>
             `
-            projectsList.classList.add("mobile-hidden")
-            projectInfo.scrollTo(0, 0)
-
+            projectsList.classList.add("mobile-no-scroll")
 
             const currentProtocol = window.location.protocol + "//"
             let currentUrl = window.location.href
@@ -77,7 +75,7 @@ export class Projects extends LiraElement {
 
         projectInfo.classList.add("fadeout")
         setTimeout(() => {
-            projectsList.classList.remove("mobile-hidden")
+            projectsList.classList.remove("mobile-no-scroll")
             projectInfo.classList.remove("fadeout", "open")
             projectInfo.innerHTML = ``
 
