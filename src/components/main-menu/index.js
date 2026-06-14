@@ -12,7 +12,7 @@ export class MainMenu extends LiraElement {
 
         window.navigation.addEventListener("navigate", (event) => {
             this.clearActiveMenuItem()
-            this.setActiveMenu()
+            this.setActiveMenuItem()
         })
     }
 
@@ -25,13 +25,16 @@ export class MainMenu extends LiraElement {
     }
 
 
-    setActiveMenu () {
+    setActiveMenuItem () {
         this.currentHash = window.location.hash
 
         for (const navItem of navItems) {
             if (this.currentHash.includes(navItem.href)) {
                 const navElement = this.shadowRoot.querySelector(`[href='${navItem.href}']`)
-                navElement.classList.add("active")
+
+                if (navElement) {
+                    navElement.classList.add("active")
+                }
             }
         }
     }
