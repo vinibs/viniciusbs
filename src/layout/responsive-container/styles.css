@@ -15,7 +15,7 @@
     height: 100%;
     justify-content: center !important;
     align-items: start !important;
-
+    position: relative;
     margin: 0 auto;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .responsive-container.main-container {
-    min-height: calc(100vh - 115px);
+    min-height: calc(100vh - 105px);
     margin-bottom: 105px
 }
 
@@ -71,6 +71,7 @@
     }
 
     .responsive-container.main-container {
+        min-height: calc(100vh - 85px);
         margin-bottom: 85px
     }
 

@@ -3,6 +3,7 @@
  * https://developers.google.com/web/fundamentals/web-components/customelements
  */
 import { LiraElement } from '/js/lira.js'
+import { mainContent } from '../../../contents/home.js'
 
 
 // Defines the custom element's class
@@ -19,20 +20,36 @@ export class Home extends LiraElement {
     render () {
         return `
             <fadein-container>
-                <responsive-container mode="half" limitedWidth mainContainer verticalCentered>
-                    <div class="home-logo">vinicius bs</div>
-                    <div class="home-content">
-                        <div class="description">
-                            <span>Software <strong>engineering</strong>.</span>
-                            <span><em>Adapt. Code. Lead. Solve.</em></span>
-                        </div>
+                <responsive-container limitedWidth mainContainer>
+                    <floating-bubbles>
+                        ${this.renderEach(mainContent.bubbles, 
+                            (bubbleContent) => {
+                                return `
+                                <bubble-item model="${bubbleContent.model}"
+                                    ${bubbleContent.url ? `url="${bubbleContent.url}"` : ''}>
 
-                        <div class="subtitle">
-                            Building solutions through technology.
+                                    ${bubbleContent.text}
+                                </bubble-item>
+                                `
+                            }
+                        )}
+                    </floating-bubbles>
+
+
+                    <section class="home-content">
+                        <div class="home-logo">vinicius bs</div>
+                        <div class="description">
+                            <span>${mainContent.title}</span>
+                            <span class="main-text">
+                                ${mainContent.carouselBaseText}
+                            </span>
+                            
+                            <div class="subtitle">
+                                ${mainContent.description}
+                            </div>
                         </div>
-                    </div>
+                    </section>
                 </responsive-container>
-            </fadein-container>
         `
     }
 }

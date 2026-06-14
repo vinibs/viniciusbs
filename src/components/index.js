@@ -9,6 +9,7 @@ import { ProjectList } from './project-list/index.js'
 import { ProjectListItem } from './project-list-item/index.js'
 import { ProjectSection } from './project-section/index.js'
 import { SocialLink } from './social-link/index.js'
+import { FloatingBubbles, Bubble } from './floating-bubbles/index.js'
 
 
 window.customElements.define('badge-item', BadgeItem)
@@ -22,3 +23,6 @@ window.customElements.define('project-list', ProjectList)
 window.customElements.define('project-list-item', ProjectListItem)
 window.customElements.define('project-section', ProjectSection)
 window.customElements.define('social-link', SocialLink)
+
+window.customElements.define('floating-bubbles', FloatingBubbles)
+window.customElements.define('bubble-item', Bubble)

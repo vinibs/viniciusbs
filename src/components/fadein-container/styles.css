@@ -7,4 +7,6 @@
     animation: fadein 0.3s;
     width: 100%;
     height: calc(100% - 10px);
+    margin: 0;
+    padding: 0;
 }
