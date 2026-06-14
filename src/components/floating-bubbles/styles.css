@@ -22,7 +22,7 @@
 }
 
 .floating-bubbles ::slotted(bubble-item[model="the-salmon-dev"]) {
-    transform: scale(0.85);
+    transform: scale(0.8);
     top: min(35%, 70vw);
     left: min(60%, 55vw, 120vh);
     z-index: 2;
@@ -30,7 +30,7 @@
 
 .floating-bubbles ::slotted(bubble-item[model="medium"]),
 .floating-bubbles ::slotted(bubble-item[model="medium-new"]) {
-    transform: translate(-110%, 50%) scale(0.7);
+    transform: translate(-100%, 50%) scale(0.6);
     top: min(10%, 10vw);
     left: min(40%, 40vw, 75vh);
     z-index: 1;
@@ -44,7 +44,7 @@
 }
 
 .floating-bubbles ::slotted(bubble-item[model="photo"]) {
-    transform: translateX(-75%);
+    transform: translateX(-75%) scale(0.9);
     top: min(65%, 95vh);
     left: min(40%, 55vw, 85vh);
     z-index: 3;
@@ -86,4 +86,30 @@
             min-height: 600px;
         }
     }
+}
+
+
+
+/* ------------------------------------ */
+/* Animations */
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        translate: 0 30%;
+    }
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+.floating-bubbles ::slotted(bubble-item) {
+    animation: slide-up 0.5s ease both;
+}
+
+@supports (animation-delay: calc(sibling-index() * 1s)) {
+  .floating-bubbles ::slotted(bubble-item) {
+    animation-delay: calc((sibling-index() - 1) * 0.3s);
+  }
 }
