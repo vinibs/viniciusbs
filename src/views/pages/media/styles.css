@@ -89,6 +89,10 @@ responsive-container[mainContainer] > section:not(:first-of-type) {
 
 
     /* Medium Section */
+    .articles-details {
+        align-self: center;
+    }
+
     .articles-details img {
         width: 160px;
         height: 160px;

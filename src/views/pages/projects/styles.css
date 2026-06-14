@@ -19,7 +19,7 @@
         position: sticky;
         top: 40px;
         display: flex;
-        height: calc(100vh - 155px);
+        margin: 0 20px;
     }
 
     .project-info::before {
@@ -74,6 +74,27 @@
 @media (min-width: 901px) {
     .project-info {
         font-size: 1.1em;
+        height: calc(100vh - 155px);
+
+        animation-name: expandSticky;
+        animation-timeline: --sticky-tracker;
+        
+        animation-range: contain -25% contain 0%; 
+        animation-fill-mode: both;
+    }
+
+    @keyframes expandSticky {
+        from {
+            height: calc(100vh - 245px);
+        }
+        to {
+            height: calc(100vh - 155px);
+        }
+    }
+
+    responsive-container[mode="sidebar"] {
+        view-timeline-name: --sticky-tracker;
+        view-timeline-axis: block;
     }
 }
 

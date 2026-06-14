@@ -93,10 +93,9 @@ export class Projects extends LiraElement {
             <floating-logo></floating-logo>
 
             <fadein-container>
+                <h2>${pageTitle}</h2>
                 <responsive-container mode="sidebar" limitedWidth mainContainer>
                     <div class="projects-list" id="projects-list">
-                        <h2>${pageTitle}</h2>
-
                         <div class="project-category">
                             <h3 class="title">
                                 Personal
