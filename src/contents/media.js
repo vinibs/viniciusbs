@@ -46,6 +46,8 @@ export const articlesData = {
     mediumData: {
         url: "https://medium.com/@hiviniciusbs",
         mainIcon: "medium-new",
+        mainIconAltText: "Medium logo",
+        
         linkTitle: "Check out the Medium profile",
         linkText: "@hiviniciusbs on Medium",
         description: "Medium is a valuable platform where real engineers find actual solutions and informative content when researching. This space functions as an independent, uncoupled technical logbook, entirely free from the superficial curation or algorithms. With no strict niches, I write purely to document spontaneous technical explorations, practical experiments, and architectural critiques — treating software engineering as an ongoing playground for knowledge sharing.",

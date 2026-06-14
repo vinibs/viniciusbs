@@ -80,8 +80,9 @@ export class Media extends LiraElement {
                                     aria-label="${articlesData.mediumData.linkTitle}"
                                     target="_blank" rel="noreferrer">
 
-                                    <img src="./images/icons/${articlesData.mediumData.mainIcon}.svg"
-                                        alt="Medium logo">
+                                    <div class="articles-logo ${articlesData.mediumData.mainIcon}"
+                                        alt="${articlesData.mediumData.mainIconAltText}">
+                                    </div>
                                 
                                     ${articlesData.mediumData.linkText}
                                 </a>

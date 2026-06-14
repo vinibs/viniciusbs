@@ -27,7 +27,7 @@
         display: block;
         height: 100%;
         width: 100%;
-        background-color: rgba(255,255,255,0.8);
+        /* background-color: rgba(255,255,255,0.8); */
         /* background: url(/images/projects-background.svg) no-repeat center center; */
         background-size: contain;
         max-height: 300px;

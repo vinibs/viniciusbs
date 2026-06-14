@@ -62,8 +62,12 @@
 }
 
 @media (prefers-color-scheme: dark) {
+    .social-link {
+        color: rgb(160,160,160);
+    }
+
     .icon {
-        background-color: rgb(230,230,230);
+        background-color: rgb(160,160,160);
     }
 
     .icon.gray {
