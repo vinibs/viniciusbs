@@ -93,7 +93,8 @@
         opacity: 1;
     }
 
-    .project-info.open:before {
+    .project-info.open:before,
+    .project-info.open:after {
         display: none;
     }
 
