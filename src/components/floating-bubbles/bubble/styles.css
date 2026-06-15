@@ -12,6 +12,9 @@
     background-size: cover;
     transition: 0.3s;
     box-shadow: 0 3px 15px rgb(0,0,0,0.2);
+    animation: dynamic-float var(--float-duration) ease-in-out infinite alternate;
+    animation-delay: var(--float-delay);
+    position: absolute;
 }
 
 .bubble:hover {
@@ -65,4 +68,17 @@
     .bubble.medium-new {
         mask-image: url('./images/icons/medium-new.svg');
     }
+}
+
+
+@keyframes dynamic-float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(var(--mx), var(--my)) rotate(var(--mrot));
+  }
+  100% {
+    transform: translate(calc(var(--mx) * -0.5), calc(var(--my) * -0.3)) rotate(0deg);
+  }
 }

@@ -16,8 +16,25 @@ export class Home extends LiraElement {
         this.useStyle('./styles.css')
     }
 
+    generateRandomBubbleStyleProps () {
+        const mx = (Math.random() * 12 - 6).toFixed(2) + '%';
+        const my = (Math.random() * 12 - 6).toFixed(2) + '%';
+        const mrot = (Math.random() * 8 - 4).toFixed(2) + 'deg';
+        
+        const duration = (Math.random() * 6 + 6).toFixed(2) + 's';
+        const delay = (Math.random() * -10).toFixed(2) + 's';
 
-    injectKeywordsCarousel(baseText, keywords) {
+        return `
+            --mx: ${mx};
+            --my: ${my};
+            --mrot: ${mrot};
+            --float-duration: ${duration};
+            --float-delay: ${delay};
+        `
+    }
+
+
+    injectKeywordsCarousel (baseText, keywords) {
         const wordCarousel = `
             <word-carousel align="right">
                 ${this.renderEach(keywords, 
@@ -45,7 +62,8 @@ export class Home extends LiraElement {
                             (bubbleContent) => {
                                 return `
                                 <bubble-item model="${bubbleContent.model}"
-                                    ${bubbleContent.url ? `url="${bubbleContent.url}"` : ''}>
+                                    ${bubbleContent.url ? `url="${bubbleContent.url}"` : ''}
+                                    customStyle="${this.generateRandomBubbleStyleProps()}">
 
                                     ${bubbleContent.text}
                                 </bubble-item>
