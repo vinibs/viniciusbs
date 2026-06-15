@@ -4,13 +4,19 @@ const ResponsiveContainerAttributes = [
     'mode',
     'limitedWidth',
     'mainContainer',
-    'verticalCentered'
+    'verticalCentered',
+    'size'
 ]
 
 const availableModes = {
     'half': 'half',
     'full': 'full',
     'sidebar': 'sidebar',
+}
+
+const availableSizes = {
+    'sm': 'sm',
+    'md': 'md',
 }
 
 export class ResponsiveContainer extends LiraElement {
@@ -20,6 +26,11 @@ export class ResponsiveContainer extends LiraElement {
         if (!availableModes[this.mode]) {
             this.mode = availableModes.full
         }
+
+        if (this.size && !availableSizes[this.size]) {
+            this.size = availableSizes.md
+        }
+
         this.limitedWidth = !(this.limitedWidth === null)
         this.mainContainer = !(this.mainContainer === null)
         this.verticalCentered = !(this.verticalCentered === null)
@@ -34,6 +45,7 @@ export class ResponsiveContainer extends LiraElement {
     render () {
         return `
         <section class="responsive-container ${this.mode} 
+            ${this.size ? this.size : ''} 
             ${this.limitedWidth ? 'limited-width' : ''} 
             ${this.mainContainer ? 'main-container' : ''}
             ${this.verticalCentered ? 'vertical-centered' : ''}">

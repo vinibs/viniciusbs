@@ -73,7 +73,7 @@ export class Media extends LiraElement {
 
                     <section class="articles">
                         <h3>${articlesData.title}</h3>
-                        <responsive-container mode="sidebar">
+                        <responsive-container mode="sidebar" limitedWidth size="md">
                             <section class="articles-details">
                                 <a href="${articlesData.mediumData.url}"
                                     title="${articlesData.mediumData.linkTitle}"

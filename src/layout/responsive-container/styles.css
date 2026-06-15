@@ -23,6 +23,14 @@
     max-width: 1600px;
 }
 
+    .responsive-container.responsive-container.limited-width.sm {
+        max-width: 1000px;
+    }
+
+    .responsive-container.responsive-container.limited-width.md {
+        max-width: 1300px;
+    }
+
 .responsive-container.main-container {
     min-height: calc(100vh - 105px);
     margin-bottom: 105px
