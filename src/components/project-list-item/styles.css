@@ -23,12 +23,20 @@ p.year {
     position: relative;
 }
 
-    .project-item-container.active {
-        transition: linear 0.3s;
-        background: linear-gradient(var(--default-bg-color), var(--default-bg-color)) padding-box,
-            var(--highlight-gradient) border-box;
-        border: 1px solid transparent;
+    .project-item-container.active:after {
+        content: '';
+        position: absolute;
+        border-radius: 10px;
+        inset: 0;
+        border: 2px solid transparent;
+        background: var(--highlight-gradient) border-box;
+
+        mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
     }
+
 
 .project-item-container::before {
     content: '';
