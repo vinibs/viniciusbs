@@ -50,10 +50,11 @@ floating-bubbles {
 }
 
 .home-content > .description > .subtitle {
-    color: rgb(110,110,110);
+    color: rgb(150,150,150);
     font-size: 1em;
     line-height: 165%;
     margin-top: 20px;
+    font-style: italic;
 }
 
 

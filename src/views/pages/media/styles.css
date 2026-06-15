@@ -42,6 +42,8 @@ responsive-container[mainContainer] > section:not(:first-of-type) {
     justify-content: center;
     align-items: center;
     padding: 30px;
+    flex: 1;
+    min-width: 270px;
 }
 
     .articles-details .articles-logo {
@@ -107,8 +109,12 @@ responsive-container[mainContainer] > section:not(:first-of-type) {
         height: 200px;
     }
 
-
     /* Medium Section */
+    .articles responsive-container:host,
+    .articles-container {
+        border: 1px solid red;
+    }
+
     .articles-details {
         align-self: center;
     }
@@ -125,15 +131,15 @@ responsive-container[mainContainer] > section:not(:first-of-type) {
 
 
 @media (max-width: 1300px) {
+    .youtube-profile {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+        
     .youtube-profile img {
         width: 160px;
         height: 160px;
-    }
-
-    .channel-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
     }
 }
 
