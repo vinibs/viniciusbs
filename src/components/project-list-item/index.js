@@ -7,12 +7,15 @@ const ProjectListItemAttributes = [
     'id',
     'category',
     'onClick',
+    'active',
 ]
 
 export class ProjectListItem extends LiraElement {
     constructor () {
         super(true, ProjectListItemAttributes)
         this.useStyle('./styles.css')
+
+        this.active = !this.active === undefined
     }
 
     static get observedAttributes () {
@@ -21,7 +24,7 @@ export class ProjectListItem extends LiraElement {
 
     render () {
         return `
-            <li class="project-item-container ${this.type}"
+            <li class="project-item-container ${this.type} ${this.active ? 'active' : ''}"
                 id="${this.id}"
                 category="${this.category}"
                 type="${this.type}"

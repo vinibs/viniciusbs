@@ -8,7 +8,6 @@ ul.word-carousel {
     flex-direction: column;
     align-items: start;
     text-transform: uppercase;
-    color: var(--highlight-color);
     font-size: 1em;
     height: 1em;
     line-height: 1em;

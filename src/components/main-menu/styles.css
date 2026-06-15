@@ -42,7 +42,9 @@ nav a:hover {
 }
 
 nav a.active {
-    color: var(--highlight-color);
+    background-image: var(--highlight-gradient);
+    color: transparent;
+    background-clip: text;
     transition: 0.3s;
 }
 

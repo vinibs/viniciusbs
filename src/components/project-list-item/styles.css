@@ -19,9 +19,16 @@ p.year {
     cursor: pointer;
     padding: 5px 10px 5px 66px;
     text-align: left;
-    transition: linear 0.2s;
+    transition: linear 0.3s;
     position: relative;
 }
+
+    .project-item-container.active {
+        transition: linear 0.3s;
+        background: linear-gradient(var(--default-bg-color), var(--default-bg-color)) padding-box,
+            var(--highlight-gradient) border-box;
+        border: 1px solid transparent;
+    }
 
 .project-item-container::before {
     content: '';
@@ -30,7 +37,7 @@ p.year {
     width: 32px;
     position: absolute;
     margin-left: -48px;
-    background-color: rgb(140,140,140);
+    background-color: rgb(90,90,90);
     mask-repeat: no-repeat;
     mask-position: center center;
     mask-size: 32px;
@@ -58,11 +65,15 @@ p.year {
 }
 
 @media (prefers-color-scheme: dark) {
+    p.year {
+        color: rgb(150,150,150);
+    }
+
     .project-item-container::before {
-        background-color: rgb(120,120,120);
+        background-color: rgb(210,210,210);
     }
 
     .project-item-container:hover {
-        background-color: rgb(50,50,50);
+        background-color: rgb(20,20,20);
     }
 }

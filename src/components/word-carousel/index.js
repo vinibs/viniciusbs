@@ -5,11 +5,6 @@ export { WordCarouselItem }
 
 const WordCarouselAttributes = [
     'align',
-    // 'icon',
-    // 'color',
-    // 'href',
-    // 'title',
-    // 'text'
 ]
 
 

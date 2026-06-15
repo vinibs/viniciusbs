@@ -44,7 +44,8 @@
 }
 
 .bubble.projects {
-    background-image: url('./images/projects-home-icon.svg');
+    background-image: url('./images/projects-icon.svg');
+    background-color: rgb(212,240,255);
 }
 
 .bubble.photo {
@@ -67,6 +68,10 @@
 
     .bubble.medium-new {
         mask-image: url('./images/icons/medium-new.svg');
+    }
+
+    .bubble.projects {
+        background-color: rgb(18,59,92);
     }
 }
 

@@ -94,6 +94,10 @@ responsive-container[mainContainer] > section:not(:first-of-type) {
     .articles-details .articles-logo {
         background-color: rgb(230,230,230);
     }
+
+    .articles .articles-details a:hover {
+        color: rgb(190,190,190);
+    }
 }
 
 @media (min-width: 901px) {

@@ -20,7 +20,7 @@ export class Projects extends LiraElement {
             const previousActiveProject = document.getElementById(window.openProjectId)
 
             if (previousActiveProject) {
-                previousActiveProject.classList.remove("active")
+                previousActiveProject.removeAttribute("active")
             }
         }
 
@@ -48,7 +48,7 @@ export class Projects extends LiraElement {
 
         if (!projectInfo.classList.contains("open") || window.openProjectId !== projectId) {
             window.clearActiveProjectListItem()
-            project.classList.add("active")
+            project.setAttribute("active", true)
             window.openProjectId = projectId
 
             projectInfo.classList.add("open")

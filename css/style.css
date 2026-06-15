@@ -5,8 +5,11 @@
 }
 
 :root {
-  --highlight-color: teal;
-  --highlight-gradient: linear-gradient(green, teal);
+    --default-bg-color: rgb(255,255,255);
+    --default-text-color : rgb(30,30,30);
+
+    --highlight-color: rgb(0,117,178);
+    --highlight-gradient: linear-gradient(to right, rgb(0,117,178), rgb(0,200,131));
 }
 
 html {
@@ -16,6 +19,8 @@ html {
 body {
     font-family: sans-serif;
     line-height: 1.45em;
+    background-color: var(--default-bg-color);
+    color: var(--default-text-color);
 }
 
 header {
@@ -28,7 +33,7 @@ a, a:visited, a:hover, a:active, *::part(link) {
 }
 
 h1, h2, h3, h4 {
-    color: rgb(60,60,60);
+    color: var(--default-text-color);
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
@@ -62,13 +67,12 @@ p {
 
 
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: rgb(40,40,40);
-        color: rgb(230,230,230);
-    }
+    :root {
+        --default-bg-color: rgb(30,30,30);
+        --default-text-color: rgb(230,230,230);
 
-    h1, h2, h3, h4 {
-        color: rgb(230,230,230);
+        --highlight-color: rgb(0,155,212);
+        --highlight-gradient: linear-gradient(to right, rgb(0,155,212), rgb(31,255,205));
     }
 
     a, a:visited, a:hover, a:active, *::part(link) {

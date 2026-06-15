@@ -45,10 +45,10 @@ floating-bubbles {
     transition: 0.3s;
 }
 
-.home-content > .description > span.main-text > #keyword {
-    color: var(--highlight-color);
-    font-weight: 600;
-    text-transform: lowercase;
+.home-content > .description > span.main-text > word-carousel word-carousel-item {
+    background-image: var(--highlight-gradient);
+    color: transparent;
+    background-clip: text;
 }
 
 .home-content > .description > .subtitle {
