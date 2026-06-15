@@ -15,28 +15,17 @@ p.year {
 }
 
 .project-item-container {
-    border-radius: 10px;
+    border-radius: 50px;
     cursor: pointer;
-    padding: 5px 10px 5px 66px;
+    padding: 5px 30px 5px 76px;
     text-align: left;
     transition: linear 0.3s;
     position: relative;
 }
 
-    .project-item-container.active:after {
-        content: '';
-        position: absolute;
-        border-radius: 10px;
-        inset: 0;
-        border: 2px solid transparent;
-        background: var(--highlight-gradient) border-box;
-
-        mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-        mask-composite: exclude;
-        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-    }
-
+.project-item-container:hover {
+    background-color: rgb(245,245,245)
+}
 
 .project-item-container::before {
     content: '';
@@ -68,9 +57,25 @@ p.year {
     mask-image: url('../images/content-icons/web.svg');
 }
 
-.project-item-container:hover {
-    background-color: rgb(245,245,245)
+
+.project-item-container.active:before {
+    background-color: var(--highlight-color);
 }
+
+.project-item-container.active:after {
+    content: '';
+    position: absolute;
+    border-radius: 50px;
+    inset: 0;
+    border: 2px solid transparent;
+    background: var(--highlight-gradient) border-box;
+
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+}
+
 
 @media (prefers-color-scheme: dark) {
     p.year {
