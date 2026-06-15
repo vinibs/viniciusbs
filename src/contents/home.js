@@ -1,6 +1,6 @@
 export const mainContent = {
     title: "Software <strong>Engineering</strong>.",
-    carouselBaseText: 'Focused on <span id="keyword">{keyword}</span>.',
+    carouselBaseText: '{keyword} focused.',
     description: "Because software isn't just code.",
 
     bubbles: [

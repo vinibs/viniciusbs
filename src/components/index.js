@@ -10,6 +10,7 @@ import { ProjectListItem } from './project-list-item/index.js'
 import { ProjectSection } from './project-section/index.js'
 import { SocialLink } from './social-link/index.js'
 import { FloatingBubbles, Bubble } from './floating-bubbles/index.js'
+import { WordCarousel, WordCarouselItem } from './word-carousel/index.js'
 
 
 window.customElements.define('badge-item', BadgeItem)
@@ -26,3 +27,7 @@ window.customElements.define('social-link', SocialLink)
 
 window.customElements.define('floating-bubbles', FloatingBubbles)
 window.customElements.define('bubble-item', Bubble)
+
+
+window.customElements.define('word-carousel', WordCarousel)
+window.customElements.define('word-carousel-item', WordCarouselItem)

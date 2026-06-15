@@ -2,7 +2,7 @@ import { LiraElement } from '/js/lira.js'
 import { Bubble } from './bubble/index.js'
 
 
-export { Bubble };
+export { Bubble }
 
 const FloatingBubblesAttributes = [
 

@@ -16,6 +16,25 @@ export class Home extends LiraElement {
         this.useStyle('./styles.css')
     }
 
+
+    injectKeywordsCarousel(baseText, keywords) {
+        const wordCarousel = `
+            <word-carousel align="right">
+                ${this.renderEach(keywords, 
+                    (keyword) => {
+                        return `
+                            <word-carousel-item>
+                                ${keyword}
+                            </word-carousel-item>
+                        `
+                    }
+                )}
+            </word-carousel>
+        `
+
+        return baseText.replace('{keyword}', wordCarousel.trim()).trim();
+    }
+
     // Defines the component default inner HTML
     render () {
         return `
@@ -41,7 +60,10 @@ export class Home extends LiraElement {
                         <div class="description">
                             <span>${mainContent.title}</span>
                             <span class="main-text">
-                                ${mainContent.carouselBaseText}
+                                ${this.injectKeywordsCarousel(
+                                    mainContent.carouselBaseText,
+                                    mainContent.carouselKeywords,
+                                )}
                             </span>
                             
                             <div class="subtitle">
