@@ -1,15 +1,14 @@
-
-@keyframes showup {
-    from { bottom: -95px }
-    to { bottom: 5px }
+:root {
+    --links-opacity: 1;
+    --links-visibility: visible;
+    --navbar-height: 80px;
 }
 
 nav {
     align-items: center;
-    animation: showup 0.6s ease both;
     backdrop-filter: blur(8px);
     background: rgba(255,255,255, 0.7);
-    border: 1px solid rgb(230,230,230);
+    border: 1px solid rgb(200,200,200);
     border-radius: 40px;
     bottom: 5px;
     display: flex;
@@ -20,6 +19,7 @@ nav {
     position: fixed;
     right: 0;
     text-align: center;
+    height: var(--navbar-height);
     width: 90%;
     z-index: 5;
     -webkit-backdrop-filter: blur(8px);
@@ -33,6 +33,8 @@ nav a, nav a:hover {
     text-transform: uppercase;
     padding: 15px 20px;
     transition: 0.3s;
+    opacity: var(--links-opacity);
+    visibility: var(--links-visibility);
 }
 
 nav a:hover {
@@ -46,7 +48,7 @@ nav a.active {
 
 @media (min-width: 901px) {
     nav {
-        height: 80px;
+        --navbar-height: 80px;
     }
 
     nav a, nav a:hover {
@@ -57,7 +59,7 @@ nav a.active {
 
 @media (max-width: 900px) {
     nav {
-        height: 65px;
+        --navbar-height: 65px;
     }
 
     nav a, nav a:hover {
@@ -70,10 +72,50 @@ nav a.active {
 @media (prefers-color-scheme: dark) {
     nav {
         background: rgba(40,40,40,0.7);
-        border-color: rgb(60,60,60);
+        border-color: rgb(140,140,140);
     }
 
     nav a, nav a:hover {
         color: rgb(200,200,200);
+    }
+}
+
+/* ------------------------------------ */
+/* Animations */
+
+@keyframes ball-up-expansion {
+    0% {
+        opacity: 0;
+        translate: 0 calc(var(--navbar-height) + 15px);
+        height: var(--navbar-height);
+        width: var(--navbar-height);
+        --links-opacity: 0;
+        --links-visibility: hidden;
+    }
+    30% {
+        opacity: 1;
+        translate: 0 0;
+        width: var(--navbar-height);
+        --links-opacity: 0;
+        --links-visibility: hidden;
+    }
+    90% {
+        width: 90%;
+    }
+    100% {
+        --links-opacity: 1;
+        --links-visibility: visible;
+    }
+}
+
+
+
+nav {
+    animation: ball-up-expansion 1.2s ease both;
+}
+
+@media (orientation: portrait) {
+    nav {
+        animation: ball-up-expansion 1s ease both;
     }
 }
