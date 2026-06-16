@@ -6,7 +6,7 @@
 }
 
 .floating-bubbles ::slotted(bubble-item) {
-    animation: slide-up 0.5s ease both;
+    animation: slide-up-in 0.5s ease both;
     display: flex;
     width: min(300px, 25vw, 25vh);
     height: min(300px, 25vw, 25vh);

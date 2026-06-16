@@ -21,7 +21,7 @@
 }
 
 
-@keyframes slide-up {
+@keyframes slide-up-in {
     from {
         opacity: 0;
         visibility: hidden;
@@ -34,7 +34,7 @@
     }
 }
 
-@keyframes slide-down {
+@keyframes slide-down-in {
     from {
         opacity: 0;
         visibility: hidden;
@@ -57,6 +57,19 @@
         opacity: 0;
         visibility: hidden;
         translate: 0 30%;
+    }
+}
+
+@keyframes slide-up-out {
+    from {
+        opacity: var(--final-opacity, 1);
+        visibility: visible;
+        translate: 0 0;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        translate: 0 -30%;
     }
 }
 

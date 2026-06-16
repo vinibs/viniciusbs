@@ -51,7 +51,7 @@ ul.pillars-list {
 }
 
 ul.pillars-list li {
-    animation: slide-up 0.5s ease both;
+    animation: slide-up-in 0.5s ease both;
     animation-delay: 0.2s;
 }
 

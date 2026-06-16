@@ -12,7 +12,7 @@
 
 .project-info.open {
     background-color: var(--default-bg-color);
-    animation: slide-up 0.5s both;
+    animation: slide-up-in 0.5s both;
 }
 
     .project-info.open .project-info-content {
@@ -53,7 +53,7 @@ button.close-project {
     }
 
 .project-info-area:has(.project-info.open) button.close-project {
-    animation: slide-up 0.3s both;
+    animation: slide-up-in 0.3s both;
     animation-delay: 0.3s;
 }
 
@@ -123,7 +123,7 @@ button.close-project {
         
         border-radius: 50%;
         transition: 0.3s;
-        animation: slide-up 0.5s ease both, 
+        animation: slide-up-in 0.5s ease both, 
             dynamic-float var(--float-duration) ease-in-out infinite alternate;
         z-index: 0;
 
@@ -151,7 +151,7 @@ button.close-project {
         line-height: 1.8em;
         opacity: var(--final-opacity);
         transition: 0.3s;
-        animation: slide-up 0.5s ease both;
+        animation: slide-up-in 0.5s ease both;
         z-index: -1;
 
         --final-opacity: 0.3;

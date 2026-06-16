@@ -95,8 +95,6 @@ export class Projects extends LiraElement {
     // Defines the component default inner HTML
     render () {
         return `
-            <floating-logo></floating-logo>
-
             <fadein-container>
                 <h2>${pageTitle}</h2>
                 <responsive-container mode="sidebar" limitedWidth mainContainer>

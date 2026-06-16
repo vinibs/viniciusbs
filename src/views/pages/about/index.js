@@ -21,8 +21,6 @@ export class AboutMe extends LiraElement {
     // Defines the component default inner HTML
     render () {
         return `
-            <floating-logo></floating-logo>
-
             <fadein-container>
 
                 <responsive-container mode="full" limitedWidth mainContainer>

@@ -61,7 +61,7 @@ nav a.active {
 
 @media (prefers-color-scheme: dark) {
     nav {
-        background: rgba(40,40,40,0.7);
+        background: rgba(30,30,30,0.7);
         border-color: rgb(140,140,140);
     }
 
