@@ -1,15 +1,15 @@
 import { projects } from '../../contents/projects.js'
 import { LiraElement } from '/js/lira.js'
 
-const ProjectAttributes = [
+const ProjectDetailsItemAttributes = [
     'section',
     'id',
     'category'
 ]
 
-export class ProjectItem extends LiraElement {
+export class ProjectDetailsItem extends LiraElement {
     constructor () {
-        super(true, ProjectAttributes)
+        super(true, ProjectDetailsItemAttributes)
         this.useStyle('./styles.css')
 
         this.category = this.category.toLowerCase()
@@ -18,7 +18,7 @@ export class ProjectItem extends LiraElement {
     }
 
     static get observedAttributes () {
-        return ProjectAttributes
+        return ProjectDetailsItemAttributes
     }
 
     loadProjectData () {

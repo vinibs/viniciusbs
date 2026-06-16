@@ -53,7 +53,7 @@ export class Projects extends LiraElement {
 
             projectInfo.classList.add("open")
             projectInfo.innerHTML = `
-            <project-item id="${projectId}" category="${projectCategory}"/>
+            <project-details-item id="${projectId}" category="${projectCategory}"/>
             `
             projectsList.classList.add("mobile-no-scroll")
 
