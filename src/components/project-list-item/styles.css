@@ -10,6 +10,7 @@ p.name {
 
 p.year {
     font-size: 12px;
+    font-weight: 500;
     color: rgb(120,120,120);
     margin: -4px auto 5px;
 }
