@@ -117,7 +117,7 @@ button.close-project {
         display: block;
         height: 100%;
         width: 100%;
-        background: rgb(212,240,255) url(/images/projects-icon.svg) no-repeat center center;
+        background: var(--projects-icon-bg-color) url(/images/projects-icon.svg) no-repeat center center;
         background-size: contain;
         max-height: 270px;
         max-width: 270px;
@@ -160,7 +160,7 @@ button.close-project {
         animation: slide-up-in 0.5s ease both;
         z-index: -1;
 
-        --final-opacity: 0.3;
+        --final-opacity: 0.4;
     }
 
     .project-info.open {

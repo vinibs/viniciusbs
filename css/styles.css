@@ -30,6 +30,8 @@
     --highlight-color: rgb(0,117,178);
     --translucent-highlight-color: rgba(0,117,178,0.3);
     --highlight-gradient: linear-gradient(to right, rgb(0,117,178), rgb(0,200,131));
+
+    --projects-icon-bg-color: rgb(212,240,255);
 }
 
 html {
@@ -105,6 +107,8 @@ strong {
         --highlight-color: rgb(92,198,237);
         --translucent-highlight-color: rgba(92,198,237,0.3);
         --highlight-gradient: linear-gradient(to right, rgb(8, 140, 187), rgb(31,255,205));
+
+        --projects-icon-bg-color: rgb(18,59,92);
     }
 
     a, a:visited, a:hover, a:active, *::part(link) {
