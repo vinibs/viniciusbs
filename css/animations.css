@@ -1,18 +1,22 @@
 @keyframes fade-in {
     from {
         opacity: 0;
+        visibility: hidden;
     }
     to {
         opacity: var(--final-opacity, 1);
+        visibility: visible;
     }
 }
 
 @keyframes fade-out {
     from {
         opacity: var(--final-opacity, 1);
+        visibility: hidden;
     }
     to {
         opacity: 0;
+        visibility: visible;
     }
 }
 
@@ -20,10 +24,12 @@
 @keyframes slide-up {
     from {
         opacity: 0;
+        visibility: hidden;
         translate: 0 30%;
     }
     to {
         opacity: var(--final-opacity, 1);
+        visibility: visible;
         translate: 0 0;
     }
 }
@@ -31,11 +37,26 @@
 @keyframes slide-down {
     from {
         opacity: 0;
+        visibility: hidden;
         translate: 0 -30%;
     }
     to {
         opacity: var(--final-opacity, 1);
+        visibility: visible;
         translate: 0 0;
+    }
+}
+
+@keyframes slide-down-out {
+    from {
+        opacity: var(--final-opacity, 1);
+        visibility: visible;
+        translate: 0 0;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        translate: 0 30%;
     }
 }
 

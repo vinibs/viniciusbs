@@ -73,19 +73,22 @@ export class Projects extends LiraElement {
         const projectInfo = document.getElementById("project-info")
         const projectInfoContent = document.getElementById("project-info-content")
         const projectsList = document.getElementById("projects-list")
+        const closeButton = document.getElementById("close-project-button")
+
         clearActiveProjectListItem()
 
-        projectInfo.classList.add("fadeout")
+        projectInfo.classList.add("closing")
+
         setTimeout(() => {
             projectsList.classList.remove("mobile-no-scroll")
-            projectInfo.classList.remove("fadeout", "open")
+            projectInfo.classList.remove("closing", "open")
             projectInfoContent.innerHTML = ``
 
             let currentUrl = window.location.href
             let baseUrl = currentUrl.replace(/\/view\/.*/g, "")
 
             history.pushState(null, '', baseUrl)
-        }, 200)
+        }, 300)
     }
 
 
@@ -145,16 +148,19 @@ export class Projects extends LiraElement {
                         </div>
                     </div>
 
-                    <article class="project-info" id="project-info">
-                        <div class="project-info-content" id="project-info-content">
-                        </div>
+                    <section class="project-info-area">
+                        <article class="project-info" id="project-info">
+                            <div class="project-info-content" id="project-info-content">
+                            </div>
+                            </article>
 
-                        <button
-                            class="close-project"
-                            onclick="closeProjectDetails()"
-                            title="Close project details">
-                        </button>
-                    </article>
+                            <button
+                                class="close-project"
+                                id="close-project-button"
+                                onclick="closeProjectDetails()"
+                                title="Close project details">
+                            </button>
+                    </section>
                 </responsive-container>
             </fadein-container>
         `

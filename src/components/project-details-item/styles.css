@@ -23,7 +23,7 @@ h2, h3 {
 
 h3.year {
     color: rgb(150,150,150);
-    margin-bottom: 45px;
+    margin: 5px auto 45px;
 }
 
 
@@ -36,33 +36,18 @@ p {
     text-align: justify;
 }
 
-
-.project-meta {
-    margin-top: 30px;
-    width: 100%;
+.project-screen {
+    text-align: center;
 }
 
-.type, .resources {
-    margin: 5px 0 0;
-}
-
-.resources {
-    margin-bottom: 20px;
-}
-
-.type .title, .resources .title {
-    font-weight: 600;
-    font-size: 10pt;
-    text-transform: uppercase;
-}
-
-.type badge-item {
-    text-transform: uppercase;
-}
-
-.type badge-item, .resources badge-item {
-    font-size: 0.85em;
-}
+    .project-screen img {
+        border: 1px solid rgb(210,210,210);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        border-radius: 30px;
+        margin: 20px auto 15px;
+        max-width: 95%;
+        max-height: 420px;
+    }
 
 
 .project-link {
@@ -85,18 +70,31 @@ p {
     }
 
 
-.project-screen {
-    text-align: center;
+.project-meta {
+    margin: 45px 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
 }
 
-    .project-screen img {
-        border: 1px solid rgb(210,210,210);
-        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        border-radius: 10px;
-        margin: 20px auto 15px;
-        max-width: 95%;
-        max-height: 420px;
-    }
+.project-meta > * {
+    margin: 0;
+}
+
+.type .title, .resources .title {
+    font-weight: 600;
+    font-size: 10pt;
+    text-transform: uppercase;
+}
+
+.type badge-item {
+    text-transform: uppercase;
+}
+
+.type badge-item, .resources badge-item {
+    font-size: 0.85em;
+}
 
 
 @media (prefers-color-scheme: dark) {
@@ -137,9 +135,5 @@ p {
 
     .project-meta {
         text-align: left;
-    }
-
-    .resources {
-        margin-bottom: 95px;
     }
 }

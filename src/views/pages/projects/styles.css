@@ -2,17 +2,33 @@
     margin-top: 80px;
 }
 
+
+
+.project-info {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
 .project-info.open {
     background-color: var(--default-bg-color);
+    animation: slide-up 0.5s both;
 }
 
-.project-info:not(.open) button.close-project {
-    display: none;
+    .project-info.open .project-info-content {
+        animation: fade-in 0.5s both;
+        animation-delay: 0.2s;
+    }
+
+.project-info.closing {
+    animation: slide-down-out 0.3s both;
 }
 
-.project-info:not.open button.close-project {
-    display: block;
+.project-info-area:has(.project-info:not(.open)) button.close-project {
+    visibility: hidden;
+    opacity: 0;
 }
+
 
 button.close-project {
     background: var(--translucent-highlight-color);
@@ -23,6 +39,7 @@ button.close-project {
     transition: 0.3s;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    z-index: 2;
 }
 
     button.close-project:after {
@@ -34,6 +51,15 @@ button.close-project {
         top: 0;
         width: 100%;
     }
+
+.project-info-area:has(.project-info.open) button.close-project {
+    animation: slide-up 0.3s both;
+    animation-delay: 0.3s;
+}
+
+.project-info-area:has(.project-info.closing) button.close-project {
+    animation: slide-down-out 0.3s both;
+}
 
 @media (prefers-color-scheme: dark) {
     .project-info:before {
@@ -53,19 +79,22 @@ button.close-project {
         width: 100%;
     }
 
-    .project-info {
+    .project-info-area {
         position: sticky;
         top: 40px;
         display: flex;
         margin: 0 20px;
         font-size: 1.1em;
         height: calc(100vh - (75px + 1.5em + 30px + 82px) - 25px);
+        overflow: hidden;
+        border-radius: 40px;
 
         animation-name: expandSticky;
         animation-timeline: --sticky-tracker;
         
         animation-range: contain -20% contain 20%; 
         animation-fill-mode: both;
+
     }
 
     responsive-container[mode="sidebar"] {
@@ -73,7 +102,7 @@ button.close-project {
         view-timeline-axis: block;
     }
 
-    .project-info:before {
+    .project-info-area:before {
         content: '';
         display: block;
         height: 100%;
@@ -84,12 +113,15 @@ button.close-project {
         max-width: 270px;
         align-self: center;
         margin: auto;
+        position:absolute;
+        top: calc(50% - 205px);
+        left: calc(50% - 137px);
         
         border-radius: 50%;
         transition: 0.3s;
         animation: slide-up 0.5s ease both, 
             dynamic-float var(--float-duration) ease-in-out infinite alternate;
-        z-index: 1;
+        z-index: 0;
 
         --final-opacity: 1;
         --mx: 2.90%;
@@ -99,12 +131,12 @@ button.close-project {
         --float-delay: -2.82s; 
     }
 
-    .project-info:after {
+    .project-info-area:after {
         content: 'Select a project to check details';
         display: block;
         align-self: center;
         position: absolute;
-        top: calc(50% + 170px);
+        top: calc(50% + 120px);
         left: 50%;
         transform: translate(-50%, 0);
         text-transform: uppercase;
@@ -116,40 +148,27 @@ button.close-project {
         opacity: var(--final-opacity);
         transition: 0.3s;
         animation: slide-up 0.5s ease both;
-        z-index: 0;
+        z-index: -1;
 
         --final-opacity: 0.3;
     }
 
     .project-info.open {
         align-self: start;
-        background: none;
         border: 1px solid rgb(210,210,210);
         border-radius: 40px;
         box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         justify-self: start;
         overflow: hidden;
         opacity: 1;
-    }
-
-    .project-info.open:before,
-    .project-info.open:after {
-        display: none;
+        height: 100%;
     }
 
     .project-info-content {
         padding: 5px 40px;
-        max-width: 100%;
+        height: 100%;
         overflow-y: auto;
         position: relative;
-    }
-
-    .project-info:not(.open) .project-info-content {
-        display: none;
-    }
-
-    .project-info.open .project-info-content {
-        display: block;
     }
 
     button.close-project {
@@ -177,18 +196,38 @@ button.close-project {
 
 
 @media (max-width: 900px) {
+    :root:has(.project-info.open) h2,
+    :root:has(.project-info.open) .projects-list {
+        animation: fade-out 0.2s both;
+    }
+
+    :root:has(.project-info.closing) h2,
+    :root:has(.project-info.closing) .projects-list {
+        animation: fade-in 0.2s both;
+    }
+
+
     .projects-list {
-        padding: 0 5px;
+        padding: 0 10px;
         z-index: 1;
     }
 
-    .project-info.open {
+    @media (orientation: landscape) {
+        .projects-list {
+            padding: 0 20px;
+        }
+    }
+
+    .project-info-area:has(.project-info.open) {
         max-height: 100vh;
         overflow-y: auto;
         position: fixed;
         top: 0;
-        padding-bottom: 80px;
         z-index: 2;
+    }
+
+    .project-info-area:has(.project-info.open) .project-info-content {
+        padding-bottom: 140px;
     }
 
     *:has(.mobile-no-scroll) {
