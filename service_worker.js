@@ -41,8 +41,6 @@ const assets = [
   "/src/components/index.js",
   "/src/components/badge-item/index.js",
   "/src/components/badge-item/styles.css",
-  "/src/components/circle-viewer/index.js",
-  "/src/components/circle-viewer/styles.css",
   "/src/components/fadein-container/index.js",
   "/src/components/fadein-container/styles.css",
   "/src/components/floating-logo/index.js",

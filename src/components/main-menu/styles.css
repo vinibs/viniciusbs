@@ -23,6 +23,13 @@ nav {
     width: 90%;
     z-index: 5;
     -webkit-backdrop-filter: blur(8px);
+    animation: ball-up-expansion 1.2s ease both;
+}
+
+@media (orientation: portrait) {
+    nav {
+        animation: ball-up-expansion 1s ease both;
+    }
 }
 
 nav a, nav a:hover {
@@ -82,8 +89,9 @@ nav a.active {
     }
 }
 
+
 /* ------------------------------------ */
-/* Animations */
+/* Specific Animations */
 
 @keyframes ball-up-expansion {
     0% {
@@ -107,17 +115,5 @@ nav a.active {
     100% {
         --links-opacity: 1;
         --links-visibility: visible;
-    }
-}
-
-
-
-nav {
-    animation: ball-up-expansion 1.2s ease both;
-}
-
-@media (orientation: portrait) {
-    nav {
-        animation: ball-up-expansion 1s ease both;
     }
 }

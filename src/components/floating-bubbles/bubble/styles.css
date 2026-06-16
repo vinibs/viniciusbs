@@ -74,16 +74,3 @@
         background-color: rgb(18,59,92);
     }
 }
-
-
-@keyframes dynamic-float {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  50% {
-    transform: translate(var(--mx), var(--my)) rotate(var(--mrot));
-  }
-  100% {
-    transform: translate(calc(var(--mx) * -0.5), calc(var(--my) * -0.3)) rotate(0deg);
-  }
-}

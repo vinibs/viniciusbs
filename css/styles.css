@@ -89,13 +89,6 @@ p {
     }
 }
 
-
-/* Animação de fade out */
-@keyframes fadeout {
-    from {opacity: 1}
-    to {opacity: 0}
-}
-
 .fadeout {
-    animation: fadeout 0.3s;
+    animation: fade-out 0.3s;
 }

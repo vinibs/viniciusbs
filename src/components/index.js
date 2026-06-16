@@ -1,5 +1,4 @@
 import { BadgeItem } from './badge-item/index.js'
-import { CircleViewer } from './circle-viewer/index.js'
 import { FadeInContainer } from './fadein-container/index.js'
 import { FloatingLogo } from './floating-logo/index.js'
 import { MainMenu } from './main-menu/index.js'
@@ -14,7 +13,6 @@ import { WordCarousel, WordCarouselItem } from './word-carousel/index.js'
 
 
 window.customElements.define('badge-item', BadgeItem)
-window.customElements.define('circle-viewer', CircleViewer)
 window.customElements.define('fadein-container', FadeInContainer)
 window.customElements.define('floating-logo', FloatingLogo)
 window.customElements.define('main-menu', MainMenu)

@@ -56,24 +56,3 @@ ul.word-carousel ::slotted(word-carousel-item.fade-out) {
         align-items: center;
     }
 }
-
-/* ------------------------------------ */
-/* Animations */
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fade-out {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
