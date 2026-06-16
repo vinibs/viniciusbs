@@ -1,7 +1,7 @@
 import { BadgeItem } from './badge-item/index.js'
 import { FadeInContainer } from './fadein-container/index.js'
 import { FloatingLogo } from './floating-logo/index.js'
-import { MainMenu } from './main-menu/index.js'
+import { MainNavbar } from './main-navbar/index.js'
 import { ParagraphText } from './paragraph-text/index.js'
 import { ProjectDetailsItem } from './project-details-item/index.js'
 import { ProjectList } from './project-list/index.js'
@@ -15,7 +15,7 @@ import { WordCarousel, WordCarouselItem } from './word-carousel/index.js'
 window.customElements.define('badge-item', BadgeItem)
 window.customElements.define('fadein-container', FadeInContainer)
 window.customElements.define('floating-logo', FloatingLogo)
-window.customElements.define('main-menu', MainMenu)
+window.customElements.define('main-navbar', MainNavbar)
 window.customElements.define('paragraph-text', ParagraphText)
 window.customElements.define('project-details-item', ProjectDetailsItem)
 window.customElements.define('project-list', ProjectList)

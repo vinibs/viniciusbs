@@ -1,7 +1,7 @@
 import { LiraElement } from '/js/lira.js'
 import { navItems } from '../../contents/nav.js'
 
-export class MainMenu extends LiraElement {
+export class MainNavbar extends LiraElement {
     currentHash = null
 
     constructor () {
