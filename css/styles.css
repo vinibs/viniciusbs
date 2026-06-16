@@ -8,7 +8,9 @@
     --default-bg-color: rgb(255,255,255);
     --default-text-color : rgb(30,30,30);
 
+    --badge-highlight-color: rgb(200, 244, 228);
     --highlight-color: rgb(0,117,178);
+    --translucent-highlight-color: rgba(0,117,178,0.3);
     --highlight-gradient: linear-gradient(to right, rgb(0,117,178), rgb(0,200,131));
 }
 
@@ -28,9 +30,14 @@ header {
 }
 
 
-a, a:visited, a:hover, a:active, *::part(link) {
+a, a:visited, a:active, *::part(link) {
     color: rgb(90,90,90);
+    transition: 0.3s;
 }
+
+    a:hover, *::part(link):hover {
+        color: var(--highlight-color);
+    }
 
 h1, h2, h3, h4 {
     color: var(--default-text-color);
@@ -71,8 +78,10 @@ p {
         --default-bg-color: rgb(30,30,30);
         --default-text-color: rgb(230,230,230);
 
-        --highlight-color: rgb(0,155,212);
-        --highlight-gradient: linear-gradient(to right, rgb(0,155,212), rgb(31,255,205));
+        --badge-highlight-color: rgb(31,126,104);
+        --highlight-color: rgb(92,198,237);
+        --translucent-highlight-color: rgba(92,198,237,0.3);
+        --highlight-gradient: linear-gradient(to right, rgb(92,198,237), rgb(31,255,205));
     }
 
     a, a:visited, a:hover, a:active, *::part(link) {

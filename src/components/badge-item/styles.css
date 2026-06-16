@@ -3,21 +3,24 @@ p {
 }
 
 .badge {
-    border-radius: 5px;
+    border-radius: 20px;
     display: inline-block;
-    padding: 2px 10px;
+    padding: 2px 15px;
     margin: 5px;
+    border: none;
 }
 
 .badge.light {
     background-color: rgb(230,230,230);
-    border: none;
 }
 
 .badge.dark {
-    background-color: rgb(90,90,90);
-    border: none;
+    background-color: rgb(140,140,140);
     color: rgb(245,245,245);
+}
+
+.badge.highlight {
+    background-color: var(--badge-highlight-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,10 +29,10 @@ p {
     }
 
     .badge.light {
-        background-color: rgb(70,70,70);
+        background-color: rgb(100,100,100);
     }
 
     .badge.dark {
-        background-color: rgb(10,10,10);
+        background-color: rgb(70,70,70);
     }
 }

@@ -44,6 +44,7 @@ export class Projects extends LiraElement {
         const projectCategory = project.getAttribute("category").toLowerCase()
 
         const projectInfo = document.getElementById("project-info")
+        const projectInfoContent = document.getElementById("project-info-content")
         const projectsList = document.getElementById("projects-list")
 
         if (!projectInfo.classList.contains("open") || window.openProjectId !== projectId) {
@@ -52,7 +53,7 @@ export class Projects extends LiraElement {
             window.openProjectId = projectId
 
             projectInfo.classList.add("open")
-            projectInfo.innerHTML = `
+            projectInfoContent.innerHTML = `
             <project-details-item id="${projectId}" category="${projectCategory}"/>
             `
             projectsList.classList.add("mobile-no-scroll")
@@ -70,6 +71,7 @@ export class Projects extends LiraElement {
 
     closeProjectDetails () {
         const projectInfo = document.getElementById("project-info")
+        const projectInfoContent = document.getElementById("project-info-content")
         const projectsList = document.getElementById("projects-list")
         clearActiveProjectListItem()
 
@@ -77,7 +79,7 @@ export class Projects extends LiraElement {
         setTimeout(() => {
             projectsList.classList.remove("mobile-no-scroll")
             projectInfo.classList.remove("fadeout", "open")
-            projectInfo.innerHTML = ``
+            projectInfoContent.innerHTML = ``
 
             let currentUrl = window.location.href
             let baseUrl = currentUrl.replace(/\/view\/.*/g, "")
@@ -143,7 +145,15 @@ export class Projects extends LiraElement {
                         </div>
                     </div>
 
-                    <article class="project-info text-content" id="project-info">
+                    <article class="project-info" id="project-info">
+                        <div class="project-info-content" id="project-info-content">
+                        </div>
+
+                        <button
+                            class="close-project"
+                            onclick="closeProjectDetails()"
+                            title="Close project details">
+                        </button>
                     </article>
                 </responsive-container>
             </fadein-container>

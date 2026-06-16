@@ -5,23 +5,25 @@
     flex-direction: column;
     row-gap: 30px;
     margin: 15px auto 0;
-    height: calc(100% - 15px);
+    height: calc(100% - 30px);
     justify-content: space-between;
 }
 
 
 h2, h3 {
-    color: rgb(0,0,0);
+    background-image: var(--highlight-gradient);
+    color: transparent;
+    background-clip: text;
     font-weight: 400;
     line-height: 1.75em;
-    margin: 10px auto 5px;
+    margin: 30px auto 5px;
     text-align: center;
     text-transform: uppercase;
 }
 
 h3.year {
-    color: rgb(90,90,90);
-    margin-bottom: 30px;
+    color: rgb(150,150,150);
+    margin-bottom: 45px;
 }
 
 
@@ -63,21 +65,21 @@ p {
 }
 
 
-.projectlink {
+.project-link {
     margin: 40px auto 10px;
     text-align: center;
 }
 
-    .projectlink a::after {
+    .project-link a:after {
         content: " ↗";
     }
 
-    .projectlink.disabled, .projectlink.disabled a {
+    .project-link.disabled, .project-link.disabled a {
         color: rgb(200,200,200);
         cursor: default;
     }
 
-    .projectlink.disabled span {
+    .project-link.disabled span {
         text-decoration: underline;
         font-style: italic;
     }
@@ -96,64 +98,14 @@ p {
         max-height: 420px;
     }
 
-.close-project-container {
-    display: flex;
-    justify-content: center;
-}
-
-button.close-project {
-    background: rgba(200,200,200,0.2);
-    border: none;
-    border-radius: 50%;
-    height: 45px;
-    margin: 25px auto 18px;
-    position: relative;
-    width: 45px;
-    cursor: pointer;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
-
-    button.close-project:after {
-        color: rgb(90,90,90);
-        content: "×";
-        cursor: pointer;
-        font-family: sans-serif;
-        font-size: 36px;
-        left: 0;
-        line-height: 100%;
-        top: calc(50% - 20px);
-        width: 100%;
-    }
-
-
 
 @media (prefers-color-scheme: dark) {
-    h2, h3 {
-        color: rgb(255,255,255);
-    }
-
     h3.year {
         color: rgb(200,200,200);
     }
 
     .project-screen img {
         border: 1px solid rgb(90,90,90);
-    }
-
-    button.close-project {
-        background: rgba(120,120,120,0.2);
-    }
-
-        button.close-project:after {
-            color: rgb(180,180,180);
-        }
-}
-
-@media (min-width: 901px) {
-    .close-project-container {
-        justify-self: end;
-        margin-top: auto;
     }
 }
 
@@ -174,7 +126,7 @@ button.close-project {
         text-align: center;
     }
 
-    .project .projectlink {
+    .project .project-link {
         text-align: center;
     }
 
@@ -188,12 +140,6 @@ button.close-project {
     }
 
     .resources {
-        margin-bottom: 55px;
-    }
-
-    button.close-project {
-        bottom: 95px;
-        left: calc(50vw - 22.5px);
-        position: fixed;
+        margin-bottom: 95px;
     }
 }

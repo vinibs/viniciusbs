@@ -33,7 +33,9 @@ export class ProjectDetailsItem extends LiraElement {
         this.url = project.link?.url
         this.linkTitle = project.link?.title
         this.linkText = project.link?.text
+        this.linkIcon = project.link?.icon
         this.hasLink = !!project.link
+        this.hasLinkIcon = !!project.link?.icon
 
         this.hasImage = !!project.image
         this.imageTitle = project.image?.title
@@ -42,8 +44,6 @@ export class ProjectDetailsItem extends LiraElement {
 
     render () {
         return `
-        <fadein-container>
-
         <div class="project">
             <div class="project-data">
                 <div class="project-content">
@@ -56,14 +56,6 @@ export class ProjectDetailsItem extends LiraElement {
                     <paragraph-text class="description">
                         ${this.description}
                     </paragraph-text>
-
-                    ${this.hasLink ? `
-                    <p class="projectlink">
-                        <a href="${this.url}" part="link"
-                            title="${this.linkTitle}"
-                            target="_blank">${this.linkText}</a>
-                    </p>
-                    ` : ''}
                 </div>
 
                 ${this.hasImage ? `
@@ -77,10 +69,35 @@ export class ProjectDetailsItem extends LiraElement {
                 </div>
                 ` : ''}
 
+
+                ${this.hasLink ? `
+                <p class="project-link">
+                    ${this.hasLinkIcon ?
+                        `
+                        <social-link icon="${this.linkIcon}"
+                            href="${this.url}"
+                            title="${this.linkTitle}"
+                            text="${this.linkText}">
+                        </social-link>
+                        `
+                        :
+                        `
+                        <a href="${this.url}" part="link"
+                            title="${this.linkTitle}"
+                            aria-label="${this.linkText}
+                            target="_blank">
+                            ${this.linkText}
+                        </a>
+                        `
+                    }
+                </p>
+                ` : ''}
+
+
                 <div class="project-meta">
                     <p class="type">
                         <span class="title">Type:</span>
-                        <badge-item type="dark">
+                        <badge-item type="light">
                             ${this.type}
                         </badge-item>
                     </p>
@@ -89,25 +106,13 @@ export class ProjectDetailsItem extends LiraElement {
                         <span class="title">Resources:</span>
                         <span class="flex gap-5 wrap">
                         ${this.renderEach(this.resources, (resource) => {
-                            return `<badge-item>${resource}</badge-item>`
+                            return `<badge-item type="highlight">${resource}</badge-item>`
                         })}
                         </span>
                     </p>
                 </div>
             </div>
-
-
-            
-            <div class="close-project-container">
-                <button
-                    class="close-project"
-                    onclick="closeProjectDetails()"
-                    title="Close project details">
-                </button>
-            </div>
         </div>
-
-        </fadein-container>
         `
     }
 }
