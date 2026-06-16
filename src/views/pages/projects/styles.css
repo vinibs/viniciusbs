@@ -58,7 +58,7 @@ button.close-project {
 }
 
 .project-info-area:has(.project-info.closing) button.close-project {
-    animation: slide-down-out 0.3s both;
+    animation: slide-down-out 0.2s both;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -68,6 +68,10 @@ button.close-project {
 
     button.close-project:after {
         color: rgb(230,230,230);
+    }
+
+    button.close-project:hover:after {
+        color: rgb(60,60,60) !important;
     }
 }
 

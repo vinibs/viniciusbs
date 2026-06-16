@@ -81,7 +81,7 @@ p {
         --badge-highlight-color: rgb(31,126,104);
         --highlight-color: rgb(92,198,237);
         --translucent-highlight-color: rgba(92,198,237,0.3);
-        --highlight-gradient: linear-gradient(to right, rgb(92,198,237), rgb(31,255,205));
+        --highlight-gradient: linear-gradient(to right, rgb(8, 140, 187), rgb(31,255,205));
     }
 
     a, a:visited, a:hover, a:active, *::part(link) {

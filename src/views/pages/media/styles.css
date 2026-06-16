@@ -25,6 +25,9 @@ responsive-container[mainContainer] > section:not(:first-of-type) {
 
     .channel-info h4 {
         font-size: 1.2em;
+        background-image: var(--highlight-gradient);
+        color: transparent;
+        background-clip: text;
     }
 
     
@@ -87,7 +90,7 @@ responsive-container[mainContainer] > section:not(:first-of-type) {
 @media (prefers-color-scheme: dark) {
     /* YouTube Channels Section */
     .channel-info p {
-        color: rgb(180,180,180);
+        color: rgb(210,210,210);
     }
 
     /* Articles Section */
@@ -95,8 +98,12 @@ responsive-container[mainContainer] > section:not(:first-of-type) {
         background-color: rgb(230,230,230);
     }
 
-    .articles .articles-details a:hover {
+    .articles .articles-details a {
         color: rgb(190,190,190);
+    }
+
+    .articles .articles-details a:hover {
+        color: rgb(220,220,220);
     }
 }
 
