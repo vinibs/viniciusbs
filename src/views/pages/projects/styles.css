@@ -70,8 +70,14 @@ button.close-project {
         color: rgb(230,230,230);
     }
 
-    button.close-project:hover:after {
-        color: rgb(60,60,60) !important;
+    @media (min-width: 901px) {
+        .project-info.open {
+            border-color: rgb(90,90,90) !important;
+        }
+
+        button.close-project:hover:after {
+            color: rgb(60,60,60) !important;
+        }
     }
 }
 
