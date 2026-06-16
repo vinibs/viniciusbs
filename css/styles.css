@@ -1,3 +1,21 @@
+
+@font-face {
+  font-family: 'ElmsSans';
+  src: url('../fonts/ElmsSans.ttf') format('truetype');
+  font-weight: 100 200 300 400 500 600 700 800 900;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ElmsSans';
+  src: url('../fonts/ElmsSans-italic.ttf') format('truetype');
+  font-weight: 100 200 300 400 500 600 700 800 900;
+  font-style: italic;
+}
+
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,7 +37,8 @@ html {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'ElmsSans', sans-serif;
+    font-weight: 300;
     line-height: 1.45em;
     background-color: var(--default-bg-color);
     color: var(--default-text-color);
@@ -61,6 +80,10 @@ p {
     margin-top: 1em;
     text-align: justify;
     font-size: 1.1em;
+}
+
+strong {
+    font-weight: 600;
 }
 
 

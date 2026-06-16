@@ -24,6 +24,7 @@ nav {
     z-index: 5;
     -webkit-backdrop-filter: blur(8px);
     animation: ball-up-expansion 1.2s ease both;
+    font-weight: 500;
 }
 
 @media (orientation: portrait) {
