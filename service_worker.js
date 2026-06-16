@@ -7,6 +7,9 @@ const assets = [
   "/css/styles.css",
   "/css/animations.css",
 
+  "/fonts/ElmsSans-italic.ttf",
+  "/fonts/ElmsSans.ttf",
+
   "/js/lira.js",
 
   "/images/app-icons/apple-icon-192x192.png",
