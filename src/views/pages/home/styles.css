@@ -85,8 +85,12 @@ floating-bubbles {
     transition: 0.3s;
 }
 
-.home-content > .description > span.main-text > word-carousel word-carousel-item {
+.home-content > .description > span.main-text > word-carousel {
     font-weight: 400;
+}
+
+.home-content > .description > span.main-text > word-carousel,
+.home-content > .description > span.main-text > word-carousel word-carousel-item {
     background-image: var(--highlight-gradient);
     color: transparent;
     background-clip: text;

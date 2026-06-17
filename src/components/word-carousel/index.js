@@ -18,7 +18,7 @@ export class WordCarousel extends LiraElement {
     carouselItems = []
     lastItemIndex = null
 
-    pageLoadDelay = 400
+    pageLoadDelay = 600
     totalVisibilityDurationMs = 2000
     transitionDurationMs = 300
     delayBetweenItems = 300
@@ -46,6 +46,13 @@ export class WordCarousel extends LiraElement {
     startCarousel () {
         this.setupCarouselItem(this.lastItemIndex)
 
+        for (const [itemIndex, item] of this.carouselItems.entries()) {
+            const elementIndex = item.style.getPropertyValue('--element-index')
+            if (elementIndex == "") {
+                item.style.setProperty('--element-index', itemIndex)
+            }
+        }
+
         const interval = setInterval(() => {
             this.setupCarouselItem(this.lastItemIndex)
         }, this.totalVisibilityDurationMs + this.delayBetweenItems)
@@ -54,13 +61,7 @@ export class WordCarousel extends LiraElement {
     setupCarouselItem (previousIndex) {
         const itemNumber = (previousIndex ?? -1) + 1
         const itemIndex = itemNumber % this.carouselItems.length
-
         const item = this.carouselItems[itemIndex]
-
-        const elementIndex = item.style.getPropertyValue('--element-index')
-        if (elementIndex == "") {
-            item.style.setProperty('--element-index', itemIndex)
-        }
 
         item.classList.add('fade-in')
 
