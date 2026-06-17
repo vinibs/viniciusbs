@@ -1,3 +1,7 @@
+* {
+    --default-bg-color: rgb(255,255,255);
+}
+
 p {
     text-transform: uppercase;
 }
@@ -16,12 +20,14 @@ p.year {
 }
 
 .project-item-container {
+    background-color: var(--default-bg-color);
     border-radius: 50px;
     cursor: pointer;
     padding: 5px 30px 5px 76px;
     text-align: left;
     transition: linear 0.3s;
     position: relative;
+    z-index: 1;
 }
 
 .project-item-container:hover {
@@ -40,6 +46,7 @@ p.year {
     mask-position: center center;
     mask-size: 32px;
     mask-image: url('../images/content-icons/backend.svg');
+    z-index: 2;
 }
 
 .project-item-container.backend::before {
@@ -70,11 +77,11 @@ p.year {
     inset: 0;
     border: 2px solid transparent;
     background: var(--highlight-gradient) border-box;
-
-    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
     -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
 }
 
 

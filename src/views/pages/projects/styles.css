@@ -2,8 +2,6 @@
     margin-top: 80px;
 }
 
-
-
 .project-info {
     width: 100%;
     height: 100%;
@@ -47,6 +45,8 @@ button.close-project {
         content: "×";
         cursor: pointer;
         font-family: sans-serif;
+        display: block;
+        position: absolute;
         left: 0;
         top: 0;
         width: 100%;
@@ -194,8 +194,10 @@ button.close-project {
         }
 
     button.close-project:after {
+        height: 35px;
+        width: 35px;
         font-size: 28px;
-        line-height: 14px;
+        line-height: 33px;
     }
 
         button.close-project:hover:after {
@@ -253,7 +255,9 @@ button.close-project {
     }
 
     button.close-project:after {
+        height: 45px;
+        width: 45px;
         font-size: 36px;
-        line-height: 18px;
+        line-height: 40px;
     }
 }
