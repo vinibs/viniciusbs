@@ -89,7 +89,6 @@ floating-bubbles {
     font-weight: 400;
 }
 
-.home-content > .description > span.main-text > word-carousel,
 .home-content > .description > span.main-text > word-carousel word-carousel-item {
     background-image: var(--highlight-gradient);
     color: transparent;

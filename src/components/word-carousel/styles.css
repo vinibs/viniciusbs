@@ -28,17 +28,16 @@
 
 
 .word-carousel ::slotted(word-carousel-item) {
-    visibility: hidden;
-    transform: translateY(calc(var(--element-index) * (1em + 20px) * -1));
+    display: none;
 }
 
 .word-carousel ::slotted(word-carousel-item.fade-in) {
-    visibility: visible;
+    display: block;
     animation: fade-in 0.3s linear forwards;
 }
 
 .word-carousel ::slotted(word-carousel-item.fade-out) {
-    visibility: visible;
+    display: block;
     animation: fade-out 0.3s linear forwards;
 }
 

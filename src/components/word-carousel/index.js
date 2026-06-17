@@ -46,13 +46,6 @@ export class WordCarousel extends LiraElement {
     startCarousel () {
         this.setupCarouselItem(this.lastItemIndex)
 
-        for (const [itemIndex, item] of this.carouselItems.entries()) {
-            const elementIndex = item.style.getPropertyValue('--element-index')
-            if (elementIndex == "") {
-                item.style.setProperty('--element-index', itemIndex)
-            }
-        }
-
         const interval = setInterval(() => {
             this.setupCarouselItem(this.lastItemIndex)
         }, this.totalVisibilityDurationMs + this.delayBetweenItems)
