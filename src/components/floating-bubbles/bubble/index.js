@@ -10,6 +10,7 @@ export class Bubble extends LiraElement {
     constructor () {
         super(true, BubbleAttributes)
         this.useStyle('./styles.css')
+        this.useStyle('/css/animations.css')
     }
     
     static get observedAttributes () {

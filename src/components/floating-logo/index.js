@@ -6,6 +6,7 @@ export class FloatingLogo extends LiraElement {
     constructor () {
         super(true)
         this.useStyle('./styles.css')
+        this.useStyle('/css/animations.css')
 
         this.checkIsHomePage()
         

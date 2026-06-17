@@ -32,6 +32,14 @@
     --highlight-gradient: linear-gradient(to right, rgb(0,117,178), rgb(0,200,131));
 
     --projects-icon-bg-color: rgb(212,240,255);
+
+
+    --final-opacity: 1;
+    --mx: 2.83%;
+    --my: -1.67%;
+    --mrot: 3.48deg;
+    --float-duration: 10.39s;
+    --float-delay: -5.42s;
 }
 
 html {

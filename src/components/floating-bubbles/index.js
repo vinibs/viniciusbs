@@ -12,6 +12,7 @@ export class FloatingBubbles extends LiraElement {
     constructor () {
         super(true, FloatingBubblesAttributes)
         this.useStyle('./styles.css')
+        this.useStyle('/css/animations.css')
     }
     
     static get observedAttributes () {

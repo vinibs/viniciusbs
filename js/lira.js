@@ -21,7 +21,7 @@ class Router {
      */
     constructor (routeObj) {
         // Listens to the hash change event
-        window.addEventListener('hashchange', (ev) => {   
+        window.addEventListener('hashchange', (ev) => {
             this.run()
         })
 
@@ -37,7 +37,7 @@ class Router {
     run () {
         let path = this.getPath()
         let notFoundRoute = null
-        
+
         // Check for a route that corresponds to current page
         for (const i in this.routeObj._routes) {
             let route = this.formatPath(this.routeObj._routes[i])
@@ -161,7 +161,7 @@ class Router {
                 if (!customElements.get(route.component))
                     throw `Component name must be a valid custom element name. `
                         + `Did you import the correct component file?`
-                
+
                 let appElement = document.getElementsByTagName('lira-app')
                 if (appElement.length <= 0)
                     throw `Can't find "lira-app" root component`
@@ -170,7 +170,7 @@ class Router {
                     `<${route.component}></${route.component}>`
                 scroll(0,0)
                 break;
-                
+
             default:
                 throw `Component attribute must be a function or a valid `
                     + `HTML custom element name`
@@ -278,7 +278,7 @@ class HTTP {
             if (window.matchMedia(`(display-mode: ${mode})`).matches)
                 return mode
         }
-        
+
         return null
     }
 
@@ -326,7 +326,7 @@ class LiraElement extends HTMLElement {
         } = getCallerInfo()
         this.currentPath = currentPath
         this.currentDirectory = currentDirectory
-        
+
         this._useShadowRoot = useShadowRoot
 
         let domRoot = this
@@ -389,12 +389,16 @@ class LiraElement extends HTMLElement {
      */
     useStyle (cssFileRelativePath) {
         this._useStyle = true
-        this._stylePath = parseFilePath(
+        if (!this._stylePaths) {
+            this._stylePaths = []
+        }
+
+        const stylePath = parseFilePath(
             cssFileRelativePath,
             this.currentDirectory
         )
-
-        styleLoader.loadStyle(this._stylePath)
+        this._stylePaths.push(stylePath)
+        styleLoader.loadStyle(stylePath)
     }
 
     /**
@@ -413,17 +417,29 @@ class LiraElement extends HTMLElement {
 
         if (!this._useStyle) return renderWith('')
 
-        styleLoader.getStyleContent(this._stylePath)
-            .then((styles) => {
-                const styleContent = `
-                <style>
-                    ${styles}
-                </style>
-                `
-                renderWith(styleContent)
-            })
-            .catch((error) => {
-                renderWith('')
+        var allStyleContents = ''
+        const stylePromises = []
+
+        for (const stylePath of this._stylePaths) {
+            stylePromises.push(
+                styleLoader.getStyleContent(stylePath)
+                .then((styles) => {
+                    const styleContent = `
+                    <style>
+                        ${styles}
+                    </style>
+                    `
+                    allStyleContents += styleContent
+                })
+                .catch((error) => {
+                    console.error('Failed to load style contents from ', stylePath)
+                })
+            )
+        }
+
+        Promise.allSettled(stylePromises)
+            .finally(() => {
+                renderWith(allStyleContents)
             })
     }
 
@@ -462,7 +478,7 @@ const getCallerInfo = (depthLevel = 1) => {
     let caller, callerFilePath, callerDirPath
 
     if (depthLevel < 1) depthLevel = 1
-    
+
     // Ignore 1st depth level (the one who called this current function)
     depthLevel += 1
     const desiredDepthIndex = depthLevel + 1
@@ -527,7 +543,7 @@ const getCallerInfo = (depthLevel = 1) => {
  */
 const parseFilePath = (relativeFilePath, referenceDirPath) => {
     if (relativeFilePath.charAt(0) === '/') return relativeFilePath
-    
+
     if (relativeFilePath.substring(0, 2) === './') {
         return `${referenceDirPath}/${relativeFilePath.substring(2)}`
     }
@@ -566,8 +582,8 @@ class StyleLoader {
      */
     _shouldUseCache () {
         return (
-            config && 
-            ('cache-styles' in config) && 
+            config &&
+            ('cache-styles' in config) &&
             !!config['cache-styles']
         )
     }
@@ -594,7 +610,7 @@ class StyleLoader {
 
         return this._loadFile(filePath)
     }
-    
+
     /**
      * Loads the style file and add it to cache
      * @param {string} filePath
@@ -608,7 +624,7 @@ class StyleLoader {
                     if (this._shouldUseCache()) {
                         this.cache[filePath] = text
                     }
-                    
+
                     resolve(text)
                     return text
                 })
@@ -642,7 +658,7 @@ class Lira {
     constructor (route) {
         // Defines the custom element tag so it can be used in DOM
         window.customElements.define('lira-app', App)
-        
+
         // Once app is started, start the router
         /** @private */
         this.router = new Router(route)

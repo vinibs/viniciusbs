@@ -25,6 +25,7 @@ export class WordCarousel extends LiraElement {
     constructor () {
         super(true, WordCarouselAttributes)
         this.useStyle('./styles.css')
+        this.useStyle('/css/animations.css')
 
         if (this.align && !availableAlignments[this.align]) {
             this.align = availableAlignments.left
