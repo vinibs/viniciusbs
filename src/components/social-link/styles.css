@@ -1,11 +1,15 @@
+* {
+    --default-social-link-color: rgb(110,110,110);
+}
 
 .social-link {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    color: rgb(140,140,140);
+    color: var(--default-social-link-color);
     transition: linear 0.2s;
+    font-weight: 400;
 }
 
 .social-link:hover {
@@ -23,7 +27,7 @@
     mask-repeat: no-repeat;
     mask-size: 31px auto;
     mask-position: center center;
-    background-color: rgb(140,140,140);
+    background-color: var(--default-social-link-color);
     transition: linear 0.2s;
     border-radius: 4px;
 }
@@ -62,12 +66,8 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .social-link {
-        color: rgb(190,190,190);
-    }
-
-    .icon {
-        background-color: rgb(190,190,190);
+    * {
+        --default-social-link-color: rgb(190,190,190);
     }
 
     .icon.gray {

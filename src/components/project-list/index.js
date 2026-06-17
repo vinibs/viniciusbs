@@ -8,9 +8,9 @@ export class ProjectList extends LiraElement {
 
     render () {
         return `
-            <ul class="project-list">
+            <section class="project-list">
                 <slot></slot>
-            </ul>
+            </section>
         `
     }
 }

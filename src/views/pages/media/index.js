@@ -25,7 +25,7 @@ export class Media extends LiraElement {
         return `
             <fadein-container>
 
-                <responsive-container mode="full" limitedWidth mainContainer>
+                <responsive-container mode="full" limitedWidth mainContainer role="main">
                     <h2>${pageTitle}</h2>
 
                     <section class="video-content">

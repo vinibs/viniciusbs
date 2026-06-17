@@ -57,15 +57,14 @@ export class Home extends LiraElement {
         return `
             <fadein-container>
                 <responsive-container limitedWidth mainContainer>
-                    <floating-bubbles>
+                    <floating-bubbles role="complementary">
                         ${this.renderEach(mainContent.bubbles, 
                             (bubbleContent) => {
                                 return `
                                 <bubble-item model="${bubbleContent.model}"
                                     ${bubbleContent.url ? `url="${bubbleContent.url}"` : ''}
-                                    customStyle="${this.generateRandomBubbleStyleProps()}">
-
-                                    ${bubbleContent.text}
+                                    customStyle="${this.generateRandomBubbleStyleProps()}"
+                                    text="${bubbleContent.text}">
                                 </bubble-item>
                                 `
                             }
@@ -73,8 +72,8 @@ export class Home extends LiraElement {
                     </floating-bubbles>
 
 
-                    <section class="home-content">
-                        <div class="home-logo">vinicius bs</div>
+                    <section class="home-content" role="main">
+                        <div class="home-logo" role="banner">vinicius bs</div>
                         <div class="description">
                             <span>${mainContent.title}</span>
                             <span class="main-text">

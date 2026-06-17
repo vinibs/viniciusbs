@@ -18,8 +18,10 @@ export class WordCarousel extends LiraElement {
     carouselItems = []
     lastItemIndex = null
 
+    pageLoadDelay = 400
     totalVisibilityDurationMs = 2000
     transitionDurationMs = 300
+    delayBetweenItems = 300
 
 
     constructor () {
@@ -32,7 +34,9 @@ export class WordCarousel extends LiraElement {
         }
 
         this.carouselItems = this.querySelectorAll('word-carousel-item')
-        this.startCarousel()
+        setTimeout(() => {
+            this.startCarousel()
+        }, this.pageLoadDelay)
     }
     
     static get observedAttributes () {
@@ -44,7 +48,7 @@ export class WordCarousel extends LiraElement {
 
         const interval = setInterval(() => {
             this.setupCarouselItem(this.lastItemIndex)
-        }, this.totalVisibilityDurationMs)
+        }, this.totalVisibilityDurationMs + this.delayBetweenItems)
     }
 
     setupCarouselItem (previousIndex) {
@@ -63,26 +67,20 @@ export class WordCarousel extends LiraElement {
         setTimeout(() => {
             item.classList.remove('fade-in')
             item.classList.add('fade-out')
-
-            // console.log('fading out:', itemIndex, item)
         }, this.totalVisibilityDurationMs - this.transitionDurationMs)
 
         setTimeout(() => {
             item.classList.remove('fade-out')
-
-            // console.log('faded out, cleaning:', itemIndex, item)
         }, this.totalVisibilityDurationMs)
-
-        // console.log('fading in:', itemIndex, item)
 
         this.lastItemIndex = itemIndex
     }
     
     render () {
         return `
-        <ul class="word-carousel ${this.align ? `align-${this.align}` : ''}">
+        <section class="word-carousel ${this.align ? `align-${this.align}` : ''}">
             <slot></slot>
-        </ul>
+        </section>
         `
     }
 }

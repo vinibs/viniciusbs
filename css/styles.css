@@ -1,17 +1,17 @@
 
 @font-face {
-  font-family: 'ElmsSans';
-  src: url('../fonts/ElmsSans.ttf') format('truetype');
-  font-weight: 100 200 300 400 500 600 700 800 900;
-  font-style: normal;
+    font-family: 'ElmsSans';
+    src: url('../fonts/ElmsSans.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
 }
 
 
 @font-face {
-  font-family: 'ElmsSans';
-  src: url('../fonts/ElmsSans-italic.ttf') format('truetype');
-  font-weight: 100 200 300 400 500 600 700 800 900;
-  font-style: italic;
+    font-family: 'ElmsSans';
+    src: url('../fonts/ElmsSans-italic.ttf') format('truetype');
+    font-style: italic;
+    font-display: swap;
 }
 
 

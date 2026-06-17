@@ -76,13 +76,14 @@ responsive-container[mainContainer] > section:not(:first-of-type) {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    color: rgb(140,140,140);
+    color: rgb(110,110,110);
     gap: 30px;
     transition: 0.2s linear;
+    font-weight: 400;
 }
 
 .articles .articles-details a:hover {
-    color: rgb(90,90,90);
+    color: rgb(160,160,160);
 }
 
 

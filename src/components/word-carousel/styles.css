@@ -1,4 +1,4 @@
-ul.word-carousel {
+.word-carousel {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -14,45 +14,45 @@ ul.word-carousel {
     gap: 20px;
 }
 
-    ul.word-carousel.align-left {
+    .word-carousel.align-left {
         align-items: start;
     }
 
-    ul.word-carousel.align-center {
+    .word-carousel.align-center {
         align-items: center;
     }
 
-    ul.word-carousel.align-right {
+    .word-carousel.align-right {
         align-items: end;
     }
 
 
-ul.word-carousel ::slotted(word-carousel-item) {
+.word-carousel ::slotted(word-carousel-item) {
     visibility: hidden;
     transform: translateY(calc(var(--element-index) * (1em + 20px) * -1));
 }
 
-ul.word-carousel ::slotted(word-carousel-item.fade-in) {
+.word-carousel ::slotted(word-carousel-item.fade-in) {
     visibility: visible;
     animation: fade-in 0.3s linear forwards;
 }
 
-ul.word-carousel ::slotted(word-carousel-item.fade-out) {
+.word-carousel ::slotted(word-carousel-item.fade-out) {
     visibility: visible;
     animation: fade-out 0.3s linear forwards;
 }
 
 
 @media (max-width: 900px) {
-    ul.word-carousel {
+    .word-carousel {
         margin: 5px;
         display: flex;
     }
 
-    ul.word-carousel,
-    ul.word-carousel.align-left,
-    ul.word-carousel.align-center,
-    ul.word-carousel.align-right {
+    .word-carousel,
+    .word-carousel.align-left,
+    .word-carousel.align-center,
+    .word-carousel.align-right {
         align-items: center;
     }
 }

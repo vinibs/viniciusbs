@@ -4,6 +4,7 @@ const BubbleAttributes = [
     'model',
     'url',
     'customStyle',
+    'text'
 ]
 
 export class Bubble extends LiraElement {
@@ -19,10 +20,10 @@ export class Bubble extends LiraElement {
     
     render () {
         return `
-        <${this.url ? `a href="${this.url}"` : 'div'}
+        <${this.url ? `a href="${this.url}" aria-label="${this.text ?? ''}"` : 'div'}
             class="bubble ${this.model ? `backgrounded ${this.model}` : ''}"
             ${this.customStyle ? `style="${this.customStyle}"` : ''}>
-            ${!this.model ? '<slot></slot>' : ''}
+            ${!this.model ? (this.text ?? '') : ''}
         </${this.url ? `a` : 'div'}>
         `
     }

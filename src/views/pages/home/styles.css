@@ -86,13 +86,14 @@ floating-bubbles {
 }
 
 .home-content > .description > span.main-text > word-carousel word-carousel-item {
+    font-weight: 400;
     background-image: var(--highlight-gradient);
     color: transparent;
     background-clip: text;
 }
 
 .home-content > .description > .subtitle {
-    color: rgb(150,150,150);
+    color: rgb(110,110,110);
     font-size: 1em;
     line-height: 165%;
     margin-top: 20px;

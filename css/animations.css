@@ -91,3 +91,29 @@
     transform: translate(calc(var(--mx) * -0.5), calc(var(--my) * -0.3)) rotate(0deg);
   }
 }
+
+
+/* - Auxiliary animations for allowing other animations run while changing element's visibility - */
+@keyframes visibility-show {
+    0% {
+        visibility: hidden;
+    }
+    1% {
+        visibility: visible;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+@keyframes visibility-hide {
+    0% {
+        visibility: visible;
+    }
+    99% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+    }
+}

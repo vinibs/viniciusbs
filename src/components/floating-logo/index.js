@@ -8,16 +8,18 @@ export class FloatingLogo extends LiraElement {
         this.useStyle('./styles.css')
         this.useStyle('/css/animations.css')
 
-        this.checkIsHomePage()
+        this.checkIsHomePage(window.location.hash)
         
         window.navigation.addEventListener("navigate", (event) => {
-            this.checkIsHomePage()
+            const targetUrl = new URL(event.destination.url);
+            const newHash = targetUrl.hash; 
+
+            this.checkIsHomePage(newHash)
             this.handleLogoHomeClass()
         })
     }
 
-    checkIsHomePage () {
-        const currentHash = window.location.hash
+    checkIsHomePage (currentHash) {
         const possibleHomeHashes = ['', '/', '#', '#/']
         this.isAtHomePage = false
 

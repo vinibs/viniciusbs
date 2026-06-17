@@ -12,7 +12,8 @@
     top: 5px;
     width: 120px;
     z-index: 15;
-    animation: slide-down-in 0.3s both;
+    animation: slide-down-in 0.3s both,
+        visibility-show 0.3s both;
 }
 
 .logo::before {
@@ -31,7 +32,8 @@
 }
 
     .logo.at-home.exited {
-        animation: slide-up-out 0.3s both;
+        animation: slide-up-out 0.3s both,
+            visibility-hide 0.3s both;
     }
 
 @media (prefers-color-scheme: dark) {

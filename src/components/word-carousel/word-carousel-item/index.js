@@ -8,9 +8,9 @@ export class WordCarouselItem extends LiraElement {
     
     render () {
         return `
-        <li class="word-carousel-item">
+        <span class="word-carousel-item">
             <slot></slot>
-        </li>
+        </span>
         `
     }
 }

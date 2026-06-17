@@ -11,8 +11,11 @@ export class MainNavbar extends LiraElement {
         this.currentHash = window.location.hash
 
         window.navigation.addEventListener("navigate", (event) => {
+            const targetUrl = new URL(event.destination.url);
+            const newHash = targetUrl.hash; 
+
             this.clearActiveMenuItem()
-            this.setActiveMenuItem()
+            this.setActiveMenuItem(newHash)
         })
     }
 
@@ -25,8 +28,9 @@ export class MainNavbar extends LiraElement {
     }
 
 
-    setActiveMenuItem () {
-        this.currentHash = window.location.hash
+    setActiveMenuItem (newHash) {
+        this.currentHash = newHash
+        
 
         for (const navItem of navItems) {
             if (this.currentHash.includes(navItem.href)) {
@@ -42,7 +46,7 @@ export class MainNavbar extends LiraElement {
 
     render () {
         return `
-            <nav>
+            <nav role="navigation">
                 ${this.renderEach(navItems,
                     (navItem) => {
                         return `

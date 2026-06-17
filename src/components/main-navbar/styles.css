@@ -1,6 +1,6 @@
 :root {
     --links-opacity: 1;
-    --links-visibility: visible;
+    --links-display: block;
     --navbar-height: 80px;
 }
 
@@ -23,7 +23,7 @@ nav {
     width: 90%;
     z-index: 5;
     -webkit-backdrop-filter: blur(8px);
-    animation: ball-up-expansion 1.2s ease both;
+    animation: ball-up-expansion 1.8s ease both;
     font-weight: 500;
 }
 
@@ -45,7 +45,8 @@ nav a, nav a:hover {
     padding: 15px 20px;
     transition: 0.3s;
     opacity: var(--links-opacity);
-    visibility: var(--links-visibility);
+    display: var(--links-display);
+    /* visibility: var(--links-visibility); */
 }
 
 nav a:hover {
@@ -105,20 +106,21 @@ nav a.active {
         height: var(--navbar-height);
         width: var(--navbar-height);
         --links-opacity: 0;
-        --links-visibility: hidden;
+        --links-display: none;
     }
-    30% {
+    40% {
         opacity: 1;
         translate: 0 0;
         width: var(--navbar-height);
         --links-opacity: 0;
-        --links-visibility: hidden;
+        --links-display: none;
     }
     90% {
         width: 90%;
+        --links-display: block;
     }
     100% {
         --links-opacity: 1;
-        --links-visibility: visible;
+        --links-display: block;
     }
 }

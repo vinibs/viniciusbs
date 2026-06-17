@@ -127,7 +127,7 @@ export class Projects extends LiraElement {
                                 Corporate
                             </h3>
 
-                            <project-list>
+                            <project-list role="region">
                                 ${this.renderEach(
                                     Object.entries(projects.corporate),
                                     ([projectId, projectData]) => {
@@ -148,7 +148,7 @@ export class Projects extends LiraElement {
 
                     <section class="project-info-area">
                         <article class="project-info" id="project-info">
-                            <div class="project-info-content" id="project-info-content">
+                            <div class="project-info-content" id="project-info-content" role="main">
                             </div>
                             </article>
 

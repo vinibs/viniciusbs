@@ -23,12 +23,12 @@ export class AboutMe extends LiraElement {
         return `
             <fadein-container>
 
-                <responsive-container mode="full" limitedWidth mainContainer>
+                <responsive-container mode="full" limitedWidth mainContainer role="main">
                     <h2>${pageTitle}</h2>
 
                     <responsive-container mode="sidebar">
 
-                        <div class="whoiam">
+                        <div class="whoiam" role="complementary">
                             <div class="photoarea">
                                 <img src="${personalInfo.photo.path}"
                                     width="${personalInfo.photo.width}"

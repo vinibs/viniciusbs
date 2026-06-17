@@ -24,7 +24,7 @@ export class ProjectListItem extends LiraElement {
 
     render () {
         return `
-            <li class="project-item-container ${this.type} ${this.active ? 'active' : ''}"
+            <div class="project-item-container ${this.type} ${this.active ? 'active' : ''}"
                 id="${this.id}"
                 category="${this.category}"
                 type="${this.type}"
@@ -32,7 +32,7 @@ export class ProjectListItem extends LiraElement {
 
                 <p class="name">${this.name}</p>
                 <p class="year">${this.year}</p>
-            </li>
+            </div>
         `
     }
 }
