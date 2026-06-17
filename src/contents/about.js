@@ -8,29 +8,42 @@ export const personalInfo = {
         height: 200,
     },
     name: 'Vinicius Baroni Soares',
-    email: 'hiviniciusbs@gmail.com',
     location: 'Braga, Portugal',
     icons: {
         linkedin: {
             url: 'https://www.linkedin.com/in/viniciusbs',
-            title: 'LinkedIn',
+            title: 'Check my LinkedIn profile',
         },
-        github: {
-            url: 'https://github.com/vinibs',
-            title: 'GitHub',
+        email: {
+            url: 'mailto:hiviniciusbs@gmail.com',
+            title: 'Send me an e-mail',
         },
-        medium: {
-            url: 'https://medium.com/@hiviniciusbs',
-            title: 'Medium',
-        }
     },
     description: `
         Hi! You can call me Vini.
 
         I'm a Software Engineer focused on <strong>Quality, Patterns and Governance</strong>, with professional experience since 2019, and who sees mentorship, engineering standards and quality as <strong>a single unit</strong> and not as three separate forces.
 
-        I ensure consistency and longevity of software projects by thoroughly reviewing code, consistently mentoring (and learning from) peers and automating repetitive workflows, simplifying them where possible, for the sake of <strong>process quality</strong>. I understand "quality" is a complex concept, shaped by the intersection of code, product and process attributes – measured by <strong>assessing the real problem</strong> and how the proposed solution covers it.
+        I ensure consistency and longevity of software projects by thoroughly reviewing code, consistently mentoring (and learning from) peers and automating repetitive workflows, simplifying them where possible, for the sake of <strong>process quality</strong>. I understand "quality" is a complex concept, shaped by the intersection of code, product and process attributes – measured by <strong>assessing the real problem</strong> and how it is covered by the proposed solution.
 
         My current focus is on merging core backend logic with mentoring, quality (in all contexts) and <strong>software longevity</strong>, ensuring each problem is actually understood and solved, with a solution that is <strong>built to last</strong> and easy to maintain over the long-term.
-    `
+    `,
+    profilePillars: [
+        {
+            title: "Quality",
+            description: "The intersection of code, product, and process attributes, measured by how effectively a solution solves the real problem.",
+        },
+        {
+            title: "Mentorship",
+            description: "Knowledge sharing and peer growth as an atomic part of daily engineering workflows.",
+        },
+        {
+            title: "Longevity",
+            description: "A focus on software maintainability, ensuring systems are built to last and easy to evolve over the long term.",
+        },
+        {
+            title: "Context",
+            description: "Thinking first about the problem rather than the technology, delivering real solutions based on actual domain analysis.",
+        },
+    ],
 }

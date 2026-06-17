@@ -1,0 +1,139 @@
+
+.project {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin: 15px auto 0;
+    height: calc(100% - 30px);
+    justify-content: space-between;
+}
+
+
+h2, h3 {
+    background-image: var(--highlight-gradient);
+    color: transparent;
+    background-clip: text;
+    font-weight: 500;
+    line-height: 1.75em;
+    margin: 30px auto 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3.year {
+    color: rgb(150,150,150);
+    margin: 5px auto 45px;
+}
+
+
+p {
+    line-height: 1.8em;
+}
+
+
+.project-content > .description {
+    text-align: justify;
+}
+
+.project-screen {
+    text-align: center;
+}
+
+    .project-screen img {
+        border: 1px solid rgb(210,210,210);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        border-radius: 30px;
+        margin: 20px auto 15px;
+        max-width: 95%;
+        max-height: 420px;
+    }
+
+
+.project-link {
+    margin: 40px auto 10px;
+    text-align: center;
+}
+
+    .project-link a:after {
+        content: " ↗";
+    }
+
+    .project-link.disabled, .project-link.disabled a {
+        color: rgb(200,200,200);
+        cursor: default;
+    }
+
+    .project-link.disabled span {
+        text-decoration: underline;
+        font-style: italic;
+    }
+
+
+.project-meta {
+    margin: 45px 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.project-meta > * {
+    margin: 0;
+}
+
+.type .title, .resources .title {
+    font-weight: 600;
+    font-size: 10pt;
+    text-transform: uppercase;
+}
+
+.type badge-item {
+    text-transform: uppercase;
+}
+
+.type badge-item, .resources badge-item {
+    font-size: 0.85em;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    h3.year {
+        color: rgb(200,200,200);
+    }
+
+    .project-screen img {
+        border: 1px solid rgb(90,90,90);
+    }
+}
+
+
+@media (max-width: 900px) {
+    .project {
+        padding: 60px 15px 20px;
+        margin-top: 0;
+    }
+
+    .project-screen {
+        justify-self: center;
+        width: 100%;
+    }
+
+    .project > div {
+        grid-column: 1/8;
+        text-align: center;
+    }
+
+    .project .project-link {
+        text-align: center;
+    }
+
+    .project-content {
+        padding: 10px;
+        max-width: none;
+    }
+
+    .project-meta {
+        text-align: left;
+    }
+}

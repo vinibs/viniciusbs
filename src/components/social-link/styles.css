@@ -1,0 +1,76 @@
+* {
+    --default-social-link-color: rgb(110,110,110);
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--default-social-link-color);
+    transition: linear 0.2s;
+    font-weight: 400;
+}
+
+.social-link:hover {
+    color: var(--highlight-color);
+}
+
+.social-link:hover .icon {
+    background-color: var(--highlight-color);
+}
+
+.icon {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    mask-repeat: no-repeat;
+    mask-size: 31px auto;
+    mask-position: center center;
+    background-color: var(--default-social-link-color);
+    transition: linear 0.2s;
+    border-radius: 4px;
+}
+
+.icon.gray {
+    background-color: rgb(179,179,179);
+}
+
+.icon.github {
+    mask-image: url('/images/icons/github.svg');
+    border-radius: 100%;
+}
+
+.icon.linkedin {
+    mask-image: url('/images/icons/linkedin.svg');
+}
+
+.icon.email {
+    mask-image: url('/images/icons/email.svg');
+}
+
+.icon.medium {
+    mask-image: url('/images/icons/medium.svg');
+}
+
+.icon.medium-new {
+    mask-image: url('/images/icons/medium-new.svg');
+}
+
+.icon.youtube {
+    mask-image: url('/images/icons/youtube.svg');
+}
+
+.icon.instagram {
+    mask-image: url('/images/icons/instagram.svg');
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        --default-social-link-color: rgb(190,190,190);
+    }
+
+    .icon.gray {
+        background-color: rgb(150,150,150);
+    }
+}

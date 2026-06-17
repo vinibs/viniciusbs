@@ -9,11 +9,12 @@ export class NotFound extends LiraElement {
     // Defines the component default inner HTML
     render () {
         return `
-            <a href="#" class="logo"></a>
-            <h2>Not found</h2>
-            <p class="text-center">
-                This page doesn't seem to be a part of this app.
-            </p>
+            <fadein-container>
+                <h2>Not found</h2>
+                <p class="text-center">
+                    This page doesn't seem to be a part of this app.
+                </p>
+            </fadein-container>
         `
     }
 }

@@ -1,0 +1,205 @@
+responsive-container[mainContainer] > section:not(:first-of-type) {
+    margin-top: 60px;
+}
+
+
+/* YouTube Channels Section */
+.youtube-profile {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+}
+
+.youtube-profile img {
+    border-radius: 50%;
+}
+
+.channel-details {
+    min-width: 0;
+}
+
+.channel-info {
+    margin-bottom: 30px;
+}
+
+    .channel-info h4 {
+        font-size: 1.2em;
+        background-image: var(--highlight-gradient);
+        color: transparent;
+        background-clip: text;
+    }
+
+    
+    .channel-links {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+
+/* Medium Section */
+.articles-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    flex: 1;
+    min-width: 270px;
+}
+
+    .articles-details .articles-logo {
+        background-color: rgb(0,0,0);
+        mask-size: 100% 100%;
+        mask-repeat: no-repeat;
+        mask-position: center center;
+    }
+
+        .articles-details .articles-logo.medium {
+            mask-image: url('./images/icons/medium.svg');
+        }
+        
+        .articles-details .articles-logo.medium-new {
+            mask-image: url('./images/icons/medium-new.svg');
+        }
+
+.articles-main {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: end;
+}
+
+.articles .articles-details a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(110,110,110);
+    gap: 30px;
+    transition: 0.2s linear;
+    font-weight: 400;
+}
+
+.articles .articles-details a:hover {
+    color: rgb(160,160,160);
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+    /* YouTube Channels Section */
+    .channel-info p {
+        color: rgb(210,210,210);
+    }
+
+    /* Articles Section */
+    .articles-details .articles-logo {
+        background-color: rgb(230,230,230);
+    }
+
+    .articles .articles-details a {
+        color: rgb(190,190,190);
+    }
+
+    .articles .articles-details a:hover {
+        color: rgb(220,220,220);
+    }
+}
+
+@media (min-width: 901px) {
+    /* YouTube Channels Section */
+    .youtube-profile {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .youtube-profile img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Medium Section */
+    .articles responsive-container:host,
+    .articles-container {
+        border: 1px solid red;
+    }
+
+    .articles-details {
+        align-self: center;
+    }
+
+    .articles-details .articles-logo {
+        width: 160px;
+        height: 160px;
+    }
+
+    .articles-main {
+        align-self: center;
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .youtube-profile {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+        
+    .youtube-profile img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    /* YouTube Channels Section */
+    .youtube-profile {
+        min-width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .youtube-profile img {
+        width: 140px;
+        height: 140px;
+    }
+
+
+    .channel-details {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .channel-info {
+        margin-bottom: 40px;
+    }
+
+    .channel-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+
+    /* Medium Section */
+    .articles-details {
+        padding: 30px 10px 10px;
+    }
+
+    .articles-details .articles-logo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .articles-main {
+        align-items: center;
+        padding-top: 0;
+        gap: 20px;
+    }
+}

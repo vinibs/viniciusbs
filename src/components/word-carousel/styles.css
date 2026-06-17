@@ -1,0 +1,58 @@
+.word-carousel {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-flex;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    align-items: start;
+    text-transform: uppercase;
+    font-size: 1em;
+    height: 1em;
+    line-height: 1em;
+    gap: 20px;
+}
+
+    .word-carousel.align-left {
+        align-items: start;
+    }
+
+    .word-carousel.align-center {
+        align-items: center;
+    }
+
+    .word-carousel.align-right {
+        align-items: end;
+    }
+
+
+.word-carousel ::slotted(word-carousel-item) {
+    visibility: hidden;
+    transform: translateY(calc(var(--element-index) * (1em + 20px) * -1));
+}
+
+.word-carousel ::slotted(word-carousel-item.fade-in) {
+    visibility: visible;
+    animation: fade-in 0.3s linear forwards;
+}
+
+.word-carousel ::slotted(word-carousel-item.fade-out) {
+    visibility: visible;
+    animation: fade-out 0.3s linear forwards;
+}
+
+
+@media (max-width: 900px) {
+    .word-carousel {
+        margin: 5px;
+        display: flex;
+    }
+
+    .word-carousel,
+    .word-carousel.align-left,
+    .word-carousel.align-center,
+    .word-carousel.align-right {
+        align-items: center;
+    }
+}

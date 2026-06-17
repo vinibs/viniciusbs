@@ -1,0 +1,126 @@
+:root {
+    --links-opacity: 1;
+    --links-display: block;
+    --navbar-height: 80px;
+}
+
+nav {
+    align-items: center;
+    backdrop-filter: blur(8px);
+    background: rgba(255,255,255, 0.7);
+    border: 1px solid rgb(200,200,200);
+    border-radius: 40px;
+    bottom: 5px;
+    display: flex;
+    justify-content: space-around;
+    left: 0;
+    margin: auto;
+    max-width: 780px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    height: var(--navbar-height);
+    width: 90%;
+    z-index: 5;
+    -webkit-backdrop-filter: blur(8px);
+    animation: ball-up-expansion 1.8s ease both;
+    font-weight: 500;
+}
+
+@media (orientation: portrait) {
+    nav {
+        animation: ball-up-expansion 1s ease both;
+    }
+}
+
+nav a {
+    color: rgb(90,90,90);
+}
+
+nav a, nav a:hover {
+    font-size: 1.2em;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    transition: 0.3s;
+    opacity: var(--links-opacity);
+    display: var(--links-display);
+    /* visibility: var(--links-visibility); */
+}
+
+nav a:hover {
+    color: var(--highlight-color);
+}
+
+nav a.active {
+    background-image: var(--highlight-gradient);
+    color: transparent;
+    background-clip: text;
+    transition: 0.3s;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    nav {
+        background: rgba(30,30,30,0.7);
+        border-color: rgb(90,90,90);
+    }
+
+    nav a {
+        color: rgb(200,200,200);
+    }
+}
+
+@media (min-width: 901px) {
+    nav {
+        --navbar-height: 80px;
+    }
+
+    nav a, nav a:hover {
+        padding: 15px 20px;
+        border-radius: 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    nav {
+        --navbar-height: 65px;
+    }
+
+    nav a, nav a:hover {
+        font-size: 1em;
+        padding: 10px 15px;
+        border-radius: 20px;
+    }
+}
+
+
+/* ------------------------------------ */
+/* Specific Animations */
+
+@keyframes ball-up-expansion {
+    0% {
+        opacity: 0;
+        translate: 0 calc(var(--navbar-height) + 15px);
+        height: var(--navbar-height);
+        width: var(--navbar-height);
+        --links-opacity: 0;
+        --links-display: none;
+    }
+    40% {
+        opacity: 1;
+        translate: 0 0;
+        width: var(--navbar-height);
+        --links-opacity: 0;
+        --links-display: none;
+    }
+    90% {
+        width: 90%;
+        --links-display: block;
+    }
+    100% {
+        --links-opacity: 1;
+        --links-display: block;
+    }
+}

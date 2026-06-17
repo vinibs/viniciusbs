@@ -1,24 +1,31 @@
 import { BadgeItem } from './badge-item/index.js'
-import { CircleViewer } from './circle-viewer/index.js'
 import { FadeInContainer } from './fadein-container/index.js'
 import { FloatingLogo } from './floating-logo/index.js'
-import { MainMenu } from './main-menu/index.js'
+import { MainNavbar } from './main-navbar/index.js'
 import { ParagraphText } from './paragraph-text/index.js'
-import { ProjectItem } from './project-item/index.js'
+import { ProjectDetailsItem } from './project-details-item/index.js'
 import { ProjectList } from './project-list/index.js'
 import { ProjectListItem } from './project-list-item/index.js'
 import { ProjectSection } from './project-section/index.js'
-import { SocialLinkIcon } from './social-link-icon/index.js'
+import { SocialLink } from './social-link/index.js'
+import { FloatingBubbles, Bubble } from './floating-bubbles/index.js'
+import { WordCarousel, WordCarouselItem } from './word-carousel/index.js'
 
 
 window.customElements.define('badge-item', BadgeItem)
-window.customElements.define('circle-viewer', CircleViewer)
 window.customElements.define('fadein-container', FadeInContainer)
 window.customElements.define('floating-logo', FloatingLogo)
-window.customElements.define('main-menu', MainMenu)
+window.customElements.define('main-navbar', MainNavbar)
 window.customElements.define('paragraph-text', ParagraphText)
-window.customElements.define('project-item', ProjectItem)
+window.customElements.define('project-details-item', ProjectDetailsItem)
 window.customElements.define('project-list', ProjectList)
 window.customElements.define('project-list-item', ProjectListItem)
 window.customElements.define('project-section', ProjectSection)
-window.customElements.define('social-link-icon', SocialLinkIcon)
+window.customElements.define('social-link', SocialLink)
+
+window.customElements.define('floating-bubbles', FloatingBubbles)
+window.customElements.define('bubble-item', Bubble)
+
+
+window.customElements.define('word-carousel', WordCarousel)
+window.customElements.define('word-carousel-item', WordCarouselItem)

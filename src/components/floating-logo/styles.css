@@ -3,7 +3,7 @@
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     background-color: rgba(255,255,255,0.7);
-    border-radius: 8px;
+    border-radius: 20px;
     color: transparent;
     display: block;
     height: 50px;
@@ -12,6 +12,8 @@
     top: 5px;
     width: 120px;
     z-index: 15;
+    animation: slide-down-in 0.3s both,
+        visibility-show 0.3s both;
 }
 
 .logo::before {
@@ -23,9 +25,20 @@
     background-size: 96px auto;
 }
 
+.logo.at-home {
+    opacity: 0;
+    visibility: hidden;
+    animation: none;
+}
+
+    .logo.at-home.exited {
+        animation: slide-up-out 0.3s both,
+            visibility-hide 0.3s both;
+    }
+
 @media (prefers-color-scheme: dark) {
     .logo {
-        background-color: rgba(40,40,40,0.7);
+        background-color: rgba(30,30,30,0.7);
     }
 
     .logo::before {

@@ -1,0 +1,97 @@
+.floating-bubbles {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.floating-bubbles ::slotted(bubble-item) {
+    animation: slide-up-in 0.5s ease both;
+    display: flex;
+    width: min(300px, 25vw, 25vh);
+    height: min(300px, 25vw, 25vh);
+    border-radius: 50%;
+    position: absolute;
+}
+
+@supports (animation-delay: calc(sibling-index() * 1s)) {
+    @media (prefers-reduced-motion: no-preference) {
+        .floating-bubbles ::slotted(bubble-item) {
+            animation-delay: calc((sibling-index() - 1) * 0.15s);
+        }
+    }
+}
+
+.floating-bubbles ::slotted(bubble-item[model="o-dev-salmao"]) {
+    top: min(10%, 10vw);
+    left: min(40%, 40vw, 75vh);
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.floating-bubbles ::slotted(bubble-item[model="the-salmon-dev"]) {
+    transform: scale(0.8);
+    top: min(35%, 70vw);
+    left: min(60%, 55vw, 120vh);
+    z-index: 2;
+}
+
+.floating-bubbles ::slotted(bubble-item[model="medium"]),
+.floating-bubbles ::slotted(bubble-item[model="medium-new"]) {
+    transform: translate(-100%, 50%) scale(0.6);
+    top: min(10%, 10vw);
+    left: min(40%, 40vw, 75vh);
+    z-index: 1;
+}
+
+.floating-bubbles ::slotted(bubble-item[model="projects"]) {
+    transform: translate(-15%, 65%) scale(0.7);
+    top: min(35%, 70vw);
+    left: min(60%, 55vw, 120vh);
+    z-index: 3;
+}
+
+.floating-bubbles ::slotted(bubble-item[model="photo"]) {
+    transform: translateX(-75%) scale(0.9);
+    top: min(65%, 95vh);
+    left: min(40%, 55vw, 85vh);
+    z-index: 3;
+}
+
+
+
+@media (min-width: 901px) {
+    .floating-bubbles {
+        min-height: 600px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .floating-bubbles {
+        min-height: 400px;
+    }
+
+    .floating-bubbles ::slotted(bubble-item) {
+        width: min(220px, 30vw, 30vh);
+        height: min(220px, 30vw, 30vh);
+    }
+
+
+    @media (orientation: landscape) {
+        .floating-bubbles {
+            min-height: 600px;
+        }
+
+        .floating-bubbles ::slotted(bubble-item) {
+            width: min(250px, 40vw, 40vh);
+            height: min(250px, 40vw, 40vh);
+        }
+    }
+
+    @media (min-width: 600px) {
+            .floating-bubbles {
+            min-height: 600px;
+        }
+    }
+}

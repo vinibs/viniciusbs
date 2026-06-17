@@ -1,4 +1,7 @@
 .project-list {
-    padding-left: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 0;
     list-style: none;
 }
