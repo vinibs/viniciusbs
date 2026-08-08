@@ -86,6 +86,10 @@ p.year {
 
 
 @media (prefers-color-scheme: dark) {
+    * {
+        --default-bg-color: rgb(30,30,30);
+    }
+
     p.year {
         color: rgb(150,150,150);
     }
